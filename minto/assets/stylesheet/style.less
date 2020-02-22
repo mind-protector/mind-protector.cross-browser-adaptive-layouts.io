@@ -1,0 +1,63 @@
+// out: style.css, compress: false
+
+@import "inc/_vars";
+
+*,
+*::before,
+*::active {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: @primary-font;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+}
+
+body::before, body::after {
+    content: "";
+    display: block;
+    height: 8px;
+    background-color: @primary-color;
+    margin-bottom: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: @container-size;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+
+    padding: 16px 9px 17px 3px;
+    border: 0;
+    cursor: pointer;
+
+    background-color: #82699d;
+    text-decoration: none;
+
+    transition: background .1s linear;
+}
+
+.btn:hover {
+    background-color: lighten(#82699d, 5%);
+}
+
+@import "inc/_header";
+@import "inc/_intro";
+@import "inc/_desc";
+@import "inc/_comment";
+@import "inc/_clients";
+@import "inc/_footer";
