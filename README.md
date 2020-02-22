@@ -2,12 +2,12 @@ All layouts were found freely available on the Internet. Less was compiled in cs
 
 ## Cross-browser was tested in:
 
-- ***IE 11***
+- IE 11
  
-- ***Edge 10***
+- Edge 10
  
-- ***Chrome 77***
+- Chrome 77
  
-- ***Opera 35***
+- Opera 35
  
-- ***FireFox 73***
+- FireFox 73
