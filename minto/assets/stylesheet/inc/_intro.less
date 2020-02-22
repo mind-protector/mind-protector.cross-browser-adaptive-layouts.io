@@ -1,0 +1,75 @@
+// main: ../style.less
+
+// Mode: widescreen
+@widescreen-area: 65vh;
+@widescreen: ~"(min-width: 1500px)";
+
+// Mode: handheld
+@handheld-area: 24vh;
+@handheld: ~"only screen and (max-device-width: 480px)";
+
+/* Intro
+==================*/
+.intro {
+    height: 52vh;
+    margin-top: 30px;
+
+    @media @widescreen {
+        height: @widescreen-area;
+    }
+
+    @media @handheld {
+        height: @handheld-area;
+    }
+}
+
+.intro-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    height: 100%;
+    background-image: url(../images/intro/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.intro-text {
+    width: 609px;
+    height: auto;
+    line-height: 1;
+    color: #fff;
+
+    text-align: center;
+}
+
+.intro-title {
+    text-shadow: -4px 5px 0 rgba(130, 105, 157, .75);
+    font-family: @title-font;
+    font-size: 97px;
+    font-weight: 400;
+    opacity: .97;
+    margin-bottom: 27px;
+}
+
+.intro-subtitle {
+    display: inline;
+    text-shadow: -1px 1px 0 rgba(0, 0, 0, .45);
+    font-family: @subtitle-font;
+    font-size: 31px;
+    font-weight: 400;
+}
+
+.btn-right {
+    padding: 16px 3px 17px 9px;
+}
+
+.arrow {
+    width: 22px;
+    height: 32px;
+    background-image: url(../images/intro/arrow.png);
+}
+
+.right-arrow {
+    transform: scale(-1, 1);
+}

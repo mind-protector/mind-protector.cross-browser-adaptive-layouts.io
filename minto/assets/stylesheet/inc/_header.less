@@ -1,0 +1,106 @@
+// main: ../style.less
+
+.header {
+    margin-top: 36px;
+}
+
+.header-gid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo
+==================*/
+
+.header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 212px;
+    height: 70px;
+}
+
+.mark {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 71px;
+    background-image: url(../images/header/logo.png);
+    background-repeat: no-repeat;
+}
+
+.logo-letter {
+    color: #fff;
+    font-size: 29px;
+}
+
+.site-name {
+    color: @primary-color;
+    font-family: @secondary-font;
+    font-size: 39px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: color .1s linear;
+}
+
+.site-name:hover {
+    color: lighten(@primary-color, 10%);
+}
+
+/* Navigation
+==================*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 59%;
+}
+
+.nav-item {
+    color: @secondary-color;
+    font-size: 19px;
+
+    text-transform: capitalize;
+    text-decoration: none;
+
+    transition: color .1s linear;
+}
+
+.nav-item::before {
+    content: "";
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.nav-item:hover {
+    color: lighten(@secondary-color, 20%);
+}
+
+.n1::before {
+    width: 21px;
+    height: 20px;
+    background-image: url(../images/header/home.png);
+}
+
+.n2::before {
+    width: 18px;
+    height: 19px;
+    background-image: url(../images/header/about.png);
+}
+
+.n3::before {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/header/services.png);
+}
+
+.n4::before {
+    width: 20px;
+    height: 14px;
+    background-image: url(../images/header/contact.png);
+}

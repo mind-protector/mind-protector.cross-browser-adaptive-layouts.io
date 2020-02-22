@@ -1,0 +1,65 @@
+// main: ../style.less
+
+.comment {
+    margin-top: 30px;
+}
+
+.comment-grid {
+    display: flex;
+    margin: 0 12px;
+}
+
+.comment-avatar {
+    margin-right: 33px;
+    width: 317px;
+    max-width: 317px;
+    height: 317px;
+    background-image: url(../images/comment/avatar.png), url(../images/comment/avatar-shadow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.comment-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 56%;
+    margin-top: 46px;
+}
+
+.comment-title {
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 31px;
+    color: #505051;
+}
+
+.comment-text {
+    margin: 32px 0 15px 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #838383;
+}
+
+.more {
+    display: block;
+    height: auto;
+    text-align: right;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 13px;
+    color: #82699d;
+}
+
+.more:hover {
+    text-decoration: underline;
+}
+
+.more::after {
+    content: "";
+    display: inline-block;
+    margin-left: 6px;
+    width: 11px;
+    height: 7px;
+    background-image: url(../images/comment/arrow.png);
+}
