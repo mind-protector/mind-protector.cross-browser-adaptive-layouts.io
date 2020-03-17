@@ -26,8 +26,19 @@
     text-align: center;
     max-width: 61%;
 
+    font-weight: 700;
+
     @media (max-width: $tablet) {
         max-width: 70%;
+    }
+
+    @media (max-width: $final) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        max-width: initial;
+        @include size(700px, 300px);
     }
 
     &-text {
