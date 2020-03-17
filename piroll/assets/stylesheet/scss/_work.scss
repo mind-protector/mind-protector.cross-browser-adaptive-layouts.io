@@ -9,10 +9,6 @@
     flex-direction: column;
     background-color: #dddddd;
 
-    @media (max-width: $medium) {
-        height: 600px;
-    }
-
     @media (max-width: $tablet) {
         height: 1500px;
     }
