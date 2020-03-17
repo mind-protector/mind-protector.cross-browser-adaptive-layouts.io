@@ -269,9 +269,6 @@
   height: 699px;
   flex-direction: column;
   background-color: #dddddd; }
-  @media (max-width: 1170px) {
-    .work {
-      height: 600px; } }
   @media (max-width: 930px) {
     .work {
       height: 1500px; } }
