@@ -1,0 +1,115 @@
+
+/* SKILLS
+==================*/
+
+.skills {
+    position: relative;
+    background-color: #f8f9f9;
+
+    @media (min-width: $large) {
+        .container {
+            max-width: 90%;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        height: 794px;
+    }
+
+    &-content {
+        margin: 164px 11.965811% 164px 0;
+        grid-column-start: 1;
+        grid-column-end: 7;
+
+        @media (max-width: $medium) {
+            margin: 102px 11.965811% 102px 0;
+        }
+
+        @media (max-width: $netbook) {
+            margin-right: 6%;
+        }
+
+        @media (max-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            height: 397px;
+            margin: 0;
+
+            grid-column-start: 2;
+            grid-column-end: 12;
+        }
+    }
+
+    &-title {
+        margin-bottom: 39px;
+        color: #171717;
+        font-size: 30px;
+        letter-spacing: 0.3px;
+        text-transform: capitalize;
+    }
+}
+
+/* GRAPHICS
+==================*/
+
+.graphic {
+    margin: 0 0 41px 0;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &-title {
+        margin-bottom: 19px;
+        color: #000000;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        white-space: pre;
+    }
+
+    &-line {
+        display: flex;
+        height: 3px;
+        background-color: #d8d8d8;
+
+        & .first {
+            flex: .75;
+        }
+
+        & .second {
+            flex: .9;
+        }
+
+        & .third {
+            flex: .65;
+        }
+    }
+}
+
+.line-active {
+    height: inherit;
+    background-color: $primary-color;
+}
+
+/* ASIDE IMAGE
+==================*/
+
+.aside-image {
+    position: absolute;
+    height: 100%;
+
+    top: 0;
+    right: 0;
+    left: 50%;
+    width: 50%;
+
+    background-color: $secondary-color;
+
+    @media (max-width: $tablet) {
+        position: static;
+
+        @include size(100%, 50%);
+    }
+}

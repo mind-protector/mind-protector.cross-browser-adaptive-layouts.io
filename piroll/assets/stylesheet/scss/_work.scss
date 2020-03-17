@@ -1,0 +1,101 @@
+
+/* WORK
+==================*/
+
+.work {
+    display: flex;
+    height: 699px;
+
+    flex-direction: column;
+    background-color: #dddddd;
+
+    @media (max-width: $medium) {
+        height: 600px;
+    }
+
+    @media (max-width: $tablet) {
+        height: 1500px;
+    }
+
+    &-group {
+        flex: 1;
+        display: flex;
+        height: 300px;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+
+            .small-group {
+                flex-direction: row;
+            }
+
+            .reverse {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &-item {
+        flex: 1;
+        height: auto;
+        @include centering;
+
+        &::before {
+            content: "";
+            @include size(48px, 30px);
+            background-image: url(../../images/work/look.png);
+            opacity: 0;
+
+            transition: opacity .2s linear;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.gray {
+    background-color: #838383;
+}
+
+.black {
+    background-color: #252525;
+}
+
+/* MORE
+==================*/
+
+.more {
+    height: 99px;
+    @include centering;
+
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    background-color: $third-color;
+
+    .text {
+        color: #8e8e8e;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: lighten(#8e8e8e, 10%);
+            opacity: 0;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

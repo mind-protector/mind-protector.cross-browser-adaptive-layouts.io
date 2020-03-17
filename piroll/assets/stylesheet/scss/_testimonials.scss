@@ -1,0 +1,77 @@
+
+/* TESTIMONIALS
+==================*/
+
+.testimonials {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 500px;
+    color: #fff;
+    background-color: $primary-color;
+
+    @media (max-width: $tablet) {
+        height: 440px;
+    }
+}
+
+/* REVIEW
+==================*/
+
+.review {
+    position: absolute;
+    text-align: center;
+    max-width: 61%;
+
+    @media (max-width: $tablet) {
+        max-width: 70%;
+    }
+
+    &-text {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.24px;
+    }
+
+    &-author {
+        margin-top: 28px;
+        display: block;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+    }
+}
+
+/* PAGINATION
+==================*/
+
+.pagination {
+    display: flex;
+    flex-direction: column-reverse;
+    @include size(40px, 100%);
+
+    &-buttons {
+        margin-bottom: 31px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.btn-pag {
+    @include size(6px, 6px);
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #b0e8e6;
+}
+
+.pag-active {
+    @include size(10px, 10px);
+    background-color: #fff;
+}

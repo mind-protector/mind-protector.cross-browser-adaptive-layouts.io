@@ -1,0 +1,31 @@
+
+/* ABOUT
+==================*/
+
+.about {
+    margin: 100px 0;
+    text-align: center;
+
+    @media (max-width: $netbook) {
+        margin: 70px 0;
+    }
+
+    &-title {
+        margin-bottom: 41px;
+        font-size: 30px;
+        letter-spacing: 0.3px;
+    }
+
+    &-text {
+        max-width: 47.48%;
+        margin: 0 auto 37px auto;
+        font: $secondary-font;
+        color: $secondary-text-color;
+        line-height: 24px;
+        letter-spacing: 0.08px;
+
+        @media (max-width: $tablet) {
+            max-width: 61.48%;
+        }
+    }
+}

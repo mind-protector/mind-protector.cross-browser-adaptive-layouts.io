@@ -1,0 +1,113 @@
+
+/* NUMBERS
+==================*/
+
+.numbers {
+    height: 240px;
+    color: #fff;
+    background-color: $primary-color;
+    text-transform: uppercase;
+
+    @media (min-width: $large) {
+        .container {
+            max-width: 80%;
+        }
+    }
+
+    @media (max-width: $netbook) {
+        .container {
+            max-width: 960px;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        .container {
+            grid-template-rows: .2fr repeat(2, .4fr);
+        }
+    }
+
+    &-item {
+        margin-left: 4px;
+        grid-row-start: 2;
+
+        @media (max-width: $netbook) {
+            margin-left: 10px;
+        }
+
+        @media (max-width: $tablet) {
+            margin-left: 30px;
+        }
+    }
+
+    .item-projects {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        @media (max-width: $tablet) {
+            grid-column-start: 2;
+            grid-column-end: 7;
+        }
+    }
+
+    .item-hours {
+        grid-column-start: 4;
+        grid-column-end: 7;
+
+        @media (max-width: $tablet) {
+            grid-column-start: 8;
+            grid-column-end: 12;
+        }
+    }
+
+    .item-feedbacks {
+        grid-column-start: 7;
+        grid-column-end: 10;
+
+        @media (max-width: $tablet) {
+            grid-column-start: 2;
+            grid-column-end: 7;
+
+            grid-row-start: 3;
+        }
+    }
+
+    .item-clients {
+        grid-column-start: 10;
+        grid-column-end: 13;
+
+        @media (max-width: $tablet) {
+            grid-column-start: 8;
+            grid-column-end: 12;
+
+            grid-row-start: 3;
+        }
+    }
+
+    &-icon {
+        margin-top: 2px;
+    }
+}
+
+.subject {
+    display: inline-block;
+    margin-left: 27px;
+
+    @media (max-width: $netbook) {
+        margin-left: 18px;
+    }
+
+    @media (max-width: $netbook) {
+        &-caption {
+            font-size: 11px;
+        }
+    }
+
+    &-value {
+        margin-bottom: 8px;
+        font-size: 18px;
+
+        @media (max-width: $netbook) {
+            font-size: 15px;
+        }
+    }
+}

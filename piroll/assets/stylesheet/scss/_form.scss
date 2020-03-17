@@ -1,0 +1,74 @@
+
+/* FORM DESC
+==================*/
+
+.form {
+    height: 751px;
+    background-color: $third-color;
+
+    &-inner {
+        @include size(751px, 100%);
+        padding-top: 101px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &-desc {
+        margin-bottom: 38px;
+    }
+
+    &-title {
+        margin-bottom: 35px;
+        color: #1d1d1d;
+        font-size: 30px;
+        letter-spacing: 0.3px;
+    }
+
+    .subtitle-text {
+        font: $secondary-font;
+        color: $secondary-text-color;
+        letter-spacing: 0.08px;
+    }
+}
+
+/* FORM
+==================*/
+
+.form-item {
+    @include throw-css;
+
+    font: $secondary-font;
+    font-size: 15px;
+    color: #787878;
+    letter-spacing: 0.15px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.input, .textarea {
+    padding: 18px 0 19px 20px;
+    resize: none;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+
+    .input {
+        flex: .48;
+    }
+}
+
+.message {
+    margin-bottom: 30px;
+
+    .input {
+        width: 100%;
+    }
+}
+
+.input {
+    margin-bottom: 30px;
+}

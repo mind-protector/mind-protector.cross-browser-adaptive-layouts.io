@@ -1,0 +1,101 @@
+
+/* INTRO
+==================*/
+
+.intro {
+    height: 670px;
+    background-color: $secondary-color;
+
+    @media (min-width: $large) {
+        .container {
+            max-width: 80%;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        .container {
+            max-width: 780px;
+        }
+    }
+}
+
+/* HEADER
+==================*/
+
+.header {
+    display: flex;
+    margin-top: 38px;
+    align-items: center;
+    justify-content: space-between;
+    grid-column-start: 1;
+    grid-column-end: 13;
+
+    @media (max-width: $tablet) {
+        font-size: 11px;
+    }
+}
+
+.site-logo {
+    @include size(31px, 25px);
+    background-image: url(../../images/intro/logo.png);
+}
+
+.nav-item {
+    display: inline;
+    margin-right: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    @media (min-width: $large) {
+        margin-right: 45px;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+/* BANNER
+==================*/
+
+.banner {
+    margin-top: 180px;
+    padding-left: 55px;
+    grid-column-start: 7;
+    grid-column-end: 13;
+
+    @media (max-width: $laptop) {
+        padding: 0;
+    }
+
+    @media (max-width: $netbook) {
+        grid-column-start: 6;
+    }
+
+    @media (max-width: $tablet) {
+        margin-top: 140px;
+        grid-column-start: 5;
+    }
+
+    &-title {
+        color: #1d1d1d;
+        font-size: 38px;
+        letter-spacing: 0.38px;
+    }
+
+    &-text {
+        margin-top: 32px;
+        color: $secondary-text-color;
+        font: $secondary-font;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.09px;
+    }
+}
+
+/* BUTTON
+==================*/
+
+.contact-button {
+    margin-top: 39px;
+}

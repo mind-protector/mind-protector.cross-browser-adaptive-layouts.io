@@ -1,0 +1,72 @@
+
+/* SERVICES
+==================*/
+
+.services {
+    height: 535px;
+    padding-top: 72px;
+    background-color: $third-color;
+
+    @media (max-width: $tablet) {
+        .container {
+            max-width: 790px;
+        }
+    }
+
+    &-item {
+        max-width: 231px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &-subject {
+        margin: 30px 0 20px 0;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+
+        @media (max-width: $tablet) {
+            font-size: 11px;
+        }
+    }
+
+    &-desc {
+        font: $secondary-font;
+        color: $secondary-text-color;
+        letter-spacing: 0.08px;
+
+        @media (max-width: $tablet) {
+            font-size: 14px;
+        }
+    }
+}
+
+/* SERVICES GRID
+==================*/
+
+.col-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.col-2 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.col-3 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+
+.col-4 {
+    grid-column-start: 10;
+    grid-column-end: 13;
+}
+
+.row-1 {
+    grid-row-start: 1;
+}
+
+.row-2 {
+    grid-row-start: 2;
+}

@@ -1,0 +1,115 @@
+
+/* IMPORTS
+==================*/
+
+@import "_vars.scss";
+@import "_mixins.scss";
+@import "_intro.scss";
+@import "_about.scss";
+@import "_skills.scss";
+@import "_numbers.scss";
+@import "_work.scss";
+@import "_process.scss";
+@import "_services.scss";
+@import "_testimonials.scss";
+@import "_clients.scss";
+@import "_form.scss";
+@import "_footer.scss";
+
+/* SETTINGS
+==================*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: $primary-font;
+    color: $primary-text-color;
+}
+
+.wrapper {
+    min-width: 800px;
+}
+
+p, ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-text-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: $primary-color;
+    }
+}
+
+.active {
+    color: $primary-color;
+}
+
+.container {
+    display: grid;
+    max-width: $container-size;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 2.564102%;
+
+    @media (max-width: $laptop) {
+        max-width: 980px;
+    }
+
+    @media (max-width: $netbook) {
+        max-width: 900px;
+    }
+}
+
+.full {
+    grid-template-rows: .4fr .6fr;
+    height: 100%;
+}
+
+.rows-2 {
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+}
+
+.btn {
+    border: 0;
+    padding: 23px 46px 22px;
+
+    background-color: $primary-color;
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    &:hover {
+        background-color: lighten($primary-color, 1.5%);
+    }
+}

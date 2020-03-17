@@ -1,0 +1,98 @@
+
+/* FOOTER
+==================*/
+
+.footer {
+    height: 284px;
+    padding-top: 99px;
+
+    color: #bcbcbc;
+    background-color: #141414;
+
+    @media (max-width: $netbook) {
+        .container {
+            max-width: 840px;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        .container {
+            max-width: 770px;
+        }
+    }
+
+    .license {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        .inc {
+            margin-bottom: 27px;
+
+            font-size: 18px;
+            letter-spacing: 0.18px;
+
+            color: #fff;
+        }
+
+        .copy {
+            font: $secondary-font;
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0.07px;
+        }
+    }
+
+    .contacts {
+        margin-left: 26%;
+
+        grid-column-start: 5;
+        grid-column-end: 8;
+
+        font: $secondary-font;
+        font-size: 15px;
+        letter-spacing: 0.07px;
+
+        .email {
+            padding-bottom: 6px;
+        }
+    }
+
+    &-group {
+        display: flex;
+        grid-column-start: 8;
+        grid-column-end: 11;
+
+        .company {
+            margin-left: 26%;
+        }
+
+        .events {
+            margin-left: 21%;
+        }
+    }
+
+    .socials {
+        margin-left: 40%;
+
+        grid-column-start: 11;
+        grid-column-end: 13;
+    }
+}
+
+.inf-list {
+    font: $secondary-font;
+    font-size: 15px;
+    letter-spacing: 0.07px;
+}
+
+.inf-item {
+    margin-bottom: 8px;
+}
+
+.inf-link {
+    color: #bcbcbc;
+
+    &:active {
+        color: #fff;
+    }
+}
