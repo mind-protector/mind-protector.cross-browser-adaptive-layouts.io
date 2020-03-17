@@ -451,10 +451,19 @@
 .review {
   position: absolute;
   text-align: center;
-  max-width: 61%; }
+  max-width: 61%;
+  font-weight: 700; }
   @media (max-width: 930px) {
     .review {
       max-width: 70%; } }
+  @media (max-width: 800px) {
+    .review {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: initial;
+      width: 700px;
+      height: 300px; } }
   .review-text {
     font-size: 24px;
     line-height: 36px;
@@ -570,6 +579,9 @@
 .input, .textarea {
   padding: 18px 0 19px 20px;
   resize: none; }
+
+.textarea {
+  width: 100%; }
 
 .contact-info {
   display: flex;
