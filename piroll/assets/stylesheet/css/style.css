@@ -94,7 +94,7 @@
       grid-column-start: 5;
       /* For IE10-11
         ======================== */
-      -ms-grid-column: 10;
+      -ms-grid-column: 8;
       /* ====================== */ } }
   .banner-title {
     color: #1d1d1d;
@@ -151,8 +151,11 @@
     margin: 164px 11.965811% 164px 0;
     -ms-grid-column: 1;
         grid-column-start: 1;
-    -ms-grid-column-span: 6;
-    grid-column-end: 7; }
+    grid-column-end: 7;
+    /* For IE10-11
+        ======================== */
+    -ms-grid-column-span: 12;
+    /* ====================== */ }
     @media (max-width: 1170px) {
       .skills-content {
         margin: 102px 11.965811% 102px 0; } }
@@ -175,8 +178,11 @@
         margin: 0;
         -ms-grid-column: 2;
             grid-column-start: 2;
-        -ms-grid-column-span: 10;
-        grid-column-end: 12; } }
+        grid-column-end: 12;
+        /* For IE10-11
+            ======================== */
+        -ms-grid-column-span: 18;
+        /* ====================== */ } }
   .skills-title {
     margin-bottom: 39px;
     color: #171717;
@@ -203,29 +209,11 @@
     height: 3px;
     background-color: #d8d8d8; }
     .graphic-line .first {
-      -webkit-box-flex: .75;
-          -ms-flex: .75;
-              flex: .75;
-      /* For IE10-11
-            ======================== */
-      width: 75%;
-      /* ====================== */ }
+      width: 75%; }
     .graphic-line .second {
-      -webkit-box-flex: .9;
-          -ms-flex: .9;
-              flex: .9;
-      /* For IE10-11
-            ======================== */
-      width: 90%;
-      /* ====================== */ }
+      width: 90%; }
     .graphic-line .third {
-      -webkit-box-flex: .65;
-          -ms-flex: .65;
-              flex: .65;
-      /* For IE10-11
-            ======================== */
-      width: 65%;
-      /* ====================== */ }
+      width: 65%; }
 
 .line-active {
   height: inherit;
@@ -280,7 +268,7 @@
     /* For IE10-11
         ======================== */
     -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
+    -ms-grid-column-span: 8;
     /* ====================== */ }
     @media (max-width: 930px) {
       .numbers .item-projects {
@@ -299,7 +287,7 @@
     /* For IE10-11
         ======================== */
     -ms-grid-column: 7;
-    -ms-grid-column-span: 6;
+    -ms-grid-column-span: 8;
     /* ====================== */ }
     @media (max-width: 930px) {
       .numbers .item-hours {
@@ -309,7 +297,7 @@
         /* For IE10-11
             ======================== */
         -ms-grid-column: 16;
-        -ms-grid-column-span: 24;
+        -ms-grid-column-span: 8;
         /* ====================== */ } }
   .numbers .item-feedbacks {
     -ms-grid-column: 7;
@@ -317,8 +305,8 @@
     grid-column-end: 10;
     /* For IE10-11
         ======================== */
-    -ms-grid-column: 14;
-    -ms-grid-column-span: 20;
+    -ms-grid-column: 13;
+    -ms-grid-column-span: 6;
     /* ====================== */ }
     @media (max-width: 930px) {
       .numbers .item-feedbacks {
@@ -338,8 +326,8 @@
     grid-column-end: 13;
     /* For IE10-11
         ======================== */
-    -ms-grid-column: 20;
-    -ms-grid-column-span: 24;
+    -ms-grid-column: 19;
+    -ms-grid-column-span: 6;
     /* ====================== */ }
     @media (max-width: 930px) {
       .numbers .item-clients {
@@ -511,9 +499,12 @@
             justify-content: center;
     -ms-grid-column: 1;
         grid-column-start: 1;
-    -ms-grid-column-span: 12;
     grid-column-end: 13;
-    background-color: #e9e9e9; }
+    background-color: #e9e9e9;
+    /* For IE10-11
+        ======================== */
+    -ms-grid-column-span: 24;
+    /* ====================== */ }
     @media (max-width: 1030px) {
       .process-video {
         height: 540px; } }
@@ -563,28 +554,43 @@
 /* SERVICES GRID
 ==================*/
 .col-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  /* For IE10-11
+    ======================== */
   -ms-grid-column: 1;
-      grid-column-start: 1;
-  -ms-grid-column-span: 3;
-  grid-column-end: 4; }
+  -ms-grid-column-span: 6;
+  /* ====================== */ }
 
 .col-2 {
   -ms-grid-column: 4;
       grid-column-start: 4;
-  -ms-grid-column-span: 3;
-  grid-column-end: 7; }
+  grid-column-end: 7;
+  /* For IE10-11
+    ======================== */
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  /* ====================== */ }
 
 .col-3 {
   -ms-grid-column: 7;
       grid-column-start: 7;
-  -ms-grid-column-span: 3;
-  grid-column-end: 10; }
+  grid-column-end: 10;
+  /* For IE10-11
+    ======================== */
+  -ms-grid-column: 13;
+  -ms-grid-column-span: 6;
+  /* ====================== */ }
 
 .col-4 {
   -ms-grid-column: 10;
       grid-column-start: 10;
-  -ms-grid-column-span: 3;
-  grid-column-end: 13; }
+  grid-column-end: 13;
+  /* For IE10-11
+    ======================== */
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 6;
+  /* ====================== */ }
 
 .row-1 {
   -ms-grid-row: 1;
@@ -623,7 +629,20 @@
   position: absolute;
   text-align: center;
   max-width: 61%;
-  font-weight: 700; }
+  font-weight: 700;
+  /* For IE10-11
+    ======================== */
+  /* ====================== */ }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .review {
+      left: 25%;
+      right: 25%;
+      margin: 10%; } }
+  @media screen and (-ms-high-contrast: active) and (max-width: 930px), (-ms-high-contrast: none) and (max-width: 930px) {
+    .review {
+      left: 15%;
+      right: 15%;
+      margin: 15%; } }
   @media (max-width: 930px) {
     .review {
       max-width: 70%; } }
@@ -736,11 +755,18 @@
           -ms-flex-pack: space-evenly;
               justify-content: space-evenly;
       width: 100%;
-      margin-bottom: 50px; }
+      margin-bottom: 50px;
+      /* For IE10-11
+            ======================== */
+      /* ====================== */ }
       .clients-group #bottom-1 {
         margin-left: 130px; }
       .clients-group #bottom-2 {
         margin-right: 130px; } }
+  @media screen and (max-width: 930px) and (-ms-high-contrast: active), (max-width: 930px) and (-ms-high-contrast: none) {
+    .clients-group {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
 
 /* FORM DESC
 ==================*/
@@ -796,9 +822,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .contact-info .input {
-    -webkit-box-flex: .48;
-        -ms-flex: .48;
-            flex: .48; }
+    width: 48%; }
 
 .message {
   margin-bottom: 30px; }
@@ -821,8 +845,11 @@
   .footer .license {
     -ms-grid-column: 1;
         grid-column-start: 1;
-    -ms-grid-column-span: 3;
-    grid-column-end: 4; }
+    grid-column-end: 4;
+    /* For IE10-11
+        ======================== */
+    -ms-grid-column-span: 7;
+    /* ====================== */ }
     .footer .license .inc {
       margin-bottom: 27px;
       font-size: 18px;
@@ -837,11 +864,15 @@
     margin-left: 26%;
     -ms-grid-column: 5;
         grid-column-start: 5;
-    -ms-grid-column-span: 3;
     grid-column-end: 8;
     font: 400 16px "Nunito Sans", sans-serif;
     font-size: 15px;
-    letter-spacing: 0.07px; }
+    letter-spacing: 0.07px;
+    /* For IE10-11
+        ======================== */
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 6;
+    /* ====================== */ }
     .footer .contacts .email {
       padding-bottom: 6px; }
   .footer-group {
@@ -850,8 +881,16 @@
     display: flex;
     -ms-grid-column: 8;
         grid-column-start: 8;
-    -ms-grid-column-span: 3;
-    grid-column-end: 11; }
+    grid-column-end: 11;
+    /* For IE10-11
+        ======================== */
+    -ms-grid-column: 16;
+    -ms-grid-column-span: 8;
+    /* ====================== */ }
+
+@media screen and (-ms-high-contrast: active) and (max-width: 930px), (-ms-high-contrast: none) and (max-width: 930px) {
+  .footer-group {
+    -ms-grid-column: 15; } }
     .footer-group .company {
       margin-left: 26%; }
     .footer-group .events {
@@ -860,8 +899,16 @@
     margin-left: 40%;
     -ms-grid-column: 11;
         grid-column-start: 11;
+    grid-column-end: 13;
+    /* For IE10-11
+        ======================== */
+    -ms-grid-column: 22;
     -ms-grid-column-span: 2;
-    grid-column-end: 13; }
+    /* ====================== */ }
+
+@media screen and (-ms-high-contrast: active) and (max-width: 930px), (-ms-high-contrast: none) and (max-width: 930px) {
+  .footer .socials {
+    -ms-grid-column: 21; } }
 
 .inf-list {
   font: 400 16px "Nunito Sans", sans-serif;
