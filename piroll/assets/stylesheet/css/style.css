@@ -296,7 +296,7 @@
         grid-column-end: 12;
         /* For IE10-11
             ======================== */
-        -ms-grid-column: 16;
+        -ms-grid-column: 14;
         -ms-grid-column-span: 8;
         /* ====================== */ } }
   .numbers .item-feedbacks {
@@ -318,7 +318,7 @@
         /* For IE10-11
             ======================== */
         -ms-grid-column: 3;
-        -ms-grid-column-span: 14;
+        -ms-grid-column-span: 8;
         /* ====================== */ } }
   .numbers .item-clients {
     -ms-grid-column: 10;
@@ -338,8 +338,8 @@
             grid-row-start: 3;
         /* For IE10-11
             ======================== */
-        -ms-grid-column: 16;
-        -ms-grid-column-span: 22;
+        -ms-grid-column: 14;
+        -ms-grid-column-span: 8;
         /* ====================== */ } }
   .numbers-icon {
     margin-top: 2px; }
@@ -631,7 +631,6 @@
     -ms-grid-rows: .9fr .1fr;
     grid-template-rows: .9fr .1fr;
     max-width: 61%;
-    width: 61%;
     min-width: 660px;
     min-height: 300px; }
   .testimonials-inner > *:nth-child(1) {
@@ -1007,4 +1006,3 @@ a {
   letter-spacing: 1.2px; }
   .btn:hover {
     background-color: #11d0ca; }
-
