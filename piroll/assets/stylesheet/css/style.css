@@ -317,7 +317,7 @@
             grid-row-start: 3;
         /* For IE10-11
             ======================== */
-        -ms-grid-column: 4;
+        -ms-grid-column: 3;
         -ms-grid-column-span: 14;
         /* ====================== */ } }
   .numbers .item-clients {
@@ -617,23 +617,28 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
   height: 500px;
   color: #fff;
   background-color: #10c9c3; }
-  @media (max-width: 930px) {
-    .testimonials {
-      height: 440px; } }
+  .testimonials-inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: .9fr .1fr;
+    grid-template-rows: .9fr .1fr;
+    max-width: 61%;
+    min-width: 660px;
+    min-height: 300px; }
+  .testimonials-inner > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1; }
+  .testimonials-inner > *:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1; }
 
 /* REVIEW
 ==================*/
@@ -648,18 +653,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  max-width: 61%;
-  min-width: 660px;
-  min-height: 300px;
   font-weight: 700;
   text-align: center; }
-  @media (max-width: 930px) {
-    .review {
-      max-width: 70%; } }
-  @media (max-width: 800px) {
-    .review {
-      max-width: initial; } }
   .review-text {
     font-size: 24px;
     line-height: 36px;
@@ -677,14 +672,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  width: 40px;
-  height: 100%; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: 31px; }
   .pagination-buttons {
-    margin-bottom: 31px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -694,7 +687,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 100%; }
+    width: 40px; }
 
 .btn-pag {
   width: 6px;
@@ -759,7 +752,7 @@
             ======================== */
       /* ====================== */ }
       .clients-group #bottom-1 {
-        margin-left: 130px; }
+        margin-left: 100px; }
       .clients-group #bottom-2 {
         margin-right: 130px; } }
   @media screen and (max-width: 930px) and (-ms-high-contrast: active), (max-width: 930px) and (-ms-high-contrast: none) {
@@ -1013,3 +1006,4 @@ a {
   letter-spacing: 1.2px; }
   .btn:hover {
     background-color: #11d0ca; }
+
