@@ -21,6 +21,11 @@
         grid-column-start: 1;
         grid-column-end: 7;
 
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column-span: 12;
+        /* ====================== */
+
         @media (max-width: $medium) {
             margin: 102px 11.965811% 102px 0;
         }
@@ -39,6 +44,11 @@
 
             grid-column-start: 2;
             grid-column-end: 12;
+
+            /* For IE10-11
+            ======================== */
+            -ms-grid-column-span: 18;
+            /* ====================== */
         }
     }
 
@@ -75,15 +85,15 @@
         background-color: #d8d8d8;
 
         & .first {
-            flex: .75;
+            width: 75%;
         }
 
         & .second {
-            flex: .9;
+            width: 90%;
         }
 
         & .third {
-            flex: .65;
+            width: 65%;
         }
     }
 }

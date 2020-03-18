@@ -7,6 +7,12 @@
     height: $height;
 }
 
+@mixin IEcentering($centering, $margin-top) {
+    left: $centering;
+    right: $centering;
+    margin-top: $margin-top;
+}
+
 @mixin centering {
     display: flex;
     align-items: center;

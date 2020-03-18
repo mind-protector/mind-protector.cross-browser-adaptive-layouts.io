@@ -52,6 +52,10 @@
     resize: none;
 }
 
+.input {
+    margin-bottom: 30px;
+}
+
 .textarea {
     width: 100%;
 }
@@ -61,7 +65,7 @@
     justify-content: space-between;
 
     .input {
-        flex: .48;
+        width: 48%;
     }
 }
 
@@ -71,8 +75,4 @@
     .input {
         width: 100%;
     }
-}
-
-.input {
-    margin-bottom: 30px;
 }

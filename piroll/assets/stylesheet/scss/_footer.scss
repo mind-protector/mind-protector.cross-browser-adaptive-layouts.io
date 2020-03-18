@@ -13,6 +13,14 @@
         .container {
             max-width: 840px;
         }
+        /* For IE10-11
+        ======================== */
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            .container {
+                max-width: 900px;
+            }
+        }
+        /* ====================== */
     }
 
     @media (max-width: $tablet) {
@@ -21,9 +29,25 @@
         }
     }
 
+    /* For IE10-11
+    ======================== */
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @media (max-width: $final) {
+            .container {
+                max-width: 760px;
+            }
+        }
+    }
+    /* ====================== */
+
     .license {
         grid-column-start: 1;
         grid-column-end: 4;
+
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column-span: 7;
+        /* ====================== */
 
         .inc {
             margin-bottom: 27px;
@@ -52,6 +76,12 @@
         font-size: 15px;
         letter-spacing: 0.07px;
 
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 8;
+        -ms-grid-column-span: 6;
+        /* ====================== */
+
         .email {
             padding-bottom: 6px;
         }
@@ -61,6 +91,18 @@
         display: flex;
         grid-column-start: 8;
         grid-column-end: 11;
+
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 15;
+        -ms-grid-column-span: 5;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            @media (max-width: $tablet) {
+                -ms-grid-column: 15;
+            }
+        }
+        /* ====================== */
 
         .company {
             margin-left: 26%;
@@ -76,6 +118,18 @@
 
         grid-column-start: 11;
         grid-column-end: 13;
+
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 21;
+        -ms-grid-column-span: 2;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            @media (max-width: $tablet) {
+                -ms-grid-column: 21;
+            }
+        }
+        /* ====================== */
     }
 }
 

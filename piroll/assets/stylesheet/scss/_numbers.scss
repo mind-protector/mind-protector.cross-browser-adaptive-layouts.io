@@ -43,9 +43,21 @@
         grid-column-start: 1;
         grid-column-end: 4;
 
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 8;
+        /* ====================== */
+
         @media (max-width: $tablet) {
             grid-column-start: 2;
             grid-column-end: 7;
+
+            /* For IE10-11
+            ======================== */
+            -ms-grid-column: 3;
+            -ms-grid-column-span: 8;
+            /* ====================== */
         }
     }
 
@@ -53,9 +65,21 @@
         grid-column-start: 4;
         grid-column-end: 7;
 
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 7;
+        -ms-grid-column-span: 8;
+        /* ====================== */
+
         @media (max-width: $tablet) {
             grid-column-start: 8;
             grid-column-end: 12;
+
+            /* For IE10-11
+            ======================== */
+            -ms-grid-column: 14;
+            -ms-grid-column-span: 8;
+            /* ====================== */
         }
     }
 
@@ -63,11 +87,23 @@
         grid-column-start: 7;
         grid-column-end: 10;
 
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 13;
+        -ms-grid-column-span: 6;
+        /* ====================== */
+
         @media (max-width: $tablet) {
             grid-column-start: 2;
             grid-column-end: 7;
 
             grid-row-start: 3;
+
+            /* For IE10-11
+            ======================== */
+            -ms-grid-column: 3;
+            -ms-grid-column-span: 8;
+            /* ====================== */
         }
     }
 
@@ -75,11 +111,23 @@
         grid-column-start: 10;
         grid-column-end: 13;
 
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 19;
+        -ms-grid-column-span: 6;
+        /* ====================== */
+
         @media (max-width: $tablet) {
             grid-column-start: 8;
             grid-column-end: 12;
 
             grid-row-start: 3;
+
+            /* For IE10-11
+            ======================== */
+            -ms-grid-column: 14;
+            -ms-grid-column-span: 8;
+            /* ====================== */
         }
     }
 

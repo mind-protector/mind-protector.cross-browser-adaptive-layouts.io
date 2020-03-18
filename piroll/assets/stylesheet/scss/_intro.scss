@@ -30,6 +30,14 @@
     grid-column-start: 1;
     grid-column-end: 13;
 
+    /* For IE10-11
+    ======================== */
+    height: 25px;
+
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 24;
+    /* ====================== */
+
     @media (max-width: $tablet) {
         font-size: 11px;
     }
@@ -64,17 +72,33 @@
     grid-column-start: 7;
     grid-column-end: 13;
 
+    /* For IE10-11
+    ======================== */
+    -ms-grid-column: 14;
+    -ms-grid-column-span: 24;
+    /* ====================== */
+
     @media (max-width: $laptop) {
         padding: 0;
     }
 
     @media (max-width: $netbook) {
         grid-column-start: 6;
+
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 10;
+        /* ====================== */
     }
 
     @media (max-width: $tablet) {
         margin-top: 140px;
         grid-column-start: 5;
+
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column: 8;
+        /* ====================== */
     }
 
     &-title {

@@ -7,6 +7,17 @@
     padding-top: 72px;
     background-color: $third-color;
 
+    /* For IE10-11
+    ======================== */
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @media (max-width: $netbook) {
+            .container {
+                max-width: 1000px;
+            }
+        }
+    }
+    /* ====================== */
+
     @media (max-width: $tablet) {
         .container {
             max-width: 790px;
@@ -14,13 +25,19 @@
     }
 
     &-item {
+        position: relative;
         max-width: 231px;
-        margin: 0 auto;
         text-align: center;
     }
 
+    &-text {
+        position: absolute;
+        top: 0;
+        margin-top: 80px;
+    }
+
     &-subject {
-        margin: 30px 0 20px 0;
+        margin-bottom: 20px;
         text-transform: uppercase;
         letter-spacing: 1.2px;
 
@@ -46,21 +63,45 @@
 .col-1 {
     grid-column-start: 1;
     grid-column-end: 4;
+
+    /* For IE10-11
+    ======================== */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    /* ====================== */
 }
 
 .col-2 {
     grid-column-start: 4;
     grid-column-end: 7;
+
+    /* For IE10-11
+    ======================== */
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    /* ====================== */
 }
 
 .col-3 {
     grid-column-start: 7;
     grid-column-end: 10;
+
+    /* For IE10-11
+    ======================== */
+    -ms-grid-column: 13;
+    -ms-grid-column-span: 6;
+    /* ====================== */
 }
 
 .col-4 {
     grid-column-start: 10;
     grid-column-end: 13;
+
+    /* For IE10-11
+    ======================== */
+    -ms-grid-column: 19;
+    -ms-grid-column-span: 6;
+    /* ====================== */
 }
 
 .row-1 {

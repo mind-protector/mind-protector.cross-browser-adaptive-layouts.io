@@ -47,12 +47,19 @@
             margin-bottom: 50px;
 
             #bottom-1 {
-                margin-left: 130px;
+                margin-left: 100px;
             }
 
             #bottom-2 {
                 margin-right: 130px;
             }
+
+            /* For IE10-11
+            ======================== */
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                justify-content: space-around;
+            }
+            /* ====================== */
         }
     }
 }

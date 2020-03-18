@@ -45,6 +45,11 @@
         grid-column-end: 13;
         background-color: $secondary-color;
 
+        /* For IE10-11
+        ======================== */
+        -ms-grid-column-span: 24;
+        /* ====================== */
+
         @media (max-width: $netbook) {
             height: 540px;
         }
