@@ -631,6 +631,7 @@
     -ms-grid-rows: .9fr .1fr;
     grid-template-rows: .9fr .1fr;
     max-width: 61%;
+    width: 61%;
     min-width: 660px;
     min-height: 300px; }
   .testimonials-inner > *:nth-child(1) {
