@@ -1,4 +1,4 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
 /* IMPORTS
 ==================*/
@@ -86,7 +86,7 @@
       grid-column-start: 6;
       /* For IE10-11
         ======================== */
-      -ms-grid-column: 12;
+      -ms-grid-column: 10;
       /* ====================== */ } }
   @media (max-width: 930px) {
     .banner {
@@ -528,16 +528,27 @@
 .services {
   height: 535px;
   padding-top: 72px;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  /* For IE10-11
+    ======================== */
+  /* ====================== */ }
+
+@media screen and (-ms-high-contrast: active) and (max-width: 1030px), (-ms-high-contrast: none) and (max-width: 1030px) {
+  .services .container {
+    max-width: 1000px; } }
   @media (max-width: 930px) {
     .services .container {
       max-width: 790px; } }
   .services-item {
+    position: relative;
     max-width: 231px;
-    margin: 0 auto;
     text-align: center; }
+  .services-text {
+    position: absolute;
+    top: 0;
+    margin-top: 80px; }
   .services-subject {
-    margin: 30px 0 20px 0;
+    margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1.2px; }
     @media (max-width: 930px) {
@@ -588,7 +599,7 @@
   grid-column-end: 13;
   /* For IE10-11
     ======================== */
-  -ms-grid-column: 9;
+  -ms-grid-column: 18;
   -ms-grid-column-span: 6;
   /* ====================== */ }
 
@@ -637,12 +648,17 @@
     .review {
       left: 25%;
       right: 25%;
-      margin: 10%; } }
+      margin-top: 10%; } }
+  @media screen and (-ms-high-contrast: active) and (max-width: 1030px), (-ms-high-contrast: none) and (max-width: 1030px) {
+    .review {
+      left: 20%;
+      right: 20%;
+      margin-top: 14%; } }
   @media screen and (-ms-high-contrast: active) and (max-width: 930px), (-ms-high-contrast: none) and (max-width: 930px) {
     .review {
       left: 15%;
       right: 15%;
-      margin: 15%; } }
+      margin-top: 15%; } }
   @media (max-width: 930px) {
     .review {
       max-width: 70%; } }
@@ -835,7 +851,14 @@
   height: 284px;
   padding-top: 99px;
   color: #bcbcbc;
-  background-color: #141414; }
+  background-color: #141414;
+  /* For IE10-11
+    ======================== */
+  /* ====================== */ }
+
+@media screen and (-ms-high-contrast: active) and (max-width: 1030px), (-ms-high-contrast: none) and (max-width: 1030px) {
+  .footer .container {
+    max-width: 900px; } }
   @media (max-width: 1030px) {
     .footer .container {
       max-width: 840px; } }
@@ -870,7 +893,7 @@
     letter-spacing: 0.07px;
     /* For IE10-11
         ======================== */
-    -ms-grid-column: 9;
+    -ms-grid-column: 8;
     -ms-grid-column-span: 6;
     /* ====================== */ }
     .footer .contacts .email {
@@ -884,8 +907,8 @@
     grid-column-end: 11;
     /* For IE10-11
         ======================== */
-    -ms-grid-column: 16;
-    -ms-grid-column-span: 8;
+    -ms-grid-column: 15;
+    -ms-grid-column-span: 5;
     /* ====================== */ }
 
 @media screen and (-ms-high-contrast: active) and (max-width: 930px), (-ms-high-contrast: none) and (max-width: 930px) {
@@ -902,7 +925,7 @@
     grid-column-end: 13;
     /* For IE10-11
         ======================== */
-    -ms-grid-column: 22;
+    -ms-grid-column: 21;
     -ms-grid-column-span: 2;
     /* ====================== */ }
 
