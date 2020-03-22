@@ -1,0 +1,33 @@
+
+/* IMPORTS
+==================*/
+
+@import "_vars.scss";
+@import "_mixins.scss";
+@import "_intro.scss";
+
+/* SETTINGS
+==================*/
+
+body, main {
+    min-width: $final;
+}
+
+main {
+    height: 200vh;
+
+    font: $primary-font;
+    color: $black-color;
+}
+
+.main-color {
+    color: $primary-color
+}
+
+.title {
+    margin-bottom: 5px;
+    font: $title-font;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

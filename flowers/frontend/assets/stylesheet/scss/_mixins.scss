@@ -1,0 +1,12 @@
+
+/* MIXINS
+==================*/
+
+@mixin size($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin bg-fixed($img) {
+    background: url('../../images/intro/#{$img}') no-repeat center center fixed;
+}
