@@ -162,7 +162,13 @@
   width: 155px;
   height: 150px;
   position: absolute;
-  top: 40%; }
+  top: 40%;
+  /* For IE10-11
+    ======================== */
+  /* ====================== */ }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .rounds {
+      left: 45%; } }
   @media (max-width: 1180px) {
     .rounds {
       top: 45%; } }
