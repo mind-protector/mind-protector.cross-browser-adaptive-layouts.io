@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /* IMPORTS
 ==================*/
 /* BREAKPOINTS
@@ -61,7 +63,8 @@
     background-color: #e1797a !important;
     border-color: #e1797a !important; }
   .btn-pink:focus, .btn-pink:active {
-    box-shadow: 0 0 0 0.2rem rgba(225, 121, 122, 0.5) !important; }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(225, 121, 122, 0.5) !important;
+            box-shadow: 0 0 0 0.2rem rgba(225, 121, 122, 0.5) !important; }
 
 /* INTRO
 ==================*/
@@ -82,9 +85,15 @@
 ==================*/
 .carousel-info {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   left: 10%;
   z-index: 999; }
@@ -92,7 +101,8 @@
 .carousel-caption {
   padding-bottom: 65px !important;
   width: 100%;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   position: static !important;
   text-shadow: 1px 1px 10px #000; }
   @media (min-width: 1570px) {
@@ -206,4 +216,3 @@ main {
   font: 400 69px "PT Mono", monospace;
   text-transform: uppercase;
   letter-spacing: 2px; }
-
