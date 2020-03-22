@@ -118,7 +118,7 @@
       margin: 0 auto; } }
   @media (max-width: 529px) {
     .carousel-caption {
-      padding-bottom: 35px !important; }
+      padding-bottom: 30px !important; }
       .carousel-caption .title {
         font-size: 30px; }
       .carousel-caption .subtitle {
@@ -161,7 +161,7 @@
       top: 50%; } }
   @media (max-width: 560px) {
     .rounds {
-      top: 28%; } }
+      top: 27%; } }
   @media (min-width: 1570px) {
     .rounds {
       top: 50%; } }
