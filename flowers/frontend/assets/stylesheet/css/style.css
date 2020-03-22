@@ -11,7 +11,7 @@
 /* NAVIGATION
 ==================*/
 .navbar {
-  min-width: 382px;
+  min-width: 368px;
   background-color: rgba(255, 255, 255, 0.9); }
 
 .navbar-brand {
@@ -178,7 +178,7 @@
 /* SETTINGS
 ==================*/
 body, main {
-  min-width: 382px; }
+  min-width: 368px; }
 
 main {
   height: 200vh;
