@@ -118,7 +118,7 @@
       margin: 0 auto; } }
   @media (max-width: 529px) {
     .carousel-caption {
-      padding-bottom: 30px !important; }
+      padding-bottom: 15px !important; }
       .carousel-caption .title {
         font-size: 30px; }
       .carousel-caption .subtitle {
