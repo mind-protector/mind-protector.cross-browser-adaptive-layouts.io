@@ -11,7 +11,7 @@
 /* NAVIGATION
 ==================*/
 .navbar {
-  min-width: 400px;
+  min-width: 382px;
   background-color: rgba(255, 255, 255, 0.9); }
 
 .navbar-brand {
@@ -120,7 +120,9 @@
       max-width: 94%; } }
   @media (max-width: 440px) {
     .carousel-caption .title {
-      font-size: 26px; } }
+      font-size: 26px; }
+    .carousel-caption .subtitle {
+      max-width: 96%; } }
 
 .carousel-item {
   background-size: cover !important; }
@@ -176,7 +178,7 @@
 /* SETTINGS
 ==================*/
 body, main {
-  min-width: 400px; }
+  min-width: 382px; }
 
 main {
   height: 200vh;
@@ -191,3 +193,4 @@ main {
   font: 400 69px "PT Mono", monospace;
   text-transform: uppercase;
   letter-spacing: 2px; }
+
