@@ -68,6 +68,9 @@
 .intro {
   height: 661px;
   color: #fff; }
+  @media (max-width: 560px) {
+    .intro {
+      height: 50vh; } }
   @media (min-width: 1366px) {
     .intro {
       height: 80vh; } }
@@ -123,6 +126,11 @@
       font-size: 26px; }
     .carousel-caption .subtitle {
       max-width: 96%; } }
+  @media (max-width: 390px) {
+    .carousel-caption .title {
+      font-size: 24px; }
+    .carousel-caption .subtitle {
+      max-width: 100%; } }
 
 .carousel-item {
   background-size: cover !important; }
@@ -143,13 +151,16 @@
   height: 150px;
   position: absolute;
   top: 40%; }
-  @media (min-width: 1570px) {
-    .rounds {
-      top: 50%; } }
   @media (max-width: 1180px) {
     .rounds {
       top: 45%; } }
   @media (max-width: 785px) {
+    .rounds {
+      top: 50%; } }
+  @media (max-width: 560px) {
+    .rounds {
+      top: 30%; } }
+  @media (min-width: 1570px) {
     .rounds {
       top: 50%; } }
 
