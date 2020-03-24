@@ -505,25 +505,25 @@
 
 <script type="text/javascript">
 
-    const currenciesChars = new Map([
-        ['rub', '₽'],
-        ['usd', '$'],
-        ['eur', '€']
-    ])
-
-    const currenciesNote = new Map([
-        ['rub', 'Руб'],
-        ['usd', 'USD'],
-        ['eur', 'EUR']
-    ])
-
     var flag = 'ru'
 
     $("#cur-3 .icon-checked").attr('style','opacity: 1;')
 
     function changeCurrency(currency) {
-        $(".currency").text(currenciesChars.get(currency))
-        $(".currency-note").text(currenciesNote.get(currency))
+        switch (currency) {
+            case 'rub':
+                $(".currency").text('₽')
+                $(".currency-note").text('Руб')
+                break
+            case 'usd':
+                $(".currency").text('$')
+                $(".currency-note").text('USD')
+                break
+            case 'eur':
+                $(".currency").text('€')
+                $(".currency-note").text('EUR')
+                break
+        }
     }
 
     function changeFlag() {
