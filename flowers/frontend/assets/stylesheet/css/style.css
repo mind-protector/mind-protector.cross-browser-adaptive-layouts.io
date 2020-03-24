@@ -31,6 +31,12 @@
   height: 24px !important; }
 
 .icon-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 3px 20px 0 10px; }
   @media (max-width: 991px) {
     .icon-item {
@@ -43,7 +49,7 @@
     padding: inherit; }
   @media (max-width: 991px) {
     .btn-item {
-      margin-top: 10px;
+      margin-top: 7px;
       padding: 3px 3px 3px 0 !important; } }
 
 .fa-user {
@@ -60,96 +66,167 @@
 .filters-lg {
   width: 144px !important; }
 
-.dropdown-menu {
+.filters-menu {
   width: 936px;
   left: -90% !important; }
   @media (max-width: 991px) {
-    .dropdown-menu {
+    .filters-menu {
       width: 790px;
       max-height: 600px;
       overflow: auto;
       left: -180% !important; } }
   @media (max-width: 870px) {
-    .dropdown-menu {
+    .filters-menu {
       left: -195% !important; } }
   @media (max-width: 767px) {
-    .dropdown-menu {
+    .filters-menu {
       width: 566px;
       left: -130% !important; } }
   @media (max-width: 640px) {
-    .dropdown-menu {
+    .filters-menu {
       width: 566px;
       left: -120% !important; } }
   @media (max-width: 576px) {
-    .dropdown-menu {
+    .filters-menu {
       width: 366px;
       left: -60% !important; } }
   @media (max-width: 444px) {
-    .dropdown-menu {
+    .filters-menu {
       left: 10% !important; } }
   @media (max-width: 420px) {
-    .dropdown-menu {
+    .filters-menu {
       left: 4% !important; } }
   @media (max-width: 400px) {
-    .dropdown-menu {
+    .filters-menu {
       left: -5% !important; } }
   @media (max-width: 363px) {
-    .dropdown-menu {
+    .filters-menu {
       left: -12% !important; } }
-
-.inline-input {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important; }
 
 .dropdown-item:focus, .dropdown-item:active {
   background-color: #f8f8f8 !important;
   color: initial !important; }
 
 .inline-input {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 !important; }
   .inline-input label, .inline-input input {
-    margin: 0;
     padding: 0; }
   .inline-input input[type="checkbox"],
   .inline-input input[type="radio"] {
-    width: auto; }
+    display: none; }
+
+/* Checkboxes and radio buttons */
+.fake {
+  display: inline-block;
+  position: relative;
+  width: 16px !important;
+  height: 16px !important;
+  border: 1px solid #000; }
+  .fake::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 9px !important;
+    height: 9px !important;
+    background-color: #ecabac;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear;
+    opacity: 0; }
+    input[type="checkbox"]:checked + .fake::before {
+      opacity: 1; }
+    input[type="radio"]:checked + .fake::before {
+      width: 8px !important;
+      height: 8px !important;
+      border-radius: 4px;
+      opacity: 1; }
+
+.checkbox {
+  border-radius: 3px; }
+
+.radio {
+  border-radius: 8px; }
+
+@media (max-width: 767px) {
+  .margins-md {
+    margin-bottom: 10px !important; } }
 
 @media (max-width: 576px) {
   .none-margins {
     margin: 0 !important; } }
 
 @media (max-width: 576px) {
-  .none-paddings {
+  .none-paddings-sm {
     padding: 0 !important; } }
+
+.none-paddings {
+  padding-right: 0 !important; }
 
 @media (max-width: 576px) {
   .color-filters {
     padding-left: 1.5rem !important; } }
 
-.size-item {
-  padding-right: .65rem !important; }
+.small-paddings-item {
+  padding-right: .3rem !important; }
   @media (max-width: 576px) {
-    .size-item {
+    .small-paddings-item {
       padding: .25rem 1.5rem !important; } }
 
-.sort-item {
-  padding-right: .7rem !important; }
-  @media (max-width: 576px) {
-    .sort-item {
+.small-paddings-md-item {
+  padding-right: .3rem !important; }
+  @media (max-width: 991px) {
+    .small-paddings-md-item {
       padding: .25rem 1.5rem !important; } }
+
+.fa-star {
+  font-size: 18px;
+  margin-right: 5px; }
+
+.popular {
+  font-weight: 700; }
+
+.fa-star, .popular {
+  color: #ffd92e !important; }
+
+.icon-checked {
+  opacity: 0;
+  -webkit-transition: .1s linear;
+  -o-transition: .1s linear;
+  transition: .1s linear; }
+
+.white-icon {
+  color: #fff; }
 
 .b-size {
   font-size: 13px; }
 
 .b-color {
   display: inline-block;
-  border-width: 2px !important;
-  padding: 0 !important;
+  position: relative;
   width: 33px !important;
-  height: 33px !important; }
+  height: 33px !important;
+  border-width: 2px !important;
+  padding: 0 !important; }
   .b-color, .b-color img {
     vertical-align: initial !important; }
   .b-color:focus, .b-color:active {
@@ -225,6 +302,27 @@
   background: -webkit-gradient(linear, left top, left bottom, from(crimson), color-stop(gold), color-stop(yellowgreen), color-stop(teal), to(crimson)) !important;
   background: -o-linear-gradient(crimson, gold, yellowgreen, teal, crimson) !important;
   background: linear-gradient(crimson, gold, yellowgreen, teal, crimson) !important; }
+
+/* Currencies
+==================*/
+.currencies-menu {
+  min-width: 120px !important; }
+
+.currencies-item {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .25rem 1rem !important;
+  font-size: 20px;
+  cursor: pointer; }
+  .currencies-item:last-child {
+    margin: 0; }
 
 /* INTRO
 ==================*/
@@ -393,3 +491,6 @@ main {
   .btn-pink:focus, .btn-pink:active {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(225, 121, 122, 0.5) !important;
             box-shadow: 0 0 0 0.2rem rgba(225, 121, 122, 0.5) !important; }
+
+label {
+  cursor: pointer; }
