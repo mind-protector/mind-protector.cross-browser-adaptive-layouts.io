@@ -37,138 +37,175 @@
             <div class="navbar-buttons">
                 <div class="dropdown">
                     <button class="btn btn-pink dropdown-toggle filters filters-lg" type="button"
-                    id="filtersMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Фильтры</button>
-                    <div class="dropdown-menu" aria-labelledby="filtersMenuButton">
+                    id="filtersMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Фильтры</button>
+                    <div class="dropdown-menu filters-menu" aria-labelledby="filtersMenu">
                         <form action="/" method="POST">
                             <div class="row">
                                 <div class="col-sm-5 col-md-4">
 
                                     <span class="dropdown-header">Тип</span>
                                     <div class="dropdown-divider"></div>
-                                    <div class="dropdown-item inline-input">
-                                        <label class="dropdown-item">Классика</label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Классика</span>
                                         <input class="dropdown-item" type="checkbox" name="classics">
-                                    </div>
-                                    <div class="dropdown-item inline-input">
-                                        <label class="dropdown-item">Коробки</label>
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Коробки</span>
                                         <input class="dropdown-item" type="checkbox" name="boxes">
-                                    </div>
-                                    <div class="dropdown-item inline-input">
-                                        <label class="dropdown-item">Корзинки</label>
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Корзинки</span>
                                         <input class="dropdown-item" type="checkbox" name="baskets">
-                                    </div>
-                                    <div class="dropdown-item inline-input">
-                                        <label class="dropdown-item">Свадебные</label>
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Свадебные</span>
                                         <input class="dropdown-item" type="checkbox" name="weddings">
-                                    </div>
-                                    <div class="dropdown-item inline-input">
-                                        <label class="dropdown-item">Комнатные</label>
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Комнатные</span>
                                         <input class="dropdown-item" type="checkbox" name="indoors">
-                                    </div>
-                                    <div class="dropdown-item inline-input">
-                                        <label class="dropdown-item">Со скидкой</label>
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Со скидкой</span>
                                         <input class="dropdown-item" type="checkbox" name="sale">
-                                    </div>
+                                        <span class="fake checkbox"></span>
+                                    </label>
                                     <div class="dropdown-divider"></div>
 
                                     <span class="dropdown-header">Размер</span>
-                                    <div class="dropdown-item inline-input size-item">
-                                        <label class="dropdown-item">Маленький <span class="b-size">(10x10см)</span></label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Маленький <span class="b-size">(10x10см)</span></span>
                                         <input class="dropdown-item" type="checkbox" name="small">
-                                    </div>
-                                    <div class="dropdown-item inline-input size-item">
-                                        <label class="dropdown-item">Средний <span class="b-size">(25x25см)</span></label>
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Средний <span class="b-size">(25x25см)</span></span>
                                         <input class="dropdown-item" type="checkbox" name="medium">
-                                    </div>
-                                    <div class="dropdown-item inline-input size-item">
-                                        <label class="dropdown-item">Большой <span class="b-size">(40x40см)</span></label>
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Большой <span class="b-size">(40x40см)</span></span>
                                         <input class="dropdown-item" type="checkbox" name="large">
-                                    </div>
-                                    <div class="dropdown-item inline-input size-item">
-                                        <label class="dropdown-item">Огромный <span class="b-size">(55x55см)</span></label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Огромный <span class="b-size">(55x55см)</span></span>
+                                        <input class="dropdown-item" type="checkbox" name="huge">
+                                        <span class="fake checkbox"></span>
+                                    </label>
                                 </div> <!-- col-sm-5 col-md-4 -->
-                                <div class="col-sm-7 row none-margins">
+                                <div class="col-sm-7 col-md-8 row none-margins">
 
-                                    <div class="col-md-6 none-paddings">
+                                    <div class="col-md-6 none-paddings-sm">
                                         <span class="dropdown-header">Сортировка</span>
                                         <div class="dropdown-divider"></div>
-                                        <div class="dropdown-item inline-input sort-item">
-                                            <label class="dropdown-item">Цена/Качество</label>
-                                            <input class="dropdown-item" type="radio" checked name="sort">
-                                        </div>
-                                        <div class="dropdown-item inline-input sort-item">
-                                            <label class="dropdown-item">Сначала новые</label>
+                                        <label class="dropdown-item inline-input small-paddings-item">
+                                            <span>Цена/Качество</span>
+                                            <input class="dropdown-item" type="radio" name="sort" checked>
+                                            <span class="fake radio"></span>
+                                        </label>
+                                        <label class="dropdown-item inline-input small-paddings-item">
+                                            <span>Сначала новые</span>
                                             <input class="dropdown-item" type="radio" name="sort">
-                                        </div>
-                                        <div class="dropdown-item inline-input sort-item">
-                                            <label class="dropdown-item">Сначала дешевые</label>
+                                            <span class="fake radio"></span>
+                                        </label>
+                                        <label class="dropdown-item inline-input small-paddings-item">
+                                            <span>Сначала дешевые</span>
                                             <input class="dropdown-item" type="radio" name="sort">
-                                        </div>
+                                            <span class="fake radio"></span>
+                                        </label>
                                         <div class="dropdown-divider"></div>
 
-                                        <span class="dropdown-header">Цена</span>
+                                        <span class="dropdown-header">Цена <span class="currency">₽</span></span>
                                         <div class="dropdown-item inline-input">
-                                            <label class="dropdown-item">От</label>
-                                            <input class="dropdown-item" type="text" name="from" value="2000" maxlength="5">
+                                            <label class="dropdown-item" for="from">От</label>
+                                            <input class="dropdown-item" type="text" name="from" id="from" value="1" maxlength="5">
                                         </div>
                                         <div class="dropdown-item inline-input">
-                                            <label class="dropdown-item">До</label>
-                                            <input class="dropdown-item" type="text" name="to" value="10000" maxlength="5">
+                                            <label class="dropdown-item" for="to">До</label>
+                                            <input class="dropdown-item" type="text" name="to" id="to" value="99999" maxlength="5">
                                         </div>
                                     </div> <!-- col-sm-7 row none-margins -->
 
-                                    <div class="col-md-6 none-paddings">
-                                        <span class="dropdown-header">Популярные</span>
+                                    <div class="col-md-6 none-paddings-sm none-paddings">
+                                        <span class="dropdown-header popular"><i class="fa fa-star"></i>Популярные</span>
                                         <div class="dropdown-divider"></div>
 
-                                        <div class="dropdown-item inline-input sort-item">
-                                            <label class="dropdown-item">Альстромерии</label>
-                                            <input class="dropdown-item" type="checkbox" name="ex-large">
-                                        </div>
-                                        <div class="dropdown-item inline-input sort-item">
-                                            <label class="dropdown-item">Амариллисы</label>
-                                            <input class="dropdown-item" type="checkbox" name="ex-large">
-                                        </div>
-                                        <div class="dropdown-item inline-input sort-item">
-                                            <label class="dropdown-item">Анемоны</label>
-                                            <input class="dropdown-item" type="checkbox" name="ex-large">
-                                        </div>
-                                        <div class="dropdown-item inline-input sort-item">
-                                            <label class="dropdown-item">Астры</label>
-                                            <input class="dropdown-item" type="checkbox" name="ex-large">
-                                        </div>
-                                        <div class="dropdown-item inline-input sort-item">
-                                            <label class="dropdown-item">Васильки</label>
-                                            <input class="dropdown-item" type="checkbox" name="ex-large">
-                                        </div>
-                                    </div> <!-- col-md-6 none-paddings -->
+                                        <label class="dropdown-item inline-input small-paddings-item">
+                                            <span>Розы</span>
+                                            <input class="dropdown-item" type="checkbox" name="roses">
+                                            <span class="fake checkbox"></span>
+                                        </label>
+                                        <label class="dropdown-item inline-input small-paddings-item">
+                                            <span>Тюльпаны</span>
+                                            <input class="dropdown-item" type="checkbox" name="tulips">
+                                            <span class="fake checkbox"></span>
+                                        </label>
+                                        <label class="dropdown-item inline-input small-paddings-item">
+                                            <span>Пионы</span>
+                                            <input class="dropdown-item" type="checkbox" name="peonies">
+                                            <span class="fake checkbox"></span>
+                                        </label>
+                                        <label class="dropdown-item inline-input small-paddings-item">
+                                            <span>Пионовидные розы</span>
+                                            <input class="dropdown-item" type="checkbox" name="peony_roses">
+                                            <span class="fake checkbox"></span>
+                                        </label>
+                                        <label class="dropdown-item inline-input small-paddings-item">
+                                            <span>Хризантемы</span>
+                                            <input class="dropdown-item" type="checkbox" name="сhrysanthemums">
+                                            <span class="fake checkbox"></span>
+                                        </label>
+                                    </div> <!-- col-md-6 none-paddings-sm -->
 
-                                    <div class="col-md-11 none-paddings">
+                                    <div class="col-md-11 none-paddings-sm">
                                         <span class="dropdown-header">Цвет</span>
                                         <div class="dropdown-divider"></div>
                                         <div class="color-filters">
-                                            <button class="btn btn-default b-color red" type="button"
-                                            name="red" value="false" onclick="bcolorBorderChange('red')"></button>
+                                            <button class="btn btn-default b-color red margins-md" type="button"
+                                            name="red" value="false" onclick="bcolorChecked('red')">
+                                                <i class="fa fa-check icon-checked"></i>
+                                            </button>
                                             <button class="btn btn-default b-color pink" type="button"
-                                            name="pink" value="false" onclick="bcolorBorderChange('pink')"></button>
+                                            name="pink" value="false" onclick="bcolorChecked('pink')">
+                                                <i class="fa fa-check icon-checked"></i>
+                                            </button>
                                             <button class="btn btn-default b-color orange" type="button"
-                                            name="orange" value="false" onclick="bcolorBorderChange('orange')"></button>
+                                            name="orange" value="false" onclick="bcolorChecked('orange')">
+                                                <i class="fa fa-check icon-checked"></i>
+                                            </button>
                                             <button class="btn btn-default b-color yellow" type="button"
-                                            name="yellow" value="false" onclick="bcolorBorderChange('yellow')"></button>
+                                            name="yellow" value="false" onclick="bcolorChecked('yellow')">
+                                                <i class="fa fa-check icon-checked"></i>
+                                            </button>
                                             <button class="btn btn-default b-color green" type="button"
-                                            name="green" value="false" onclick="bcolorBorderChange('green')"></button>
+                                            name="green" value="false" onclick="bcolorChecked('green')">
+                                                <i class="fa fa-check icon-checked"></i>
+                                            </button>
                                             <button class="btn btn-default b-color blue" type="button"
-                                            name="blue" value="false" onclick="bcolorBorderChange('blue')"></button>
+                                            name="blue" value="false" onclick="bcolorChecked('blue')">
+                                                <i class="fa fa-check icon-checked"></i>
+                                            </button>
                                             <button class="btn btn-default b-color purple" type="button"
-                                            name="purple" value="false" onclick="bcolorBorderChange('purple')"></button>
+                                            name="purple" value="false" onclick="bcolorChecked('purple')">
+                                                <i class="fa fa-check icon-checked"></i>
+                                            </button>
                                             <button class="btn btn-default b-color black" type="button"
-                                            name="black" value="false" onclick="bcolorBorderChange('black')"></button>
+                                            name="black" value="false" onclick="bcolorChecked('black')">
+                                                <i class="fa fa-check icon-checked white-icon"></i>
+                                            </button>
                                             <button class="btn btn-default b-color white" type="button"
-                                            name="white" value="false" onclick="bcolorBorderChange('white')"></button>
+                                            name="white" value="false" onclick="bcolorChecked('white')">
+                                                <i class="fa fa-check icon-checked"></i>
+                                            </button>
                                             <button class="btn btn-default b-color multi-color" type="button"
-                                            name="multi-color" value="false" onclick="bcolorBorderChange('multi-color')">
+                                            name="multi-color" value="false" onclick="bcolorChecked('multi-color')">
+                                                <i class="fa fa-check icon-checked"></i>
                                             </button>
                                         </div>
                                     </div> <!-- col-md-11 none-paddings -->
@@ -185,175 +222,208 @@
                                 <div class="col-md-6 col-lg-3">
 
                                     <span class="dropdown-header">A</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Альстромерии</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Амариллисы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Анемоны</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Астры</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Альстромерии</span>
+                                        <input class="dropdown-item" type="checkbox" name="alstromerias">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Амариллисы</span>
+                                        <input class="dropdown-item" type="checkbox" name="amaryllis">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Анемоны</span>
+                                        <input class="dropdown-item" type="checkbox" name="anemones">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Астры</span>
+                                        <input class="dropdown-item" type="checkbox" name="asters">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">В</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Васильки</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Васильки</span>
+                                        <input class="dropdown-item" type="checkbox" name="cornflowers">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">Г</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Гвоздики</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Георгины</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Герберы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Гицианты</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Гвоздики</span>
+                                        <input class="dropdown-item" type="checkbox" name="сarnations">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Георгины</span>
+                                        <input class="dropdown-item" type="checkbox" name="dahlias">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Герберы</span>
+                                        <input class="dropdown-item" type="checkbox" name="gerberas">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Гиацинты</span>
+                                        <input class="dropdown-item" type="checkbox" name="hyacinths">
+                                        <span class="fake checkbox"></span>
+                                    </label>
                                 </div> <!-- col-md-6 col-lg-3 -->
 
                                 <div class="col-md-6 col-lg-3">
 
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Гладиолусы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Голландская роза</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Гортензии</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Гладиолусы</span>
+                                        <input class="dropdown-item" type="checkbox" name="gladiolus">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Голландская роза</span>
+                                        <input class="dropdown-item" type="checkbox" name="dutch_rose">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Гортензии</span>
+                                        <input class="dropdown-item" type="checkbox" name="hydrangeas">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">И</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Ирисы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Ирис</span>
+                                        <input class="dropdown-item" type="checkbox" name="iris">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">К</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Каллы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Колокольчики</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Кустовые розы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Каллы</span>
+                                        <input class="dropdown-item" type="checkbox" name="сalla_lilies">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Колокольчики</span>
+                                        <input class="dropdown-item" type="checkbox" name="bells">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Кустовые розы</span>
+                                        <input class="dropdown-item" type="checkbox" name="shrub_roses">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">Л</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Лаванда</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Ландыши</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Лаванда</span>
+                                        <input class="dropdown-item" type="checkbox" name="lavender">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Ландыши</span>
+                                        <input class="dropdown-item" type="checkbox" name="may-lily">
+                                        <span class="fake checkbox"></span>
+                                    </label>
                                 </div> <!-- col-md-6 col-lg-3 -->
 
                                 <div class="col-md-6 col-lg-3">
 
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Лилии</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input small-paddings-md-item">
+                                        <span>Лилии</span>
+                                        <input class="dropdown-item" type="checkbox" name="lilies">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">М</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Матрикарии</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Махровые тюльпаны</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Мимозы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input small-paddings-md-item">
+                                        <span>Матрикарии</span>
+                                        <input class="dropdown-item" type="checkbox" name="matricaria">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-md-item">
+                                        <span>Махровые тюльпаны</span>
+                                        <input class="dropdown-item" type="checkbox" name="terry_tulips">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-md-item">
+                                        <span>Мимозы</span>
+                                        <input class="dropdown-item" type="checkbox" name="mimosa">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">Н</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Нарциссы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input small-paddings-md-item">
+                                        <span>Нарциссы</span>
+                                        <input class="dropdown-item" type="checkbox" name="daffodils">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">О</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Орхидеи</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input small-paddings-md-item">
+                                        <span>Орхидеи</span>
+                                        <input class="dropdown-item" type="checkbox" name="orchids">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">П</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Подснежники</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Подсолнухи</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input small-paddings-md-item">
+                                        <span>Подснежники</span>
+                                        <input class="dropdown-item" type="checkbox" name="snowdrops">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-md-item">
+                                        <span>Подсолнухи</span>
+                                        <input class="dropdown-item" type="checkbox" name="sunflowers">
+                                        <span class="fake checkbox"></span>
+                                    </label>
                                 </div> <!-- col-md-6 col-lg-3 -->
 
                                 <div class="col-md-6 col-lg-3">
 
                                     <span class="dropdown-header">Р</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Ранункулюсы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Роза Эквадор</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Ромашки</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Ранунклюсы</span>
+                                        <input class="dropdown-item" type="checkbox" name="ranunklyusy">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Роза Эквадор</span>
+                                        <input class="dropdown-item" type="checkbox" name="rosa_ecuador">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Ромашки</span>
+                                        <input class="dropdown-item" type="checkbox" name="daisies">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">С</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Сирень</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Суккуленты</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Сирень</span>
+                                        <input class="dropdown-item" type="checkbox" name="lilac">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Суккуленты</span>
+                                        <input class="dropdown-item" type="checkbox" name="succulents">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">Ф</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Фрезии</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Фрезии</span>
+                                        <input class="dropdown-item" type="checkbox" name="freesia">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                     <span class="dropdown-header">Э</span>
-                                    <div class="dropdown-item inline-input sort-item">
-                                        <label class="dropdown-item">Эустомы</label>
-                                        <input class="dropdown-item" type="checkbox" name="ex-large">
-                                    </div>
+                                    <label class="dropdown-item inline-input">
+                                        <span>Эустомы</span>
+                                        <input class="dropdown-item" type="checkbox" name="eustomas">
+                                        <span class="fake checkbox"></span>
+                                    </label>
 
                                 </div> <!-- col-md-6 col-lg-3 -->
                             </div> <!-- row -->
@@ -376,10 +446,18 @@
                         <a href="#" class="nav-link">Помощь</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Руб</a>
+                        <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle currency-note" id="currenciesMenu"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Руб</a>
+                        <div class="dropdown-menu currencies-menu" aria-labelledby="currenciesMenu">
+                            <h4 class="dropdown-item currencies-item" id="cur-1" onclick="currencyChecked('cur-1','usd')">USD <i class="fa fa-check icon-checked"></i></h4>
+                            <h4 class="dropdown-item currencies-item" id="cur-2" onclick="currencyChecked('cur-2','eur')">EUR <i class="fa fa-check icon-checked"></i></h4>
+                            <h4 class="dropdown-item currencies-item" id="cur-3" onclick="currencyChecked('cur-3','rub')">RUB <i class="fa fa-check icon-checked"></i></h4>
+                        </div>
+                        </div>
                     </li>
                     <li class="nav-item icon-item">
-                        <a href="#" class="nav-link flag"><img class="flag" src="../assets/images/intro/ru.png" alt="flag"></a>
+                        <a href="https://vk.com" class="nav-link flag" onclick="changeFlag()"><img class="flag" src="../assets/images/intro/ru.png" alt="flag"></a>
                     </li>
                     <li class="nav-item btn-item">
                         <a href="#" class="nav-link btn btn-pink" role="button">
@@ -427,18 +505,58 @@
 
     <script type="text/javascript">
 
-        function bcolorBorderChange(name) {
+        const currenciesChars = new Map([
+            ['rub', '₽'],
+            ['usd', '$'],
+            ['eur', '€']
+        ])
 
-            let sel = '[name="' + name + '"]';
-            let borderColor = (name == 'black') ? '#de3766':'#374647';
+        const currenciesNote = new Map([
+            ['rub', 'Руб'],
+            ['usd', 'USD'],
+            ['eur', 'EUR']
+        ])
+
+        var flag = 'ru'
+
+        $("#cur-3 .icon-checked").attr('style','opacity: 1;')
+
+        function changeCurrency(currency) {
+            $(".currency").text(currenciesChars.get(currency))
+            $(".currency-note").text(currenciesNote.get(currency))
+        }
+
+        function changeFlag() {
+            if (flag == 'ru') {
+                $(".flag img").attr('src','../assets/images/intro/en.png')
+                flag = 'en'
+            } else {
+                $(".flag img").attr('src','../assets/images/intro/ru.png')
+                flag = 'ru'
+            }
+        }
+
+        function bcolorChecked(name) {
+
+            let sel = '[name="' + name + '"] .icon-checked'
 
             if (!$(sel).attr('style')) {
-                $(sel).attr({'style':'border-color: ' + borderColor + ' !important;',
-                'value':'true'});
+                $(sel).attr({'style':'opacity: 1;',
+                'value':'true'})
             } else {
                 $(sel).attr({'style':'',
-                'value':'false'});
+                'value':'false'})
             }
+        }
+
+        function currencyChecked(id, currency) {
+            let sel = '#' + id + ' .icon-checked'
+
+            $(".currencies-item .icon-checked").attr('style', '')
+
+            $(sel).attr('style','opacity: 1;')
+
+            changeCurrency(currency)
         }
 
     </script>
