@@ -22,6 +22,64 @@
 	    <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
 	    <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script>
     <![endif]-->
+	
+    <script type="text/javascript">
+
+        const currenciesChars = new Map([
+            ['rub', '₽'],
+            ['usd', '$'],
+            ['eur', '€']
+        ])
+
+        const currenciesNote = new Map([
+            ['rub', 'Руб'],
+            ['usd', 'USD'],
+            ['eur', 'EUR']
+        ])
+
+        var flag = 'ru'
+
+        $("#cur-3 .icon-checked").attr('style','opacity: 1;')
+
+        function changeCurrency(currency) {
+            $(".currency").text(currenciesChars.get(currency))
+            $(".currency-note").text(currenciesNote.get(currency))
+        }
+
+        function changeFlag() {
+            if (flag == 'ru') {
+                $(".flag img").attr('src','../assets/images/intro/en.png')
+                flag = 'en'
+            } else {
+                $(".flag img").attr('src','../assets/images/intro/ru.png')
+                flag = 'ru'
+            }
+        }
+
+        function bcolorChecked(name) {
+
+            let sel = '[name="' + name + '"] .icon-checked'
+
+            if (!$(sel).attr('style')) {
+                $(sel).attr({'style':'opacity: 1;',
+                'value':'true'})
+            } else {
+                $(sel).attr({'style':'',
+                'value':'false'})
+            }
+        }
+
+        function currencyChecked(id, currency) {
+            let sel = '#' + id + ' .icon-checked'
+
+            $(".currencies-item .icon-checked").attr('style', '')
+
+            $(sel).attr('style','opacity: 1;')
+
+            changeCurrency(currency)
+        }
+
+    </script>
 
     <title>Flowers</title>
 </head>
