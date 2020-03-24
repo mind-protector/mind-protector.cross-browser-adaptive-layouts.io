@@ -18,14 +18,7 @@
     <!-- Font awesome -->
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-    <!--[if lt IE 10]>
-	    <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
-	    <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script>
-    <![endif]-->
-	
     <script type="text/javascript">
-	    
-	alert('test')
 
         const currenciesChars = new Map([
             ['rub', '₽'],
@@ -44,13 +37,11 @@
         $("#cur-3 .icon-checked").attr('style','opacity: 1;')
 
         function changeCurrency(currency) {
-	    alert('test')
             $(".currency").text(currenciesChars.get(currency))
             $(".currency-note").text(currenciesNote.get(currency))
         }
 
         function changeFlag() {
-	    alert('test')
             if (flag == 'ru') {
                 $(".flag img").attr('src','../assets/images/intro/en.png')
                 flag = 'en'
@@ -61,8 +52,7 @@
         }
 
         function bcolorChecked(name) {
-	    
-	    alert('test')
+
             let sel = '[name="' + name + '"] .icon-checked'
 
             if (!$(sel).attr('style')) {
@@ -75,8 +65,6 @@
         }
 
         function currencyChecked(id, currency) {
-		
-	    alert('test')
             let sel = '#' + id + ' .icon-checked'
 
             $(".currencies-item .icon-checked").attr('style', '')
@@ -87,6 +75,11 @@
         }
 
     </script>
+
+    <!--[if lt IE 10]>
+	    <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
+	    <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script>
+    <![endif]-->
 
     <title>Flowers</title>
 </head>
@@ -188,12 +181,12 @@
 
                                         <span class="dropdown-header">Цена <span class="currency">₽</span></span>
                                         <div class="dropdown-item inline-input">
-                                            <label class="dropdown-item" for="from">От</label>
-                                            <input class="dropdown-item" type="text" name="from" id="from" value="1" maxlength="5">
+                                            <label class="dropdown-item w-50" for="from">От</label>
+                                            <input class="dropdown-item w-50" type="text" name="from" id="from" value="1" maxlength="5">
                                         </div>
                                         <div class="dropdown-item inline-input">
-                                            <label class="dropdown-item" for="to">До</label>
-                                            <input class="dropdown-item" type="text" name="to" id="to" value="99999" maxlength="5">
+                                            <label class="dropdown-item w-50" for="to">До</label>
+                                            <input class="dropdown-item w-50" type="text" name="to" id="to" value="99999" maxlength="5">
                                         </div>
                                     </div> <!-- col-sm-7 row none-margins -->
 
@@ -562,69 +555,11 @@
 
 </main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-
-        const currenciesChars = new Map([
-            ['rub', '₽'],
-            ['usd', '$'],
-            ['eur', '€']
-        ])
-
-        const currenciesNote = new Map([
-            ['rub', 'Руб'],
-            ['usd', 'USD'],
-            ['eur', 'EUR']
-        ])
-
-        var flag = 'ru'
-
-        $("#cur-3 .icon-checked").attr('style','opacity: 1;')
-
-        function changeCurrency(currency) {
-            $(".currency").text(currenciesChars.get(currency))
-            $(".currency-note").text(currenciesNote.get(currency))
-        }
-
-        function changeFlag() {
-            if (flag == 'ru') {
-                $(".flag img").attr('src','../assets/images/intro/en.png')
-                flag = 'en'
-            } else {
-                $(".flag img").attr('src','../assets/images/intro/ru.png')
-                flag = 'ru'
-            }
-        }
-
-        function bcolorChecked(name) {
-
-            let sel = '[name="' + name + '"] .icon-checked'
-
-            if (!$(sel).attr('style')) {
-                $(sel).attr({'style':'opacity: 1;',
-                'value':'true'})
-            } else {
-                $(sel).attr({'style':'',
-                'value':'false'})
-            }
-        }
-
-        function currencyChecked(id, currency) {
-            let sel = '#' + id + ' .icon-checked'
-
-            $(".currencies-item .icon-checked").attr('style', '')
-
-            $(sel).attr('style','opacity: 1;')
-
-            changeCurrency(currency)
-        }
-
-    </script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>
