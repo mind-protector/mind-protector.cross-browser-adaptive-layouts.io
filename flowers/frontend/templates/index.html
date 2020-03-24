@@ -24,6 +24,8 @@
     <![endif]-->
 	
     <script type="text/javascript">
+	    
+	alert('test')
 
         const currenciesChars = new Map([
             ['rub', '₽'],
@@ -42,11 +44,13 @@
         $("#cur-3 .icon-checked").attr('style','opacity: 1;')
 
         function changeCurrency(currency) {
+	    alert('test')
             $(".currency").text(currenciesChars.get(currency))
             $(".currency-note").text(currenciesNote.get(currency))
         }
 
         function changeFlag() {
+	    alert('test')
             if (flag == 'ru') {
                 $(".flag img").attr('src','../assets/images/intro/en.png')
                 flag = 'en'
@@ -57,7 +61,8 @@
         }
 
         function bcolorChecked(name) {
-
+	    
+	    alert('test')
             let sel = '[name="' + name + '"] .icon-checked'
 
             if (!$(sel).attr('style')) {
@@ -70,6 +75,8 @@
         }
 
         function currencyChecked(id, currency) {
+		
+	    alert('test')
             let sel = '#' + id + ' .icon-checked'
 
             $(".currencies-item .icon-checked").attr('style', '')
