@@ -17,6 +17,67 @@
 
     <!-- Font awesome -->
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+
+	    var flag = 'ru';
+
+	    $("#cur-3 .icon-checked").attr('style','opacity: 1;');
+
+	    function changeCurrency(currency) {
+		switch (currency) {
+		    case 'rub':
+			$(".currency").text('₽');
+			$(".currency-note").text('Руб');
+			break;
+		    case 'usd':
+			$(".currency").text('$');
+			$(".currency-note").text('USD');
+			break;
+		    case 'eur':
+			$(".currency").text('€');
+			$(".currency-note").text('EUR');
+			break;
+		}
+	    }
+
+	    function changeFlag() {
+		if (flag == 'ru') {
+		    $(".flag img").attr('src','../assets/images/intro/en.png');
+		    flag = 'en';
+		} else {
+		    $(".flag img").attr('src','../assets/images/intro/ru.png');
+		    flag = 'ru';
+		}
+	    }
+
+	    function bcolorChecked(name) {
+
+		let sel = '[name="' + name + '"] .icon-checked';
+
+		if (!$(sel).attr('style')) {
+		    $(sel).attr({'style':'opacity: 1;',
+		    'value':'true'});
+		} else {
+		    $(sel).attr({'style':'',
+		    'value':'false'});
+		}
+	    }
+
+	    function currencyChecked(id, currency) {
+		let sel = '#' + id + ' .icon-checked';
+
+		$(".currencies-item .icon-checked").attr('style', '');
+
+		$(sel).attr('style','opacity: 1;');
+
+		changeCurrency(currency);
+	    }
+
+   </script>
 
     <!--[if lt IE 10]>
 	    <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
@@ -542,68 +603,9 @@
 </main>
 
 <!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- Popper.js, then Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-<script type="text/javascript">
-
-    var flag = 'ru';
-
-    $("#cur-3 .icon-checked").attr('style','opacity: 1;');
-
-    function changeCurrency(currency) {
-        switch (currency) {
-            case 'rub':
-                $(".currency").text('₽');
-                $(".currency-note").text('Руб');
-                break;
-            case 'usd':
-                $(".currency").text('$');
-                $(".currency-note").text('USD');
-                break;
-            case 'eur':
-                $(".currency").text('€');
-                $(".currency-note").text('EUR');
-                break;
-        }
-    }
-
-    function changeFlag() {
-        if (flag == 'ru') {
-            $(".flag img").attr('src','../assets/images/intro/en.png');
-            flag = 'en';
-        } else {
-            $(".flag img").attr('src','../assets/images/intro/ru.png');
-            flag = 'ru';
-        }
-    }
-
-    function bcolorChecked(name) {
-
-        let sel = '[name="' + name + '"] .icon-checked';
-
-        if (!$(sel).attr('style')) {
-            $(sel).attr({'style':'opacity: 1;',
-            'value':'true'});
-        } else {
-            $(sel).attr({'style':'',
-            'value':'false'});
-        }
-    }
-
-    function currencyChecked(id, currency) {
-        let sel = '#' + id + ' .icon-checked';
-
-        $(".currencies-item .icon-checked").attr('style', '');
-
-        $(sel).attr('style','opacity: 1;');
-
-        changeCurrency(currency);
-    }
-
-</script>
 
 </body>
 </html>
