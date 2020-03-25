@@ -17,67 +17,65 @@
 
     <!-- Font awesome -->
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    
+
     <script type="text/javascript">
 
-	    var flag = 'ru';
+        var flag = 'ru';
 
-	    $("#cur-3 .icon-checked").attr('style','opacity: 1;');
+        function changeCurrency(currency) {
+            switch (currency) {
+                case 'rub':
+                    $(".currency").text('₽');
+                    $(".currency-note").text('Руб');
+                    break;
+                case 'usd':
+                    $(".currency").text('$');
+                    $(".currency-note").text('USD');
+                    break;
+                case 'eur':
+                    $(".currency").text('€');
+                    $(".currency-note").text('EUR');
+                    break;
+            }
+        }
 
-	    function changeCurrency(currency) {
-		switch (currency) {
-		    case 'rub':
-			$(".currency").text('₽');
-			$(".currency-note").text('Руб');
-			break;
-		    case 'usd':
-			$(".currency").text('$');
-			$(".currency-note").text('USD');
-			break;
-		    case 'eur':
-			$(".currency").text('€');
-			$(".currency-note").text('EUR');
-			break;
-		}
-	    }
+        function changeFlag() {
+            if (flag == 'ru') {
+                $(".flag img").attr('src','../assets/images/intro/en.png');
+                flag = 'en';
+            } else {
+                $(".flag img").attr('src','../assets/images/intro/ru.png');
+                flag = 'ru';
+            }
+        }
 
-	    function changeFlag() {
-		if (flag == 'ru') {
-		    $(".flag img").attr('src','../assets/images/intro/en.png');
-		    flag = 'en';
-		} else {
-		    $(".flag img").attr('src','../assets/images/intro/ru.png');
-		    flag = 'ru';
-		}
-	    }
+        function bcolorChecked(name) {
 
-	    function bcolorChecked(name) {
+            let sel = '[name="' + name + '"] .icon-checked';
 
-		let sel = '[name="' + name + '"] .icon-checked';
+            if (!$(sel).attr('style')) {
+                $(sel).attr({'style':'opacity: 1;',
+                'value':'true'});
+            } else {
+                $(sel).attr({'style':'',
+                'value':'false'});
+            }
+        }
 
-		if (!$(sel).attr('style')) {
-		    $(sel).attr({'style':'opacity: 1;',
-		    'value':'true'});
-		} else {
-		    $(sel).attr({'style':'',
-		    'value':'false'});
-		}
-	    }
+        function currencyChecked(id, currency) {
+            let sel = '#' + id + ' .icon-checked';
 
-	    function currencyChecked(id, currency) {
-		let sel = '#' + id + ' .icon-checked';
+            $(".currencies-item .icon-checked").attr('style', '');
 
-		$(".currencies-item .icon-checked").attr('style', '');
+            $(sel).attr('style','opacity: 1;');
 
-		$(sel).attr('style','opacity: 1;');
+            changeCurrency(currency);
+        }
 
-		changeCurrency(currency);
-	    }
-
-   </script>
+    </script>
 
     <!--[if lt IE 10]>
 	    <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
@@ -575,7 +573,7 @@
                 <div class="col-md-6 contacts-item left-item vertical-center">
                     Доставка в пригород Екатеринбурга!
                 </div>
-            </div>
+            </div> <!-- row contacts-info col-md-7 -->
 
             <div class="row contacts-info col-md-5">
                 <div class="col-md-6 hot-line contacts-item col-space-around">
@@ -596,11 +594,15 @@
                         8-900-466-1616
                     </h5>
                 </div>
-            </div>
-        </div>
+            </div> <!-- row contacts-info col-md-5 -->
+        </div> <!-- row row-none-margins -->
     </header>
 
 </main>
+
+<script type="text/javascript">
+    $("#cur-3 .icon-checked").attr('style','opacity: 1;');
+</script>
 
 <!-- Optional JavaScript -->
 <!-- Popper.js, then Bootstrap JS -->
