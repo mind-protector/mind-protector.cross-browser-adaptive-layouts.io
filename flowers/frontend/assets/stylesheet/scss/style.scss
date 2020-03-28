@@ -37,6 +37,16 @@ body {
         max-width: 1140px !important;
         padding: 0 !important;
     }
+
+    @media (min-width: 1440px) {
+        max-width: 1340px !important;
+        padding: 0 !important;
+    }
+
+    @media (min-width: 1600px) {
+        max-width: 1540px !important;
+        padding: 0 !important;
+    }
 }
 
 .row-none-margins {
@@ -56,23 +66,6 @@ body {
     &:focus, &:active {
         box-shadow: 0 0 0 0.2rem rgba(225, 121, 122,.5) !important;
     }
-}
-
-.space-between {
-    display: flex;
-    justify-content: space-between;
-}
-
-.vertical-center {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.col-space-around {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .link, .link:hover, .link:focus,

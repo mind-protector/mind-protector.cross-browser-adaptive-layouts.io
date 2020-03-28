@@ -17,3 +17,7 @@
     max-width: #{$val}% !important;
     width: #{$val}% !important;
 }
+
+@mixin align-center($img) {
+    background: url('../../images/intro/#{$img}') no-repeat center center fixed;
+}

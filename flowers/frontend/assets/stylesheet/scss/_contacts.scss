@@ -5,153 +5,132 @@
 .contacts {
     margin-top: 65px;
 
-    &-info {
-        @media (max-width: 1065px) {
-            @include flex-item-size(100);
+    &-content {
+        @media (max-width: 1155px) {
+            flex-direction: column;
+        }
+    }
 
+    .content-item {
+        @include flex-item-size(50);
+
+        @media (max-width: 1155px) {
+            @include flex-item-size(100);
+            padding: 0 150px;
             margin-bottom: 20px;
-            padding: 0 !important;
+
+            &:last-child {
+                margin: 0;
+                padding-right: 180px;
+            }
+        }
+
+        @media (max-width: 966px) {
+            padding: 0 90px;
+
+            &:last-child {
+                padding-right: 100px;
+            }
+        }
+
+        @media (max-width: 740px) {
+            padding: 0 60px;
+
+            &:last-child {
+                padding-right: 70px;
+            }
+        }
+
+        @media (max-width: 644px) {
+            padding: 0 30px;
+
+            &:last-child {
+                padding-right: 40px;
+            }
         }
 
         @media (max-width: 575px) {
-            margin-bottom: 0;
+            margin: 0;
+            padding: 0;
+
+            &:last-child {
+                padding: 0;
+            }
+        }
+    }
+
+    .content-first, .content-second {
+        @media (max-width: 1155px) {
+            justify-content: space-between !important;
         }
     }
 
     &-item {
         font-size: 20px;
 
-        @media (max-width: 1065px) {
-            @include flex-item-size(30);
-
-            margin: 0 10%;
-        }
-
-        @media (max-width: 896px) {
-            font-size: 17px;
-        }
-
-        @media (max-width: 784px) {
-            @include flex-item-size(34);
-            margin: 0 7%;
-        }
-
-        @media (max-width: 697px) {
-            @include flex-item-size(35);
-            padding: 0 !important;
-        }
-
-        @media (max-width: 592px) {
-            @include flex-item-size(37);
+        @media (max-width: 966px) {
+            font-size: 18px;
         }
 
         @media (max-width: 575px) {
             @include flex-item-size(100);
-            margin: 0 0 30px 10%;
-
-            font-size: 25px;
-        }
-
-        @media (max-width: 470px) {
-            margin: 0 0 30px 6% !important;
-        }
-    }
-
-    .left-item {
-        @media (max-width: 1065px) {
-            margin: 0 0 0 15% !important;
-        }
-
-        @media (max-width: 784px) {
-            margin: 0 0 0 18% !important;
-        }
-
-        @media (max-width: 697px) {
-            margin: 0 0 0 15% !important;
-        }
-
-        @media (max-width: 592px) {
-            margin: 0 0 0 12% !important;
-        }
-
-        @media (max-width: 575px) {
-            margin: 0 0 30px 10% !important;
-        }
-
-        @media (max-width: 470px) {
-            margin: 0 0 30px 6% !important;
+            margin-bottom: 20px;
         }
     }
 }
 
 .address {
-    display: block;
-    margin-top: 5px;
-    width: auto !important;
-
-    .dotted {
-        border-bottom: 1px dotted #000;
+    .fa-map-marker {
+        margin-right: 5px;
     }
-}
 
-.fa-map-marker {
-    margin-right: 5px;
-}
+    &-text {
+        display: block;
+        margin-top: 5px;
+        width: auto !important;
 
-.text-item {
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        display: block !important;
-        position: absolute !important;
-        top: 50%;
-        transform: translate(0, -50%);
+        .dotted {
+            border-bottom: 1px dotted #000;
+        }
     }
 }
 
 .hot-line {
-    @media (max-width: 1065px) {
-        font-size: 25px;
+    &-number {
+        @media (max-width: 575px) {
+            margin: 0 0 0 8px;
+        }
     }
 
-    &-number {
-        margin: 5px 0 0 0;
-        font-size: 19px;
-        color: #000;
+    .fa-phone {
+        font-size: 16px;
+        margin-left: 9px;
+    }
+}
 
-        @media (max-width: 575px) {
-            margin: 0 0 0 10px;
-        }
+.numbers {
+    .contact-number-whatsapp,
+    .contact-number-viber {
+        font-size: 18px;
+    }
 
-        @media (max-width: 470px) {
-            margin: 5px 0 0 0;
-        }
+    .contact-number-whatsapp {
+        margin-top: 5px;
+    }
+
+    .contact-number-viber {
+        margin-bottom: 5px;
+    }
+
+    .contact-icon {
+        @include size(24px, 24px);
+        margin-right: 5px;
     }
 }
 
 .container-column-sm {
     @media (max-width: 575px) {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
     }
-
-    @media (max-width: 470px) {
-        display: block;
-    }
-}
-
-.fa-phone {
-    font-size: 16px;
-    margin-left: 9px;
-}
-
-.contact-number-whatsapp {
-    margin-top: 5px;
-}
-
-.contact-number-viber {
-    margin-bottom: 5px;
-}
-
-.contact-icon {
-    @include size(24px, 24px);
-    margin-right: 5px;
 }
