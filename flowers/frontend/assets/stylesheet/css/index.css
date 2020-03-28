@@ -478,7 +478,10 @@ label {
   /* ====================== */ }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .rounds {
-      left: 45%; } }
+      left: 50%;
+      -webkit-transform: translate(-10%, -50%);
+          -ms-transform: translate(-10%, -50%);
+              transform: translate(-10%, -50%); } }
   @media (max-width: 1180px) {
     .rounds {
       top: 45%; } }
