@@ -24,7 +24,45 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	
     <!-- Polyfill for IE10-11 -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script type="text/javascript">
+	if (!Array.prototype.forEach) {
+
+  		Array.prototype.forEach = function (callback, thisArg) {
+
+    			var T, k;
+
+    			if (this == null) {
+      				throw new TypeError(' this is null or not defined');
+    			}
+
+    			var O = Object(this);
+
+    			var len = O.length >>> 0;
+	  
+    			if (typeof callback !== 'function') {
+        			throw new TypeError(callback + ' is not a function');
+    			}
+	  
+    			if (arguments.length > 1) {
+     				T = thisArg;
+    			}
+	  
+    			k = 0;
+
+    			while (k < len) {
+
+      				var kValue;
+
+      				if (k in O) {
+
+        				kValue = O[k];
+        				callback.call(T, kValue, k, O);
+      				}
+      				k++;
+    			}
+  		};
+	}
+    </script>
 
     <!-- Main Functions -->
     <script src="../assets/js/main.js"></script>
