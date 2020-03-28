@@ -4,9 +4,7 @@
 
 @import "_vars.scss";
 @import "_mixins.scss";
-@import "_intro.scss";
-@import "_contacts.scss";
-@import "_services.scss";
+@import "_nav.scss";
 
 /* SETTINGS
 ==================*/
@@ -44,13 +42,9 @@ body {
     }
 
     @media (min-width: 1600px) {
-        max-width: 1540px !important;
+        max-width: /home/vladflat/desktop/Project/frontend/assets/stylesheet/1540px !important;
         padding: 0 !important;
     }
-}
-
-.row-none-margins {
-    margin: 0 !important;
 }
 
 .btn-pink {
