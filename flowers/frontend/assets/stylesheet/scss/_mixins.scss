@@ -3,10 +3,17 @@
 ==================*/
 
 @mixin size($width: auto, $height: auto) {
-    width: $width;
-    height: $height;
+    width: $width !important;;
+    height: $height !important;;
 }
 
 @mixin bg-fixed($img) {
     background: url('../../images/intro/#{$img}') no-repeat center center fixed;
+}
+
+@mixin flex-item-size($val) {
+    -ms-flex: 0 0 #{$val}% !important;
+    flex: #{$val}% !important;
+    max-width: #{$val}% !important;
+    width: #{$val}% !important;
 }
