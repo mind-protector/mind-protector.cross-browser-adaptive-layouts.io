@@ -610,7 +610,7 @@ label {
       width: 209px !important;
       height: 209px !important;
       position: relative;
-      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.9);
       overflow: hidden;
       text-align: center; }
       .slider-item .item-wrapper .item-desc {
@@ -627,7 +627,7 @@ label {
         opacity: 1;
         transition: opacity 124ms linear, transform 124ms linear; }
       .slider-item .item-wrapper:hover img {
-        opacity: .7;
+        opacity: .6;
         transform: scale(1.05); }
       .slider-item .item-wrapper:hover .item-desc {
         opacity: 1; }
