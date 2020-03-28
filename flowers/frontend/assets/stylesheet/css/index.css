@@ -674,8 +674,11 @@ label {
       width: 209px !important;
       height: 209px !important;
       position: relative;
-      background-color: rgba(0, 0, 0, 0.9);
       overflow: hidden;
+      background-color: initial;
+      -webkit-transition: background-color 124ms linear;
+      -o-transition: background-color 124ms linear;
+      transition: background-color 124ms linear;
       text-align: center; }
       .slider-item .item-wrapper .item-desc {
         min-width: 60%;
@@ -698,6 +701,8 @@ label {
         -o-transition: opacity 124ms linear, transform 124ms linear;
         transition: opacity 124ms linear, transform 124ms linear;
         transition: opacity 124ms linear, transform 124ms linear, -webkit-transform 124ms linear; }
+      .slider-item .item-wrapper:hover, .slider-item .item-wrapper:focus, .slider-item .item-wrapper:active {
+        background-color: rgba(0, 0, 0, 0.9); }
       .slider-item .item-wrapper:hover img {
         opacity: .6;
         -webkit-transform: scale(1.05);
