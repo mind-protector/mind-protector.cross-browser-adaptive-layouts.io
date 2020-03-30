@@ -144,7 +144,8 @@
     /* For IE10-11
     ======================== */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        left: 45%;
+        left: 50%;
+        transform: translate(-10%, -50%);
     }
     /* ====================== */
 

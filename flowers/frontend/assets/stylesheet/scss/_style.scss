@@ -5,6 +5,7 @@
 @import "_vars.scss";
 @import "_mixins.scss";
 @import "_nav.scss";
+@import "_alert.scss";
 
 /* SETTINGS
 ==================*/
@@ -42,7 +43,7 @@ body {
     }
 
     @media (min-width: 1600px) {
-        max-width: /home/vladflat/desktop/Project/frontend/assets/stylesheet/1540px !important;
+        max-width: 1540px !important;
         padding: 0 !important;
     }
 }
