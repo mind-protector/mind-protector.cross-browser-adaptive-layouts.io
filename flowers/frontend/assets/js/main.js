@@ -174,3 +174,14 @@ function sliderServices() {
 
     var slider = multiItemSlider();
 }
+
+// *PRODUCTS*
+
+function FavoriteAdd(id) {
+    var sel = '#' + id;
+    if (!$(sel).attr('style')) {
+        $(sel).attr('style','color:#f02626');
+    } else {
+        $(sel).attr('style','');
+    }
+}
