@@ -158,7 +158,8 @@
                     color: #f02626;
                 }
 
-                &:active .fa-heart {
+                &:active .fa-heart,
+                &:focus .fa-heart {
                     transform: scale(1.1);
                 }
 
