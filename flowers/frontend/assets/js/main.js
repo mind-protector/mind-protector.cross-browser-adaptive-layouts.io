@@ -1,32 +1,43 @@
 'use strict';
 
-// *NAVIGATION*
+// *COMMON FUNCTIONS*
 
-var flag = 'ru';
+function regularShape(number, titles, id, sel) {
+    sel = (sel !== undefined) ? sel : '#' + id;
+
+    var cases = [2, 0, 1, 1, 1, 2];
+    var regularShape = titles[ (number%100>4 && number%100<20) ? 2 : cases[(number%10<5)?number%10:5] ];
+    $(sel).text(number + ' ' + regularShape);
+}
+
+// *NAVIGATION*
 
 function changeCurrency(currency) {
     switch (currency) {
-        case 'rub':
+        case undefined:
             $(".currency").text('₽');
             $(".currency-note").text('Руб');
+            $(".price").text($(".price").attr('value'));
             break;
-        case 'usd':
+        case '.USD':
             $(".currency").text('$');
             $(".currency-note").text('USD');
+            $(".price").text(($(".price").attr('value') / $(currency).attr('value')).toFixed(2));
             break;
-        case 'eur':
+        case '.EUR':
             $(".currency").text('€');
             $(".currency-note").text('EUR');
+            $(".price").text(($(".price").attr('value') / $(currency).attr('value')).toFixed(2));
             break;
     }
 }
 
 function changeFlag() {
     if (flag == 'ru') {
-        $(".flag img").attr('src','../assets/images/intro/en.png');
+        $(".flag img").attr('src', '../assets/images/intro/en.png');
         flag = 'en';
     } else {
-        $(".flag img").attr('src','../assets/images/intro/ru.png');
+        $(".flag img").attr('src', '../assets/images/intro/ru.png');
         flag = 'ru';
     }
 }
@@ -49,7 +60,7 @@ function currencyChecked(id, currency) {
 
     $(".currencies-item .icon-checked").attr('style', '');
 
-    $(sel).attr('style','opacity: 1;');
+    $(sel).attr('style', 'opacity: 1;');
 
     changeCurrency(currency);
 }
@@ -177,11 +188,86 @@ function sliderServices() {
 
 // *PRODUCTS*
 
-function FavoriteAdd(id) {
+var timeouts = [];
+
+function clearTimeouts(timeouts) {
+    for (var i = 0; i <= timeouts.length; i++)
+    clearTimeout(timeouts[i]);
+
+    return timeouts = [];
+}
+
+function favoriteAdd(id) {
     var sel = '#' + id;
+    var alert = '.alert';
+
+    function showAlert(alert, timeouts) {
+        $(alert).attr('style', 'opacity:0;');
+        timeouts.push(setTimeout(() => $(alert).attr('style', 'opacity:1;'), 200));
+        timeouts.push(setTimeout(() => $(alert).attr('style', 'opacity:0;'), 4000));
+        timeouts.push(setTimeout(() => $(alert).attr('style', 'display:none;'), 4151));
+
+        return timeouts;
+    }
+
     if (!$(sel).attr('style')) {
-        $(sel).attr('style','color:#f02626');
+        $(sel).attr('style', 'color:#f02626');
+
+        goods++;
+        $(alert + ' .alert-title').text('Сохранено в избранное');
+        regularShape(goods, goodsRegularShapes, 'goods-value');
+
+        clearTimeouts(timeouts);
+        timeouts = showAlert(alert, timeouts);
     } else {
-        $(sel).attr('style','');
+        $(sel).attr('style', '');
+
+        goods--;
+        $(alert + ' .alert-title').text('Удалено из избранного');
+        regularShape(goods, goodsRegularShapes, 'goods-value');
+
+        timeouts = clearTimeouts(timeouts);
+        timeouts = showAlert(alert, timeouts);
+    }
+}
+
+function alertClose() {
+    var alert = '.alert';
+
+    $(alert).attr('style', 'opacity:0;');
+    timeouts = clearTimeouts(timeouts);
+    timeouts.push(setTimeout(() => $(alert).attr('style', 'display:none;'), 151));
+}
+
+function infoInit(score, allReviews, id, date, hit) {
+    var sel = '#' + id + ' ';
+    var rating = (allReviews < 4) ? ['Новинка!', 'text-info'] :
+        (score < 3.6) ? ['Хорошо', 'text-warning'] :
+        (score < 4.6) ? ['Превосходно', 'text-success'] :
+        ['Восхитительно', 'text-success'];
+    score = (allReviews < 4) ? 'NEW' : score;
+
+    var defClasses = 'card-text d-block ';
+    switch (date) {
+        case true:
+            $(sel + '.card-text').text('Уже собран');
+            $(sel + '.card-text').attr('class', defClasses + 'text-success');
+            break;
+        case false:
+            $(sel + '.card-text').text('Еще не собран');
+            $(sel + '.card-text').attr('class', defClasses + 'main-color');
+            break;
+        default:
+            $(sel + '.card-text').text('Будет готов в ' + date);
+            $(sel + '.card-text').attr('class', defClasses + 'text-info');
+            break;
+    }
+
+    $(sel + '.score-block').text(score);
+    $(sel + '.review-block b').text(rating[0]);
+    $(sel + '.review-block b').attr('class', rating[1]);
+
+    if (!hit) {
+        $(sel + '.hit-mark').attr('style', 'display:none;');
     }
 }
