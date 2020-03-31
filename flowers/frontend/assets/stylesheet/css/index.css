@@ -931,7 +931,7 @@ label {
         -o-transition: color .8s linear, transform .1s linear;
         transition: color .8s linear, transform .1s linear;
         transition: color .8s linear, transform .1s linear, -webkit-transform .1s linear; }
-        .results .card .product-preview .favorite-mark .fa-heart:active .results .card .product-preview .favorite-mark .fa-heart:focus {
+        .results .card .product-preview .favorite-mark .fa-heart:active, .results .card .product-preview .favorite-mark .fa-heart:focus {
           -webkit-transform: scale(1.1);
               -ms-transform: scale(1.1);
                   transform: scale(1.1); }
