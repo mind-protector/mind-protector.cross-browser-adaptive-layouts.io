@@ -31,6 +31,10 @@ body {
     letter-spacing: 2px;
 }
 
+.price {
+    padding-right: 5px;
+}
+
 .container-lg {
     @media (min-width: 1000px) {
         max-width: 1140px !important;

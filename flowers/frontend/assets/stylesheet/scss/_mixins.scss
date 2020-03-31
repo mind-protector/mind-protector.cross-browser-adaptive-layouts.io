@@ -21,3 +21,10 @@
 @mixin align-center($img) {
     background: url('../../images/intro/#{$img}') no-repeat center center fixed;
 }
+
+@mixin center-absolute() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -87,17 +87,23 @@
     }
 
     &-control {
+        @include size(40px, 50px);
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
+
         display: flex;
         align-items: center;
         justify-content: center;
-        @include size(40px, 50px);
+
         color: #fff;
         text-align: center;
         opacity: 0.5;
-        transform: translateY(-50%);
         background: rgba(0, 0, 0, .5);
+
+        @media (min-width: 1261px) {
+            display: none;
+        }
 
         &::before {
             content: '';
