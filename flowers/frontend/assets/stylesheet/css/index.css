@@ -851,11 +851,11 @@ label {
   .results .card-img-top {
     height: 313px;
     opacity: 1;
-    -webkit-transition: opacity 324ms linear, -webkit-transform 124ms linear;
-    transition: opacity 324ms linear, -webkit-transform 124ms linear;
-    -o-transition: opacity 324ms linear, transform 124ms linear;
-    transition: opacity 324ms linear, transform 124ms linear;
-    transition: opacity 324ms linear, transform 124ms linear, -webkit-transform 124ms linear; }
+    -webkit-transition: opacity 324ms linear, -webkit-transform 324ms linear;
+    transition: opacity 324ms linear, -webkit-transform 324ms linear;
+    -o-transition: opacity 324ms linear, transform 324ms linear;
+    transition: opacity 324ms linear, transform 324ms linear;
+    transition: opacity 324ms linear, transform 324ms linear, -webkit-transform 324ms linear; }
     @media (min-width: 546px) and (max-width: 689px) {
       .results .card-img-top {
         height: 270px; } }
@@ -913,6 +913,10 @@ label {
       position: absolute;
       top: 2%;
       right: 2%;
+      font-size: 24px;
+      -webkit-transition: font-size .1s linear;
+      -o-transition: font-size .1s linear;
+      transition: font-size .1s linear;
       background-color: #fff;
       border-radius: 50%;
       cursor: pointer; }
@@ -922,6 +926,9 @@ label {
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
                 transform: scale(1.1); }
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .results .card .product-preview .favorite-mark:active .fa-heart {
+          font-size: 26px; } }
       .results .card .product-preview .favorite-mark .fa-heart {
         font-size: 24px;
         color: #f7875e;
