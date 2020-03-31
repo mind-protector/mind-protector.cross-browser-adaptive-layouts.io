@@ -913,22 +913,16 @@ label {
       position: absolute;
       top: 2%;
       right: 2%;
-      font-size: 24px;
-      -webkit-transition: font-size .1s linear;
-      -o-transition: font-size .1s linear;
-      transition: font-size .1s linear;
       background-color: #fff;
       border-radius: 50%;
       cursor: pointer; }
       .results .card .product-preview .favorite-mark:hover .fa-heart {
         color: #f02626; }
-      .results .card .product-preview .favorite-mark:active .fa-heart {
+      .results .card .product-preview .favorite-mark:active .fa-heart,
+      .results .card .product-preview .favorite-mark:focus .fa-heart {
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
                 transform: scale(1.1); }
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        .results .card .product-preview .favorite-mark:active .fa-heart {
-          font-size: 26px; } }
       .results .card .product-preview .favorite-mark .fa-heart {
         font-size: 24px;
         color: #f7875e;
@@ -937,6 +931,10 @@ label {
         -o-transition: color .8s linear, transform .1s linear;
         transition: color .8s linear, transform .1s linear;
         transition: color .8s linear, transform .1s linear, -webkit-transform .1s linear; }
+        .results .card .product-preview .favorite-mark .fa-heart:active .results .card .product-preview .favorite-mark .fa-heart:focus {
+          -webkit-transform: scale(1.1);
+              -ms-transform: scale(1.1);
+                  transform: scale(1.1); }
     .results .card .product-preview .hit-mark {
       width: 120px !important;
       height: 68px !important;
