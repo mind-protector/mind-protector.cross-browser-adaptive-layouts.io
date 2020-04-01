@@ -917,6 +917,9 @@ label {
       cursor: pointer; }
       .results .card .product-preview .favorite-mark:hover .fa-heart {
         color: #f02626; }
+      .results .card .product-preview .favorite-mark:active .fa-heart {
+        width: 29px !important;
+        height: 29px !important; }
       .results .card .product-preview .favorite-mark .white-round {
         position: absolute;
         top: 50%;
