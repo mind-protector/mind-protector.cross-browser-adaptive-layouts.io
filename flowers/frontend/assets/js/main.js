@@ -200,6 +200,7 @@ function clearTimeouts(timeouts) {
 function favoriteAdd(id) {
     var sel = '#' + id;
     var alert = '.alert';
+    var size = 29 + 'px';
 
     function showAlert(alert, timeouts) {
         $(alert).attr('style', 'opacity:0;');
@@ -210,25 +211,33 @@ function favoriteAdd(id) {
         return timeouts;
     }
 
-    if (!$(sel).attr('style')) {
-        $(sel).attr('style', 'color:#f02626');
+    function alertActions(sel, k, text) {
+        $(sel).width(size);
+        $(sel).height(size);
 
-        goods++;
-        $(alert + ' .alert-title').text('Сохранено в избранное');
-        regularShape(goods, goodsRegularShapes, 'goods-value');
-
-        clearTimeouts(timeouts);
-        timeouts = showAlert(alert, timeouts);
-    } else {
-        $(sel).attr('style', '');
-
-        goods--;
-        $(alert + ' .alert-title').text('Удалено из избранного');
+        goods += k;
+        $(alert + ' .alert-title').text(text);
         regularShape(goods, goodsRegularShapes, 'goods-value');
 
         timeouts = clearTimeouts(timeouts);
         timeouts = showAlert(alert, timeouts);
     }
+
+    if (!$(sel).attr('style')) {
+        $(sel).attr('style', 'color:#f02626');
+        alertActions(sel, 1, 'Сохранено в избранное');
+    } else {
+        $(sel).attr('style', '');
+        alertActions(sel, -1, 'Удалено из избранного');
+    }
+}
+
+function favoriteDecrease(id) {
+    var sel = '#' + id;
+    $(sel).css({
+        'width':'',
+        'height':''
+    })
 }
 
 function alertClose() {
