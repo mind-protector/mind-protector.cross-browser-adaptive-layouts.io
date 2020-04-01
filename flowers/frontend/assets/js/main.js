@@ -1,5 +1,3 @@
-'use strict';
-
 // *COMMON FUNCTIONS*
 
 function regularShape(number, titles, id, sel) {
@@ -204,8 +202,6 @@ function favoriteAdd(id) {
         var size = 29 + 'px';
 
         function alertActions(k, text) {
-            //$(sel).width(size);
-            //$(sel).height(size);
 
             goods += k;
             $(alert + ' .alert-title').text(text);
@@ -231,14 +227,6 @@ function favoriteAdd(id) {
     } else {
         return;
     }
-}
-
-function favoriteDecrease(id) {
-    var sel = '#' + id;
-    //$(sel).css({
-        //'width':'',
-        //'height':''
-    //})
 }
 
 function alertClose() {
