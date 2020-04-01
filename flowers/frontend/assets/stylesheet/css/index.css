@@ -514,9 +514,9 @@ label {
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .rounds {
       left: 50%;
-      -webkit-transform: translate(0%, -50%);
-          -ms-transform: translate(0%, -50%);
-              transform: translate(0%, -50%); } }
+      -webkit-transform: translate(-50%, -10%);
+          -ms-transform: translate(-50%, -10%);
+              transform: translate(-50%, -10%); } }
   @media (max-width: 1180px) {
     .rounds {
       top: 45%; } }
@@ -915,9 +915,9 @@ label {
       right: 2%;
       z-index: 999;
       cursor: pointer; }
-      .results .card .product-preview .favorite-mark:hover .fa-heart {
+      .results .card .product-preview .favorite-mark:hover .favorite-icon .fa-heart {
         color: #f02626; }
-      .results .card .product-preview .favorite-mark:active .fa-heart {
+      .results .card .product-preview .favorite-mark:active .favorite-icon {
         width: 29px !important;
         height: 29px !important; }
       .results .card .product-preview .favorite-mark .white-round {
@@ -929,19 +929,23 @@ label {
                 transform: translate(-50%, -50%);
         background-color: #fff;
         border-radius: 50%; }
-      .results .card .product-preview .favorite-mark .fa-heart {
+      .results .card .product-preview .favorite-mark .favorite-icon {
         position: absolute;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-        width: 24px;
-        height: 24px;
-        color: #f7875e;
-        -webkit-transition: color .8s linear, width .1s linear, height .1s linear;
-        -o-transition: color .8s linear, width .1s linear, height .1s linear;
-        transition: color .8s linear, width .1s linear, height .1s linear; }
+        width: 24px !important;
+        height: 24px !important;
+        -webkit-transition: width .1s linear, height .1s linear;
+        -o-transition: width .1s linear, height .1s linear;
+        transition: width .1s linear, height .1s linear; }
+        .results .card .product-preview .favorite-mark .favorite-icon .fa-heart {
+          color: #f7875e;
+          -webkit-transition: color .8s linear;
+          -o-transition: color .8s linear;
+          transition: color .8s linear; }
     .results .card .product-preview .hit-mark {
       width: 120px !important;
       height: 68px !important;
