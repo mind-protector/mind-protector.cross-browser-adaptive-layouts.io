@@ -83,7 +83,7 @@
             height: 313px;
 
             opacity: 1;
-            transition: opacity 324ms linear, transform 124ms linear;
+            transition: opacity 324ms linear, transform 324ms linear;
 
             @media (min-width: 546px) and (max-width: 689px) {
                 height: 270px;
@@ -146,26 +146,29 @@
 
             .favorite-mark {
                 @include size(48px, 48px);
-
                 position: absolute;
                 top: 2%;
                 right: 2%;
 
-                background-color: #fff;
-                border-radius: 50%;
+                z-index: 999;
+                cursor: pointer;
 
                 &:hover .fa-heart {
                     color: #f02626;
                 }
 
-                &:active .fa-heart,
-                &:focus .fa-heart {
+                &:active .fa-heart {
                     transform: scale(1.1);
                 }
 
-                cursor: pointer;
+                .white-round {
+                    position: absolute;
+                    background-color: #fff;
+                    border-radius: 50%;
+                }
 
                 .fa-heart {
+                    position: absolute;
                     font-size: 24px;
                     color: #f7875e;
                     transition: color .8s linear, transform .1s linear;
