@@ -917,10 +917,6 @@ label {
       cursor: pointer; }
       .results .card .product-preview .favorite-mark:hover .fa-heart {
         color: #f02626; }
-      .results .card .product-preview .favorite-mark:active .fa-heart,
-      .results .card .product-preview .favorite-mark:focus .fa-heart {
-        width: 30px !important;
-        height: 30px !important; }
       .results .card .product-preview .favorite-mark .white-round {
         position: absolute;
         top: 50%;
@@ -937,8 +933,8 @@ label {
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-        width: 24px !important;
-        height: 24px !important;
+        width: 24px;
+        height: 24px;
         color: #f7875e;
         -webkit-transition: color .8s linear, width .1s linear, height .1s linear;
         -o-transition: color .8s linear, width .1s linear, height .1s linear;
