@@ -198,46 +198,47 @@ function clearTimeouts(timeouts) {
 }
 
 function favoriteAdd(id) {
-    var sel = '#' + id;
-    var alert = '.alert';
-    var size = 29 + 'px';
+    if (event.which == 1) {
+        var sel = '#' + id;
+        var alert = '.alert';
+        var size = 29 + 'px';
 
-    function showAlert(alert, timeouts) {
-        $(alert).attr('style', 'opacity:0;');
-        timeouts.push(setTimeout(function(){ $(alert).attr('style', 'opacity:1;')}, 200));
-        timeouts.push(setTimeout(function(){ $(alert).attr('style', 'opacity:0;')}, 4000));
-        timeouts.push(setTimeout(function(){ $(alert).attr('style', 'display:none;')}, 4151));
+        function alertActions(k, text) {
+            //$(sel).width(size);
+            //$(sel).height(size);
 
-        return timeouts;
-    }
+            goods += k;
+            $(alert + ' .alert-title').text(text);
+            regularShape(goods, goodsRegularShapes, 'goods-value');
 
-    function alertActions(sel, k, text) {
-        $(sel).width(size);
-        $(sel).height(size);
+            timeouts = clearTimeouts(timeouts);
 
-        goods += k;
-        $(alert + ' .alert-title').text(text);
-        regularShape(goods, goodsRegularShapes, 'goods-value');
+            $(alert).attr('style', 'opacity:0;');
+            timeouts.push(setTimeout(function(){ $(alert).attr('style', 'opacity:1;')}, 200));
+            timeouts.push(setTimeout(function(){ $(alert).attr('style', 'opacity:0;')}, 4000));
+            timeouts.push(setTimeout(function(){ $(alert).attr('style', 'display:none;')}, 4151));
 
-        timeouts = clearTimeouts(timeouts);
-        timeouts = showAlert(alert, timeouts);
-    }
+            return timeouts;
+        }
 
-    if (!$(sel).attr('style')) {
-        $(sel).attr('style', 'color:#f02626');
-        alertActions(sel, 1, 'Сохранено в избранное');
+        if (!$(sel).attr('style')) {
+            $(sel).attr('style', 'color:#f02626;');
+            timeouts = alertActions(1, 'Сохранено в избранное');
+        } else {
+            $(sel).attr('style', '');
+            timeouts = alertActions(-1, 'Удалено из избранного');
+        }
     } else {
-        $(sel).attr('style', '');
-        alertActions(sel, -1, 'Удалено из избранного');
+        return;
     }
 }
 
 function favoriteDecrease(id) {
     var sel = '#' + id;
-    $(sel).css({
-        'width':'',
-        'height':''
-    })
+    //$(sel).css({
+        //'width':'',
+        //'height':''
+    //})
 }
 
 function alertClose() {
