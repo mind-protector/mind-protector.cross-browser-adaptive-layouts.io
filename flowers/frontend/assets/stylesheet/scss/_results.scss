@@ -157,19 +157,20 @@
                     color: #f02626;
                 }
 
-                &:active .fa-heart {
-                    @include size(32px, 32px);
-                }
-
                 .white-round {
                     @include center-absolute();
+
                     background-color: #fff;
                     border-radius: 50%;
                 }
 
                 .fa-heart {
                     @include center-absolute();
-                    @include size(24px, 24px);
+                    
+                    // not @include size to animation!
+                    width: 24px;
+                    height: 24px;
+
                     color: #f7875e;
                     transition: color .8s linear,
                     width .1s linear, height .1s linear;
