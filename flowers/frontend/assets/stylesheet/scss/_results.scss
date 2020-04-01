@@ -158,20 +158,21 @@
                 }
 
                 &:active .fa-heart {
-                    transform: scale(1.1);
+                    @include size(32px, 32px);
                 }
 
                 .white-round {
-                    position: absolute;
+                    @include center-absolute();
                     background-color: #fff;
                     border-radius: 50%;
                 }
 
                 .fa-heart {
-                    position: absolute;
-                    font-size: 24px;
+                    @include center-absolute();
+                    @include size(24px, 24px);
                     color: #f7875e;
-                    transition: color .8s linear, transform .1s linear;
+                    transition: color .8s linear,
+                    width .1s linear, height .1s linear;
                 }
             }
 
