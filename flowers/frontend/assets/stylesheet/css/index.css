@@ -514,9 +514,9 @@ label {
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .rounds {
       left: 50%;
-      -webkit-transform: translate(-10%, -50%);
-          -ms-transform: translate(-10%, -50%);
-              transform: translate(-10%, -50%); } }
+      -webkit-transform: translate(0%, -50%);
+          -ms-transform: translate(0%, -50%);
+              transform: translate(0%, -50%); } }
   @media (max-width: 1180px) {
     .rounds {
       top: 45%; } }
@@ -917,9 +917,10 @@ label {
       cursor: pointer; }
       .results .card .product-preview .favorite-mark:hover .fa-heart {
         color: #f02626; }
-      .results .card .product-preview .favorite-mark:active .fa-heart {
-        width: 32px !important;
-        height: 32px !important; }
+      .results .card .product-preview .favorite-mark:active .fa-heart,
+      .results .card .product-preview .favorite-mark:focus .fa-heart {
+        width: 30px !important;
+        height: 30px !important; }
       .results .card .product-preview .favorite-mark .white-round {
         position: absolute;
         top: 50%;
