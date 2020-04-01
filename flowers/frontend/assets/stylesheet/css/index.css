@@ -913,8 +913,7 @@ label {
       position: absolute;
       top: 2%;
       right: 2%;
-      background-color: #fff;
-      border-radius: 50%;
+      z-index: 999;
       cursor: pointer; }
       .results .card .product-preview .favorite-mark:hover .fa-heart {
         color: #f02626; }
@@ -922,7 +921,12 @@ label {
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
                 transform: scale(1.1); }
+      .results .card .product-preview .favorite-mark .white-round {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%; }
       .results .card .product-preview .favorite-mark .fa-heart {
+        position: absolute;
         font-size: 24px;
         color: #f7875e;
         -webkit-transition: color .8s linear, -webkit-transform .1s linear;
@@ -930,10 +934,6 @@ label {
         -o-transition: color .8s linear, transform .1s linear;
         transition: color .8s linear, transform .1s linear;
         transition: color .8s linear, transform .1s linear, -webkit-transform .1s linear; }
-        .results .card .product-preview .favorite-mark .fa-heart:active {
-          -webkit-transform: scale(1.1);
-              -ms-transform: scale(1.1);
-                  transform: scale(1.1); }
     .results .card .product-preview .hit-mark {
       width: 120px !important;
       height: 68px !important;
