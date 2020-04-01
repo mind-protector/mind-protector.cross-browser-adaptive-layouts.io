@@ -916,7 +916,9 @@ label {
       z-index: 999;
       cursor: pointer; }
       .results .card .product-preview .favorite-mark:hover .favorite-icon .fa-heart {
-        color: #f02626; }
+        color: #f02626;
+        width: 29px !important;
+        height: 29px !important;}
       .results .card .product-preview .favorite-mark:active .favorite-icon {
         width: 29px !important;
         height: 29px !important; }
