@@ -196,6 +196,7 @@ function clearTimeouts(timeouts) {
 }
 
 function favoriteAdd(id) {
+    console.log(event.which);
     if (event.which == 1) {
         var sel = '#' + id;
         var alert = '.alert';
