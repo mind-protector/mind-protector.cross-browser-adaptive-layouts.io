@@ -209,10 +209,12 @@ function favoriteAdd(id) {
 
             timeouts = clearTimeouts(timeouts);
 
-            $(alert).attr('style', 'opacity:0;');
-            timeouts.push(setTimeout(function(){ $(alert).attr('style', 'opacity:1;')}, 200));
-            timeouts.push(setTimeout(function(){ $(alert).attr('style', 'opacity:0;')}, 4000));
-            timeouts.push(setTimeout(function(){ $(alert).attr('style', 'display:none;')}, 4151));
+            $(alert).css('opacity', '0');
+            timeouts.push(setTimeout(function(){ $(alert).css('opacity', '1')}, 200));
+            timeouts.push(setTimeout(function(){ $(alert).css('display', 'block')}, 200));
+            
+            timeouts.push(setTimeout(function(){ $(alert).css('opacity', '0')}, 4000));
+            timeouts.push(setTimeout(function(){ $(alert).css('display', 'none')}, 4151));
 
             return timeouts;
         }
@@ -232,9 +234,9 @@ function favoriteAdd(id) {
 function alertClose() {
     var alert = '.alert';
 
-    $(alert).attr('style', 'opacity:0;');
+    $(alert).css('opacity', '0');
     timeouts = clearTimeouts(timeouts);
-    timeouts.push(setTimeout(function(){ $(alert).attr('style', 'display:none;')}, 151));
+    timeouts.push(setTimeout(function(){ $(alert).css('display', 'none')}, 151));
 }
 
 function infoInit(score, allReviews, id, date, hit) {
