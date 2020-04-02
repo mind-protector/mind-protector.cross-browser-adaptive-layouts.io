@@ -1,5 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /* INDEX.SCSS
 ==================*/
 /* IMPORTS
@@ -296,8 +298,8 @@
     border-color: #bbbbbb !important; }
 
 .multi-color {
-  background: -webkit-gradient(linear, left top, left bottom, from(crimson), color-stop(gold), color-stop(yellowgreen), color-stop(teal), to(crimson)) !important;
   background: -o-linear-gradient(crimson, gold, yellowgreen, teal, crimson) !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(crimson), color-stop(gold), color-stop(yellowgreen), color-stop(teal), to(crimson)) !important;
   background: linear-gradient(crimson, gold, yellowgreen, teal, crimson) !important; }
 
 /* Currencies
