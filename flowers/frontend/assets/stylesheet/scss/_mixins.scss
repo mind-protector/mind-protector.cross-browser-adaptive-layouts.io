@@ -28,3 +28,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin reboot() {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}

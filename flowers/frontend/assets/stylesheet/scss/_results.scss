@@ -153,6 +153,20 @@
                 z-index: 999;
                 cursor: pointer;
 
+                background-color: #fff;
+                border-radius: 50%;
+
+                @include reboot();
+                box-shadow: none;
+
+                &:hover .fa-heart {
+                    color: #f02626;
+                }
+
+                &:active .favorite-icon {
+                    @include size(28px, 28px);
+                }
+
                 &:hover .fa-heart {
                     color: #f02626;
                 }
@@ -164,16 +178,16 @@
                     border-radius: 50%;
                 }
 
-                .fa-heart {
+                .favorite-icon {
                     @include center-absolute();
-                    
-                    // not @include size to animation!
-                    width: 24px;
-                    height: 24px;
+                    @include size(24px, 24px);
 
+                    transition: width .1s linear, height .1s linear;
+                }
+
+                .fa-heart {
                     color: #f7875e;
-                    transition: color .8s linear,
-                    width .1s linear, height .1s linear;
+                    transition: color .8s linear;
                 }
             }
 
