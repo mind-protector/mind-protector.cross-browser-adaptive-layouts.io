@@ -11,21 +11,36 @@ function regularShape(number, titles, id, sel) {
 // *NAVIGATION*
 
 function changeCurrency(currency) {
+
+    function changePrices(func) {
+        for(var i = 1; i <= $('.price').length; i++) {
+            var sel = '#price-' + i;
+            $(sel).text(func($(sel).attr('value')));
+        }
+    }
+    var devision = $(currency).attr('value');
+
     switch (currency) {
         case undefined:
             $(".currency").text('₽');
             $(".currency-note").text('Руб');
-            $(".price").text($(".price").attr('value'));
+            changePrices(function(val){
+                return val;
+            });
             break;
         case '.USD':
             $(".currency").text('$');
             $(".currency-note").text('USD');
-            $(".price").text(($(".price").attr('value') / $(currency).attr('value')).toFixed(2));
+            changePrices(function(val){
+                return (val / devision).toFixed(2);
+            });
             break;
         case '.EUR':
             $(".currency").text('€');
             $(".currency-note").text('EUR');
-            $(".price").text(($(".price").attr('value') / $(currency).attr('value')).toFixed(2));
+            changePrices(function(val){
+                return (val / devision).toFixed(2);
+            });
             break;
     }
 }
@@ -196,35 +211,35 @@ function clearTimeouts(timeouts) {
 }
 
 function favoriteAdd(id) {
-        var sel = '#' + id;
-        var alert = '.alert';
-        var size = 29 + 'px';
+    var sel = '#' + id;
+    var alert = '.alert';
+    var size = 29 + 'px';
 
-        function alertActions(k, text) {
+    function alertActions(k, text) {
 
-            goods += k;
-            $(alert + ' .alert-title').text(text);
-            regularShape(goods, goodsRegularShapes, 'goods-value');
+        goods += k;
+        $(alert + ' .alert-title').text(text);
+        regularShape(goods, goodsRegularShapes, 'goods-value');
 
-            timeouts = clearTimeouts(timeouts);
+        timeouts = clearTimeouts(timeouts);
 
-            $(alert).css('opacity', '0');
-            timeouts.push(setTimeout(function(){ $(alert).css('opacity', '1')}, 200));
-            timeouts.push(setTimeout(function(){ $(alert).css('display', 'block')}, 200));
-            
-            timeouts.push(setTimeout(function(){ $(alert).css('opacity', '0')}, 4000));
-            timeouts.push(setTimeout(function(){ $(alert).css('display', 'none')}, 4151));
+        $(alert).css('opacity', '0');
+        timeouts.push(setTimeout(function(){ $(alert).css('opacity', '1')}, 200));
+        timeouts.push(setTimeout(function(){ $(alert).css('display', 'block')}, 200));
 
-            return timeouts;
-        }
+        timeouts.push(setTimeout(function(){ $(alert).css('opacity', '0')}, 4000));
+        timeouts.push(setTimeout(function(){ $(alert).css('display', 'none')}, 4151));
 
-        if (!$(sel).attr('style')) {
-            $(sel).attr('style', 'color:#f02626;');
-            timeouts = alertActions(1, 'Сохранено в избранное');
-        } else {
-            $(sel).attr('style', '');
-            timeouts = alertActions(-1, 'Удалено из избранного');
-        }
+        return timeouts;
+    }
+
+    if (!$(sel).attr('style')) {
+        $(sel).attr('style', 'color:#f02626;');
+        timeouts = alertActions(1, 'Сохранено в избранное');
+    } else {
+        $(sel).attr('style', '');
+        timeouts = alertActions(-1, 'Удалено из избранного');
+    }
 }
 
 function alertClose() {
