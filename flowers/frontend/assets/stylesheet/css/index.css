@@ -514,9 +514,9 @@ label {
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .rounds {
       left: 50%;
-      -webkit-transform: translate(-50%, -10%);
-          -ms-transform: translate(-50%, -10%);
-              transform: translate(-50%, -10%); } }
+      -webkit-transform: translate(-50%, 5%);
+          -ms-transform: translate(-50%, 5%);
+              transform: translate(-50%, 5%); } }
   @media (max-width: 1180px) {
     .rounds {
       top: 45%; } }
@@ -914,12 +914,21 @@ label {
       top: 2%;
       right: 2%;
       z-index: 999;
-      cursor: pointer; }
-      .results .card .product-preview .favorite-mark:hover .favorite-icon .fa-heart {
-        color: #f02626;}
+      cursor: pointer;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0;
+      border: 0;
+      padding: 0;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+      .results .card .product-preview .favorite-mark:hover .fa-heart {
+        color: #f02626; }
       .results .card .product-preview .favorite-mark:active .favorite-icon {
-        width: 29px !important;
-        height: 29px !important; }
+        width: 28px !important;
+        height: 28px !important; }
+      .results .card .product-preview .favorite-mark:hover .fa-heart {
+        color: #f02626; }
       .results .card .product-preview .favorite-mark .white-round {
         position: absolute;
         top: 50%;
@@ -941,11 +950,11 @@ label {
         -webkit-transition: width .1s linear, height .1s linear;
         -o-transition: width .1s linear, height .1s linear;
         transition: width .1s linear, height .1s linear; }
-        .results .card .product-preview .favorite-mark .favorite-icon .fa-heart {
-          color: #f7875e;
-          -webkit-transition: color .8s linear;
-          -o-transition: color .8s linear;
-          transition: color .8s linear; }
+      .results .card .product-preview .favorite-mark .fa-heart {
+        color: #f7875e;
+        -webkit-transition: color .8s linear;
+        -o-transition: color .8s linear;
+        transition: color .8s linear; }
     .results .card .product-preview .hit-mark {
       width: 120px !important;
       height: 68px !important;
