@@ -641,13 +641,13 @@
                                     <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
                                 </a>
                                 <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 50</div>
-                                <a class="favorite-mark"
+                                <button type="button" class="favorite-mark btn"
                                 onclick="favoriteAdd('favorite-1')">
                                     <div class="white-round w-100 h-100"></div>
                                     <div class="favorite-icon">
                                     <i id="favorite-1" class="fa fa-heart w-100 h-100"></i>
                                     </div>
-                                </a>
+                                </button>
                                 <img class="hit-mark" src="../assets/images/products/hit.png" alt="hit">
                             </div>
                             <h4 class="card-title">
@@ -682,241 +682,6 @@
                     </div> <!-- card -->
                 </article> <!-- results-item -->
 
-                <article class="results-item">
-                    <div class="card">
-                        <div id="card-2" class="card-body">
-                            <div class="product-preview">
-                                <a class="link img-wrapper" href="#">
-                                    <img class="card-img-top" src="../assets/images/products/2.jpg" alt="card image bouquet">
-                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
-                                </a>
-                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 50</div>
-                                <div class="favorite-mark" onmousedown="favoriteAdd('favorite-2')" onmouseup="favoriteDecrease('favorite-2')">
-                                    <div class="white-round w-100 h-100"></div>
-                                    <i id="favorite-2" class="fa fa-heart small-heart"></i>
-                                </div>
-                                <img class="hit-mark" src="../assets/images/products/hit.png" alt="hit">
-                            </div>
-                            <h4 class="card-title">
-                                Букет &#171;Рассвет&#187;
-                                <i class="fa fa-question-circle"></i>
-                                <div class="structure text-center">
-                                    <h4 class="info-title text-left">Средний размер</h4>
-                                    <small class="info-value d-block text-left">31 x 22 см</small>
-                                    <h4 class="info-title text-left">Состав:</h4>
-                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
-                                </div>
-                            </h4>
-                            <b><data class="price card-price" value="2240">2240</data><span class="currency">₽</span></b>
-                            <span>с доставкой</span>
-                            <small class="card-text d-block"></small>
-                            <div class="product-rate d-flex">
-                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
-                                <div class="review-block d-flex flex-column h-100">
-                                    <b></b>
-                                    <span class="reviews"></span>
-                                </div>
-                            </div>
-                        </div> <!-- card-body -->
-                        <script type="text/javascript">
-                            infoInit(3.1, 3, 'card-2', false);
-                            regularShape(1, reviewsRegularShapes, undefined, '#card-2 .reviews');
-                        </script>
-                    </div> <!-- card -->
-                </article> <!-- results-item -->
-
-                <article class="results-item">
-                    <div class="card">
-                        <div id="card-3" class="card-body">
-                            <div class="product-preview">
-                                <a class="link img-wrapper" href="#">
-                                    <img class="card-img-top" src="../assets/images/products/3.jpg" alt="card image bouquet">
-                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
-                                </a>
-                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 50</div>
-                                <div class="favorite-mark" onmousedown="favoriteAdd('favorite-3')" onmouseup="favoriteDecrease('favorite-3')">
-                                    <div class="white-round w-100 h-100"></div>
-                                    <i id="favorite-3" class="fa fa-heart small-heart"></i>
-                                </div>
-                                <img class="hit-mark" src="../assets/images/products/hit.png" alt="hit">
-                            </div>
-                            <h4 class="card-title">
-                                Букет &#171;Рассвет&#187;
-                                <i class="fa fa-question-circle"></i>
-                                <div class="structure text-center">
-                                    <h4 class="info-title text-left">Средний размер</h4>
-                                    <small class="info-value d-block text-left">31 x 22 см</small>
-                                    <h4 class="info-title text-left">Состав:</h4>
-                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
-                                </div>
-                            </h4>
-                            <b><data class="price card-price" value="2240">2240</data><span class="currency">₽</span></b>
-                            <span>с доставкой</span>
-                            <small class="card-text d-block"></small>
-                            <div class="product-rate d-flex">
-                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
-                                <div class="review-block d-flex flex-column h-100">
-                                    <b></b>
-                                    <span class="reviews"></span>
-                                </div>
-                            </div>
-                        </div> <!-- card-body -->
-                        <script type="text/javascript">
-                            infoInit(4.1, 11, 'card-3', false);
-                            regularShape(8, reviewsRegularShapes, undefined, '#card-3 .reviews');
-                        </script>
-                    </div> <!-- card -->
-                </article> <!-- results-item -->
-
-                <article class="results-item">
-                    <div class="card">
-                        <div id="card-4" class="card-body">
-                            <div class="product-preview">
-                                <a class="link img-wrapper" href="#">
-                                    <img class="card-img-top" src="../assets/images/products/2.jpg" alt="card image bouquet">
-                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
-                                </a>
-                                <div class="bonuses"><i class="fa fa-gift"></i> 50</div>
-                                <div class="favorite-mark" onmousedown="favoriteAdd('favorite-4')" onmouseup="favoriteDecrease('favorite-4')">
-                                    <div class="white-round w-100 h-100"></div>
-                                    <i id="favorite-4" class="fa fa-heart small-heart"></i>
-                                </div>
-                                <img class="hit-mark" src="../assets/images/products/hit.png" alt="hit">
-                            </div>
-                            <h4 class="card-title">
-                                Букет &#171;Рассвет&#187;
-                                <i class="fa fa-question-circle"></i>
-                                <div class="structure text-center">
-                                    <h4 class="info-title text-left">Средний размер</h4>
-                                    <small class="info-value d-block text-left">31 x 22 см</small>
-                                    <h4 class="info-title text-left">Состав:</h4>
-                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
-                                </div>
-                            </h4>
-                            <b><data class="price card-price" value="2240">2240</data><span class="currency">₽</span></b>
-                            <span>с доставкой</span>
-                            <small class="card-text d-block"></small>
-                            <div class="product-rate d-flex">
-                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
-                                <div class="review-block d-flex flex-column h-100">
-                                    <b></b>
-                                    <span class="reviews"></span>
-                                </div>
-                            </div>
-                        </div> <!-- card-body -->
-                        <script type="text/javascript">
-                            infoInit(3.2, 6, 'card-4', true, true);
-                            regularShape(4, reviewsRegularShapes, undefined, '#card-4 .reviews');
-                        </script>
-                    </div> <!-- card -->
-                </article> <!-- results-item -->
-
-                <article class="results-item">
-                    <div class="card">
-                        <div id="card-5" class="card-body">
-                            <div class="product-preview">
-                                <a class="link img-wrapper" href="#">
-                                    <img class="card-img-top" src="../assets/images/products/1.jpg" alt="card image bouquet">
-                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
-                                </a>
-                                <div class="favorite-mark" onmousedown="favoriteAdd('favorite-5')" onmouseup="favoriteDecrease('favorite-5')">
-                                    <div class="white-round w-100 h-100"></div>
-                                    <i id="favorite-5" class="fa fa-heart small-heart"></i>
-                                </div>
-                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 50</div>
-                                <img class="hit-mark" src="../assets/images/products/hit.png" alt="hit">
-                            </div>
-                            <h4 class="card-title">
-                                Букет &#171;Рассвет&#187;
-                                <i class="fa fa-question-circle"></i>
-                                <div class="structure text-center">
-                                    <h4 class="info-title text-left">Средний размер</h4>
-                                    <small class="info-value d-block text-left">31 x 22 см</small>
-                                    <h4 class="info-title text-left">Состав:</h4>
-                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
-                                </div>
-                            </h4>
-                            <b><data class="price card-price" value="2240">2240</data><span class="currency">₽</span></b>
-                            <span>с доставкой</span>
-                            <small class="card-text d-block"></small>
-                            <div class="product-rate d-flex">
-                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
-                                <div class="review-block d-flex flex-column h-100">
-                                    <b></b>
-                                    <span class="reviews"></span>
-                                </div>
-                            </div>
-                        </div> <!-- card-body -->
-                        <script type="text/javascript">
-                            infoInit(3.1, 3, 'card-5', false);
-                            regularShape(1, reviewsRegularShapes, undefined, '#card-5 .reviews');
-                        </script>
-                    </div> <!-- card -->
-                </article> <!-- results-item -->
-
-                <article class="results-item">
-                    <div class="card">
-                        <div id="card-6" class="card-body">
-                            <div class="product-preview">
-                                <a class="link img-wrapper" href="#">
-                                    <img class="card-img-top" src="../assets/images/products/3.jpg" alt="card image bouquet">
-                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
-                                </a>
-                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 50</div>
-                                <div class="favorite-mark" onmousedown="favoriteAdd('favorite-6')" onmouseup="favoriteDecrease('favorite-6')">
-                                    <div class="white-round w-100 h-100"></div>
-                                    <i id="favorite-6" class="fa fa-heart small-heart"></i>
-                                </div>
-                                <img class="hit-mark" src="../assets/images/products/hit.png" alt="hit">
-                            </div>
-                            <h4 class="card-title">
-                                Букет &#171;Рассвет&#187;
-                                <i class="fa fa-question-circle"></i>
-                                <div class="structure text-center">
-                                    <h4 class="info-title text-left">Средний размер</h4>
-                                    <small class="info-value d-block text-left">31 x 22 см</small>
-                                    <h4 class="info-title text-left">Состав:</h4>
-                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
-                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
-                                </div>
-                            </h4>
-                            <b><data class="price card-price" value="2240">2240</data><span class="currency">₽</span></b>
-                            <span>с доставкой</span>
-                            <small class="card-text d-block"></small>
-                            <div class="product-rate d-flex">
-                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
-                                <div class="review-block d-flex flex-column h-100">
-                                    <b></b>
-                                    <span class="reviews"></span>
-                                </div>
-                            </div>
-                        </div> <!-- card-body -->
-                        <script type="text/javascript">
-                            infoInit(3.1, 3, 'card-6', false);
-                            regularShape(1, reviewsRegularShapes, undefined, '#card-6 .reviews');
-                        </script>
-                    </div> <!-- card -->
-                </article> <!-- results-item -->
-
                 <a href="#" class="btn btn-lg btn-outline-dark group-btn">
                     <span class="group-btn-text">Смотреть все из &#171;Хиты этой недели&#187;</span>
                 </a>
@@ -946,8 +711,8 @@
 
 <!-- Page Actions -->
 <script type="text/javascript">
-    $(".alert").attr('style','display:none;');
-    $("#cur-3 .icon-checked").attr('style','opacity: 1;');
+    $(".alert").css('display', 'none');
+    $("#cur-3 .icon-checked").css('opacity', '1');
     sliderServices();
 </script>
 
