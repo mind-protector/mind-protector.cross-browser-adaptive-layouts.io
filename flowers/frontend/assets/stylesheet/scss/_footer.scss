@@ -1,0 +1,201 @@
+
+/* FOOTER
+==================*/
+
+.footer {
+    &-container {
+        @media (max-width: 992px) {
+            max-width: 860px !important;
+        }
+    }
+
+    &-main {
+        .row:last-child > * {
+            align-items: center;
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+
+            & > * {
+                @include flex-item-size(100);
+            }
+
+            .row:last-child > * {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &-wrapper {
+        @media (max-width: 875px) {
+            @include flex-item-size(100);
+            justify-content: center;
+            margin-left: 40px !important;
+
+            @media (max-width: 585px) {
+                margin-left: 20px !important;
+            }
+
+            &:first-child {
+                margin-bottom: 20px;
+            }
+
+            .tablet-flex-col {
+                justify-content: flex-start !important;
+            }
+
+            .tablet-p-3 {
+                padding-right: 1rem !important;
+            }
+
+            .tablet-none-p {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    &-text {
+        @media (max-width: 1200px) {
+            font-size: 14px;
+        }
+    }
+
+    &-item {
+        padding: 4px 0;
+
+        @media (max-width: 875px) {
+            padding-left: 0 !important;
+
+            &:first-child {
+                margin-bottom: 0;
+                padding-left: 3px !important;
+            }
+        }
+    }
+
+    &-links {
+        cursor: pointer;
+    }
+
+    &-contacts {
+        padding-left: 3rem !important;
+        @media (max-width: 992px) {
+            padding-left: 1.5rem !important;
+        }
+
+        @media (max-width: 992px) {
+            margin-top: 0 !important;
+            padding-bottom: 1.5rem !important;
+        }
+    }
+
+    &-link {
+        &:hover .link-text {
+            padding-bottom: 2px;
+            border-bottom: 1px solid #fff;
+        }
+    }
+}
+
+.elegant-color-dark {
+    background-image: url(../../images/footer/background.png);
+    color: #fff;
+}
+
+.footer-hr {
+    width: 60px;
+    background-color: #fff;
+}
+
+.div-hr {
+    background-color: $gray-color;
+    opacity: .3;
+}
+
+.brand-title {
+    font: $brand-font;
+    font-size: 20px;
+}
+
+.color-white {
+    color: #fff !important;
+}
+
+.fa-book {
+    font-size: 24px;
+}
+
+.fa-balance-scale {
+    font-size: 22px;
+}
+
+.rights {
+    @media (max-width: 670px) {
+        @include flex-item-size(66.666666);
+    }
+
+    @media (max-width: 585px) {
+        @include flex-item-size(100);
+    }
+}
+
+.socials {
+    margin: 0 !important;
+
+    @media (max-width: 875px) {
+        align-items: center;
+    }
+
+    @media (max-width: 670px) {
+        margin: 0 0 0 1rem !important;
+        @include flex-item-size(25);
+    }
+
+    @media (max-width: 767px) {
+        justify-content: flex-end !important;
+    }
+
+    @media (max-width: 585px) {
+        margin-left: 20px !important;
+        margin-top: 20px !important;
+        padding-left: 13px !important;
+
+        justify-content: flex-start !important;
+        @include flex-item-size(100);
+    }
+}
+
+.social-group {
+    display: flex;
+
+    @media (max-width: 670px) {
+        display: block;
+    }
+
+    @media (max-width: 585px) {
+        display: flex;
+    }
+}
+
+.social {
+    @include size(32px, 32px);
+
+    @media (max-width: 670px) {
+        &:first-child {
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+.vk-logo {
+    @include size(28px, 28px);
+}
+
+.okru-logo {
+    @include size(29px, 29px);
+}
+
+.facebook {
+    @include size(30px, 30px);
+}
