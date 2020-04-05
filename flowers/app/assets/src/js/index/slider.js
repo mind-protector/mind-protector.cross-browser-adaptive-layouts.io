@@ -118,4 +118,4 @@ function sliderServices() {
     var slider = multiItemSlider();
 };
 
-$(() => sliderServices());
+$(sliderServices);
