@@ -11,7 +11,7 @@ const gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
-    browserSync = require("browser-sync").create(),
+    browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
 
     path = {
