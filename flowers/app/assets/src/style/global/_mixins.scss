@@ -1,0 +1,36 @@
+
+/* MIXINS
+==================*/
+
+@mixin size($width: auto, $height: auto) {
+    width: $width !important;;
+    height: $height !important;;
+}
+
+@mixin bg-fixed($img) {
+    background: url('../img/intro/#{$img}') no-repeat center center fixed;
+}
+
+@mixin flex-item-size($val) {
+    -ms-flex: 0 0 #{$val}% !important;
+    flex: #{$val}% !important;
+    max-width: #{$val}% !important;
+    width: #{$val}% !important;
+}
+
+@mixin align-center($img) {
+    background: url('../../images/intro/#{$img}') no-repeat center center fixed;
+}
+
+@mixin center-absolute() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin reboot() {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}

@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/build/style/main.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Montserrat+Alternates|Open+Sans:300|PT+Mono&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!-- jQuery first -->
+    <!-- then Main JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="../assets/build/js/main.js"></script>
+
+    <!--[if IE]>
+	    <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
+	    <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script>
+    <![endif]-->
+
+    <title>Flowers</title>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">Магазин<span class="main-color">Цветов</span></a>
+
+        <div class="navbar-buttons">
+            <div class="dropdown">
+                <button class="btn btn-pink dropdown-toggle filters filters-lg" type="button"
+                id="filtersMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Фильтры</button>
+                <div class="dropdown-menu filters-menu" aria-labelledby="filtersMenu">
+                    <form action="/" method="POST">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-4">
+
+                                <span class="dropdown-header">Тип</span>
+                                <div class="dropdown-divider"></div>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Классика</span>
+                                    <input class="dropdown-item" type="checkbox" name="classics">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Коробки</span>
+                                    <input class="dropdown-item" type="checkbox" name="boxes">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Корзинки</span>
+                                    <input class="dropdown-item" type="checkbox" name="baskets">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Свадебные</span>
+                                    <input class="dropdown-item" type="checkbox" name="weddings">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Комнатные</span>
+                                    <input class="dropdown-item" type="checkbox" name="indoors">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Со скидкой</span>
+                                    <input class="dropdown-item" type="checkbox" name="sale">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <div class="dropdown-divider"></div>
+
+                                <span class="dropdown-header">Размер</span>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Маленький <span class="b-size">(10x10см)</span></span>
+                                    <input class="dropdown-item" type="checkbox" name="small">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Средний <span class="b-size">(25x25см)</span></span>
+                                    <input class="dropdown-item" type="checkbox" name="medium">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Большой <span class="b-size">(40x40см)</span></span>
+                                    <input class="dropdown-item" type="checkbox" name="large">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-item">
+                                    <span>Огромный <span class="b-size">(55x55см)</span></span>
+                                    <input class="dropdown-item" type="checkbox" name="huge">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                            </div> <!-- col-sm-5 col-md-4 -->
+                            <div class="col-sm-7 col-md-8 row none-margins">
+
+                                <div class="col-md-6 none-paddings-sm">
+                                    <span class="dropdown-header">Сортировка</span>
+                                    <div class="dropdown-divider"></div>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Цена/Качество</span>
+                                        <input class="dropdown-item" type="radio" name="sort" checked>
+                                        <span class="fake radio"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Сначала новые</span>
+                                        <input class="dropdown-item" type="radio" name="sort">
+                                        <span class="fake radio"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Сначала дешевые</span>
+                                        <input class="dropdown-item" type="radio" name="sort">
+                                        <span class="fake radio"></span>
+                                    </label>
+                                    <div class="dropdown-divider"></div>
+
+                                    <span class="dropdown-header">Цена <span class="currency">₽</span></span>
+                                    <div class="dropdown-item inline-input">
+                                        <label class="dropdown-item w-50" for="from">От</label>
+                                        <input class="dropdown-item w-50" type="text" name="from" id="from" value="1" maxlength="5">
+                                    </div>
+                                    <div class="dropdown-item inline-input">
+                                        <label class="dropdown-item w-50" for="to">До</label>
+                                        <input class="dropdown-item w-50" type="text" name="to" id="to" value="99999" maxlength="5">
+                                    </div>
+                                </div> <!-- col-sm-7 row none-margins -->
+
+                                <div class="col-md-6 none-paddings-sm none-paddings">
+                                    <span class="dropdown-header popular"><i class="fa fa-star"></i>Популярные</span>
+                                    <div class="dropdown-divider"></div>
+
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Розы</span>
+                                        <input class="dropdown-item" type="checkbox" name="roses">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Тюльпаны</span>
+                                        <input class="dropdown-item" type="checkbox" name="tulips">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Пионы</span>
+                                        <input class="dropdown-item" type="checkbox" name="peonies">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Пионовидные розы</span>
+                                        <input class="dropdown-item" type="checkbox" name="peony_roses">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                    <label class="dropdown-item inline-input small-paddings-item">
+                                        <span>Хризантемы</span>
+                                        <input class="dropdown-item" type="checkbox" name="сhrysanthemums">
+                                        <span class="fake checkbox"></span>
+                                    </label>
+                                </div> <!-- col-md-6 none-paddings-sm -->
+
+                                <div class="col-md-11 none-paddings-sm">
+                                    <span class="dropdown-header">Цвет</span>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="color-filters">
+                                        <button class="btn btn-default b-color red margins-md" type="button"
+                                        name="red" value="false" onclick="bcolorChecked('red')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color pink" type="button"
+                                        name="pink" value="false" onclick="bcolorChecked('pink')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color orange" type="button"
+                                        name="orange" value="false" onclick="bcolorChecked('orange')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color yellow" type="button"
+                                        name="yellow" value="false" onclick="bcolorChecked('yellow')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color green" type="button"
+                                        name="green" value="false" onclick="bcolorChecked('green')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color blue" type="button"
+                                        name="blue" value="false" onclick="bcolorChecked('blue')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color purple" type="button"
+                                        name="purple" value="false" onclick="bcolorChecked('purple')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color black" type="button"
+                                        name="black" value="false" onclick="bcolorChecked('black')">
+                                            <i class="fa fa-check icon-checked white-icon"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color white" type="button"
+                                        name="white" value="false" onclick="bcolorChecked('white')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                        <button class="btn btn-default b-color multi-color" type="button"
+                                        name="multi-color" value="false" onclick="bcolorChecked('multi-color')">
+                                            <i class="fa fa-check icon-checked"></i>
+                                        </button>
+                                    </div>
+                                </div> <!-- col-md-11 none-paddings -->
+                            </div> <!-- col-sm-7 row none-margins-->
+                        </div> <!-- row -->
+
+                        <div class="row">
+
+                            <div class="col-12">
+                                <span class="dropdown-header">Цветок</span>
+                                <div class="dropdown-divider"></div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+
+                                <span class="dropdown-header">A</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Альстромерии</span>
+                                    <input class="dropdown-item" type="checkbox" name="alstromerias">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Амариллисы</span>
+                                    <input class="dropdown-item" type="checkbox" name="amaryllis">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Анемоны</span>
+                                    <input class="dropdown-item" type="checkbox" name="anemones">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Астры</span>
+                                    <input class="dropdown-item" type="checkbox" name="asters">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">В</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Васильки</span>
+                                    <input class="dropdown-item" type="checkbox" name="cornflowers">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">Г</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Гвоздики</span>
+                                    <input class="dropdown-item" type="checkbox" name="сarnations">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Георгины</span>
+                                    <input class="dropdown-item" type="checkbox" name="dahlias">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Герберы</span>
+                                    <input class="dropdown-item" type="checkbox" name="gerberas">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Гиацинты</span>
+                                    <input class="dropdown-item" type="checkbox" name="hyacinths">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                            </div> <!-- col-md-6 col-lg-3 -->
+
+                            <div class="col-md-6 col-lg-3">
+
+                                <label class="dropdown-item inline-input">
+                                    <span>Гладиолусы</span>
+                                    <input class="dropdown-item" type="checkbox" name="gladiolus">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Голландская роза</span>
+                                    <input class="dropdown-item" type="checkbox" name="dutch_rose">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Гортензии</span>
+                                    <input class="dropdown-item" type="checkbox" name="hydrangeas">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">И</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Ирис</span>
+                                    <input class="dropdown-item" type="checkbox" name="iris">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">К</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Каллы</span>
+                                    <input class="dropdown-item" type="checkbox" name="сalla_lilies">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Колокольчики</span>
+                                    <input class="dropdown-item" type="checkbox" name="bells">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Кустовые розы</span>
+                                    <input class="dropdown-item" type="checkbox" name="shrub_roses">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">Л</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Лаванда</span>
+                                    <input class="dropdown-item" type="checkbox" name="lavender">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Ландыши</span>
+                                    <input class="dropdown-item" type="checkbox" name="may-lily">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                            </div> <!-- col-md-6 col-lg-3 -->
+
+                            <div class="col-md-6 col-lg-3">
+
+                                <label class="dropdown-item inline-input small-paddings-md-item">
+                                    <span>Лилии</span>
+                                    <input class="dropdown-item" type="checkbox" name="lilies">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">М</span>
+                                <label class="dropdown-item inline-input small-paddings-md-item">
+                                    <span>Матрикарии</span>
+                                    <input class="dropdown-item" type="checkbox" name="matricaria">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-md-item">
+                                    <span>Махровые тюльпаны</span>
+                                    <input class="dropdown-item" type="checkbox" name="terry_tulips">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-md-item">
+                                    <span>Мимозы</span>
+                                    <input class="dropdown-item" type="checkbox" name="mimosa">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">Н</span>
+                                <label class="dropdown-item inline-input small-paddings-md-item">
+                                    <span>Нарциссы</span>
+                                    <input class="dropdown-item" type="checkbox" name="daffodils">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">О</span>
+                                <label class="dropdown-item inline-input small-paddings-md-item">
+                                    <span>Орхидеи</span>
+                                    <input class="dropdown-item" type="checkbox" name="orchids">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">П</span>
+                                <label class="dropdown-item inline-input small-paddings-md-item">
+                                    <span>Подснежники</span>
+                                    <input class="dropdown-item" type="checkbox" name="snowdrops">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input small-paddings-md-item">
+                                    <span>Подсолнухи</span>
+                                    <input class="dropdown-item" type="checkbox" name="sunflowers">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                            </div> <!-- col-md-6 col-lg-3 -->
+
+                            <div class="col-md-6 col-lg-3">
+
+                                <span class="dropdown-header">Р</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Ранунклюсы</span>
+                                    <input class="dropdown-item" type="checkbox" name="ranunklyusy">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Роза Эквадор</span>
+                                    <input class="dropdown-item" type="checkbox" name="rosa_ecuador">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Ромашки</span>
+                                    <input class="dropdown-item" type="checkbox" name="daisies">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">С</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Сирень</span>
+                                    <input class="dropdown-item" type="checkbox" name="lilac">
+                                    <span class="fake checkbox"></span>
+                                </label>
+                                <label class="dropdown-item inline-input">
+                                    <span>Суккуленты</span>
+                                    <input class="dropdown-item" type="checkbox" name="succulents">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">Ф</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Фрезии</span>
+                                    <input class="dropdown-item" type="checkbox" name="freesia">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                                <span class="dropdown-header">Э</span>
+                                <label class="dropdown-item inline-input">
+                                    <span>Эустомы</span>
+                                    <input class="dropdown-item" type="checkbox" name="eustomas">
+                                    <span class="fake checkbox"></span>
+                                </label>
+
+                            </div> <!-- col-md-6 col-lg-3 -->
+                        </div> <!-- row -->
+                    </form>
+                </div> <!-- dropdown-menu -->
+            </div> <!-- dropdown -->
+            <button class="btn btn-outline-dark filters" type="button">Применить</button>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Избранное</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Помощь</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle currency-note" id="currenciesMenu"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Руб</a>
+                    <div class="dropdown-menu currencies-menu" aria-labelledby="currenciesMenu">
+                        <h4 class="dropdown-item currencies-item" id="cur-1" onclick="changeCurrency('cur-1','.USD')">USD <i class="fa fa-check icon-checked"></i></h4>
+                        <h4 class="dropdown-item currencies-item" id="cur-2" onclick="changeCurrency('cur-2','.EUR')">EUR <i class="fa fa-check icon-checked"></i></h4>
+                        <h4 class="dropdown-item currencies-item" id="cur-3" onclick="changeCurrency('cur-3')">RUB <i class="fa fa-check icon-checked"></i></h4>
+                    </div>
+                    </div>
+                </li>
+                <li class="nav-item btn-item">
+                    <a href="#" class="nav-link btn btn-pink" role="button">
+                        <i class="fa fa-user"></i>Войти
+                    </a>
+                </li>
+                </li>
+            </ul>
+        </div> <!-- navbar-collapse-->
+    </div> <!-- container-fluid -->
+</nav>
+
+<main>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="carousel slide h-100" data-ride="carousel">
+            <div class="carousel-inner h-100">
+                <div class="carousel-info h-100">
+                    <div class="rounds">
+                        <div class="round big-round rounded-circle"></div>
+                        <div class="round medium-round rounded-circle"></div>
+                        <div class="round small-round rounded-circle"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h1 class="display-2 title">Цветочный магазин</h1>
+                        <h3 class="subtitle">Мы занимаемся продажей и доставкой цветов по Екатеринбургу</h3>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-img-1 h-100 active">
+                </div>
+                <div class="carousel-item carousel-img-2 h-100">
+                </div>
+                <div class="carousel-item carousel-img-3 h-100">
+                </div>
+            </div> <!-- carousel-inner -->
+        </div> <!-- carousel slide -->
+    </section>
+
+    <!-- Contacts -->
+    <header class="contacts vcard container-lg">
+        <div class="contacts-content d-flex align-items-center">
+            <!-- meta-data for hCard -->
+            <div class="d-none">
+                <span class="category">Магазин цветов</span>
+                <span class="fn org">МагазинЦветов</span>
+                <span class="workhours">ежедневно с 7:00 до 20:00</span>
+                <span class="url">
+                    <span class="value-title" title="https://that-site.com/"> </span>
+                </span>
+            </div>
+
+            <div class="content-item content-first d-flex align-items-center justify-content-around flex-wrap">
+                <div class="contacts-item address d-flex flex-column align-items-sm-center w-auto">
+                    <div class="adr">
+                        <span>Наш магазин по адресу:</span>
+                        <small class="address-text">
+                            <a class="link" href="#">
+                                <i class="fa fa-map-marker"></i>
+                                <!-- meta-data for hCard --> <span class="locality d-none">г. Екатеринбург</span>
+                                <span class="street-address dotted">Билимбаевская 39, 70</span>
+                            </a>
+                        </small>
+                    </div>
+                </div>
+
+                <div class="contacts-item delivery d-flex align-items-sm-center w-auto">
+                    Доставка в пригород<br class="d-none d-sm-block"> Екатеринбурга!
+                </div>
+            </div>
+
+            <div class="content-item content-second d-flex align-items-center justify-content-around flex-wrap">
+                <div class="contacts-item hot-line d-flex flex-column align-items-sm-center w-auto">
+                    <div class="container-column-sm">
+                        <small>Горячая линия<i class="fa fa-phone"></i></small>
+                        <h5 class="hot-line-number tel">8-800-666-3636</h5>
+                    </div>
+                </div>
+
+                <div class="contacts-item numbers d-flex align-items-sm-center w-auto">
+                    <div>
+                        <small>Наши контакты</small>
+                        <h5 class="contact-number-whatsapp vertical-center">
+                            <img class="contact-icon" src="../assets/build/img/header/whatsapp.png" alt="whatsapp">
+                            8-855-000-3432
+                        </h5>
+                        <h5 class="contact-number-viber vertical-center">
+                            <img class="contact-icon" src="../assets/build/img/header/viber.png" alt="viber">
+                            8-900-466-1616
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- contacts-content -->
+    </header>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="slider">
+            <div class="slider-wrapper">
+                <div class="slider-item">
+                    <div class="item-wrapper rounded-circle h-100">
+                        <img class="img-fluid rounded-circle h-100" src="../assets/build/img/services/1.jpeg" alt="photo">
+                        <h4 class="item-desc">Только свежие цветы</h4>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="item-wrapper rounded-circle h-100">
+                        <img class="img-fluid rounded-circle h-100" src="../assets/build/img/services/2.jpg" alt="photo">
+                        <h4 class="item-desc">Гаратния качества цветов</h4>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="item-wrapper rounded-circle h-100">
+                        <img class="img-fluid rounded-circle h-100" src="../assets/build/img/services/3.jpg" alt="photo">
+                        <h4 class="item-desc">Бесплатная быстрая доставка</h4>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="item-wrapper rounded-circle h-100">
+                        <img class="img-fluid rounded-circle h-100" src="../assets/build/img/services/4.jpg" alt="photo">
+                        <h4 class="item-desc">Бонусы за каждую покупку</h4>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="item-wrapper rounded-circle h-100">
+                        <img class="img-fluid rounded-circle h-100" src="../assets/build/img/services/5.jpg" alt="photo">
+                        <h4 class="item-desc">Удобные способы оплаты</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="slider-control slider-control-left" href="#" role="button"></a>
+            <a class="slider-control slider-control-right slider-control-show" href="#" role="button"></a>
+        </div> <!-- slider-wrapper -->
+    </section>
+
+    <!-- Results -->
+    <section class="results mx-auto">
+
+            <div class="group d-flex flex-wrap">
+                <h3 class="group-title display-4 w-100 h-auto p-0">Хиты этой недели</h3>
+                <small class="group-subtitle d-block w-100 h-auto p-0">Товары, которые сейчас имеют популярность</small>
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-1" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/1.jpg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 50</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-1')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-1" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Букет &#171;Рассвет&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">31 x 22 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-1" class="price card-price" value="2240">2240</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(4.6, 7, 'card-1', '12:00 завтра', true);
+                            regularShape(5, reviewsRegularShapes, undefined, '#card-1 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-2" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/2.jpg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 120</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-2')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-2" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Букет &#171;Восход&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">30 x 30 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-2" class="price card-price" value="1990">1990</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(3.6, 10, 'card-2', false);
+                            regularShape(2, reviewsRegularShapes, undefined, '#card-2 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-3" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/3.jpg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 150</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-3')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-3" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Букет &#171;Закат&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">16 x 18 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-3" class="price card-price" value="3500">3500</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(5, 3, 'card-3', true, true);
+                            regularShape(3, reviewsRegularShapes, undefined, '#card-3 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-4" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/4.jpg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 40</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-4')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-4" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Букет &#171;Весенний лес&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">24 x 18 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-4" class="price card-price" value="6600">6600</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(2.6, 10, 'card-4', '9:00 завтра');
+                            regularShape(3, reviewsRegularShapes, undefined, '#card-4 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-5" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/5.jpg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 90</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-5')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-5" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Букет &#171;Юность&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">24 x 18 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-5" class="price card-price" value="2360">2360</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(4.9, 13, 'card-5', false);
+                            regularShape(8, reviewsRegularShapes, undefined, '#card-5 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-6" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/6.jpeg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 150</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-6')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-6" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Букет из фрутов &#171;Фруктовый сад&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">34 x 28 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-6" class="price card-price" value="4380">4380</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(4.4, 7, 'card-6', true, true);
+                            regularShape(4, reviewsRegularShapes, undefined, '#card-6 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-7" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/7.jpg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 140</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-7')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-7" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Букет &#171;Сосновый бор&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">32 x 26 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-7" class="price card-price" value="5890">5890</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(3.9, 99, 'card-7', '14:00 послезавтра');
+                            regularShape(11, reviewsRegularShapes, undefined, '#card-7 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-8" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/8.jpg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 200</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-8')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-8" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title">
+                                Корзина &#171;Купидон&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">20 x 45 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-8" class="price card-price" value="11280">11280</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(4.9, 3, 'card-8', false);
+                            regularShape(2, reviewsRegularShapes, undefined, '#card-8 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-9" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/9.jpeg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 50</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-9')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-9" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Букет &#171;Жемчужина&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">24 x 18 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-9" class="price card-price" value="3300">3300</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(4.6, 25, 'card-9', true, true);
+                            regularShape(19, reviewsRegularShapes, undefined, '#card-9 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <article class="results-item">
+                    <div class="card">
+                        <div id="card-10" class="card-body">
+                            <div class="product-preview">
+                                <a class="link img-wrapper" href="#">
+                                    <img class="card-img-top" src="../assets/build/img/products/10.jpeg" alt="card image bouquet">
+                                    <div class="round-preview d-flex align-items-center justify-content-center">Смотреть</div>
+                                </a>
+                                <div class="bonuses d-flex align-items-center"><i class="fa fa-gift"></i> 100</div>
+                                <button type="button" class="favorite-mark btn"
+                                onclick="favoriteAdd('favorite-10')">
+                                    <div class="white-round w-100 h-100"></div>
+                                    <div class="favorite-icon">
+                                    <i id="favorite-10" class="fa fa-heart w-100 h-100"></i>
+                                    </div>
+                                </button>
+                                <img class="hit-mark" src="../assets/build/img/products/hit.png" alt="hit">
+                            </div>
+                            <h4 class="card-title d-flex align-items-center">
+                                Корзина &#171;Дары природы&#187;
+                                <i class="fa fa-question-circle"></i>
+                                <div class="structure text-center">
+                                    <h4 class="info-title text-left">Средний размер</h4>
+                                    <small class="info-value d-block text-left">30 x 51 см</small>
+                                    <h4 class="info-title text-left">Состав:</h4>
+                                    <small class="info-value structure-value d-block text-left">Роза белая - 1 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза красная - 2 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Махровый тюльпан сиреневый - 8 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Ранунклюсы сиреневые - 15 шт.</small>
+                                    <small class="info-value structure-value d-block text-left">Роза Эквадор розовая - 3 шт.</small>
+                                </div>
+                            </h4>
+                            <b><data id="price-10" class="price card-price" value="12540">12540</data><span class="currency">₽</span></b>
+                            <span>с доставкой</span>
+                            <small class="card-text"></small>
+                            <div class="product-rate d-flex">
+                                <div class="score-block d-flex align-items-center justify-content-center h-100"></div>
+                                <div class="review-block d-flex flex-column h-100">
+                                    <b></b>
+                                    <span class="reviews d-block"></span>
+                                </div>
+                            </div>
+                        </div> <!-- card-body -->
+                        <script type="text/javascript">
+                            infoInit(4.3, 13, 'card-10', true);
+                            regularShape(9, reviewsRegularShapes, undefined, '#card-10 .reviews');
+                        </script>
+                    </div> <!-- card -->
+                </article> <!-- results-item -->
+
+                <a href="#" class="btn btn-lg btn-outline-dark group-btn">
+                    <span class="group-btn-text">Смотреть все из &#171;Хиты этой недели&#187;</span>
+                </a>
+            </div>
+
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="page-footer font-small elegant-color-dark">
+    <div class="container footer-container text-left pt-3 mt-5">
+        <div class="row footer-main mt-3 mb-4">
+
+            <div class="row col-7 m-0">
+                <div class="col-7 footer-wrapper p-0">
+                    <h6 class="brand-title">Магазин<span class="main-color">Цветов</span></h6>
+                    <hr class="footer-hr accent-2 mb-2 mt-0 d-inline-block mx-auto">
+                    <small class="copywrite d-flex">&copy; FlowersShop, inc. 2020 Copyright.<br>Все права защищены.</small>
+                </div>
+
+                <div class="col-5 footer-wrapper footer-contacts d-flex flex-column justify-content-center pr-5 pl-0 mt-3">
+                    <div class="tablet-flex-col d-flex justify-content-center mb-3">
+                        <i class="fa fa-phone mr-2"></i>
+                        <h6 class="footer-text tel d-inline m-0">8-800-666-3636</h6>
+                    </div>
+                    <div class="tablet-flex-col tablet-none-p d-flex justify-content-center pl-2">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <h6 class="footer-text tel d-inline m-0">work@email.com</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-5 m-0">
+                <div class="col-6 footer-wrapper d-flex flex-column justify-content-center p-0">
+                    <div class="mt-2 mb-2">
+                        <h6 class="footer-text text-uppercase font-weight-bold">Узнать о Нас</h6>
+                        <ul class="list-unstyled footer-links m-0">
+                            <li class="footer-link mb-1">
+                                <a class="color-white link text-capitalize d-block" href="#">
+                                    <span class="footer-text link-text">о компании<span>
+                                </a>
+                            </li>
+                            <li class="footer-link mb-1">
+                                <a class="color-white link text-capitalize d-block" href="#">
+                                    <span class="footer-text link-text">вакансии<span>
+                                </a>
+                            </li>
+                            <li class="footer-link mb-1">
+                                <a class="color-white link text-capitalize d-block" href="#">
+                                    <span class="footer-text link-text">отзывы<span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-6 footer-wrapper d-flex flex-column justify-content-center p-0">
+                    <div class="tablet-p-3 mt-2 mb-2">
+                        <h6 class="footer-text text-uppercase font-weight-bold">Бизнесс</h6>
+                        <ul class="list-unstyled footer-links m-0">
+                            <li class="footer-link mb-1">
+                                <a class="color-white link text-capitalize d-block" href="#">
+                                    <span class="footer-text link-text">франшиза<span>
+                                </a>
+                            </li>
+                            <li class="footer-link mb-1">
+                                <a class="color-white link text-capitalize d-block" href="#">
+                                    <span class="footer-text link-text">сотрудникам<span>
+                                </a>
+                            </li>
+                            <li class="footer-link mb-1">
+                                <a class="color-white link text-capitalize d-block" href="#">
+                                    <span class="footer-text link-text">партнерам<span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- row mt-3 -->
+    </div> <!-- container text-center text-md-left mt-5 -->
+
+    <hr class="div-hr accent-2 mb-2 mt-0 d-inline-block w-100">
+    <div class="container footer-container text-left pb-4">
+        <div class="row mt-3">
+
+            <div class="row col-sm-6 col-md-8 rights m-0">
+                <a href="#" class="col-6 footer-wrapper footer-item link footer-link color-white">
+                    <i class="fa fa-book pr-2 pt-1"></i>
+                    <span class="footer-text link-text">Пользовательское соглашение</span>
+                </a>
+
+                <a href="#" class="col-6 footer-wrapper footer-item link footer-link color-white">
+                    <i class="fa fa-balance-scale pr-2 pt-1"></i>
+                    <span class="footer-text link-text">Политика конфиденциальности</span>
+                </a>
+            </div>
+
+            <div class="row col-sm-5 col-md-4 socials d-flex justify-content-md-center">
+                <div class="social-group p-0 mr-3">
+                    <a href="#" class="social d-block mr-3">
+                        <img class="w-100 h-100" src="../assets/build/img/footer/instagram.png" alt="instagram">
+                    </a>
+
+                    <a href="#" class="social d-flex align-items-center justify-content-center">
+                        <img class="vk-logo" src="../assets/build/img/footer/vk.png" alt="vk">
+                    </a>
+                </div>
+
+                <div class="social-group p-0">
+                    <a href="#" class="social d-flex align-items-center justify-content-center mr-3">
+                        <img class="okru-logo" src="../assets/build/img/footer/okru.png" alt="ok.ru">
+                    </a>
+
+                    <a href="#" class="social d-flex align-items-center justify-content-center">
+                        <img class="facebook" src="../assets/build/img/footer/facebook.png" alt="facebook">
+                    </a>
+                </div>
+            </div>
+</footer>
+
+<!-- Push Alert -->
+<div class="alert alert-dismissible fade show fixed-bottom fixed-right" role="alert">
+    <button type="button" class="close" onclick="alertClose()"><span>&times;</span></button>
+    <h4 class="alert-title"></h4>
+    <small class="alert-goods d-inline-block">
+        Всего
+        <span id="goods-value" class="goods-value">
+            <script type="text/javascript">regularShape(goods, goodsRegularShapes, 'goods-value');</script>
+        </span>
+    </small>
+    <a class="alert-link link text-info d-block" href="#">Посмотреть</a>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- Dollar and Euro -->
+<script src="//www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
+<data class="USD" value="0.000000000"></data>
+<data class="EUR" value="0.000000000"></data>
+
+</body>
+</html>

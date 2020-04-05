@@ -1,0 +1,39 @@
+
+/* BREAKPOINTS
+==================*/
+
+$final: 363px;
+
+/* FONTS
+==================*/
+
+$primary-font: 300 15px 'Open Sans', sans-serif;
+$secondary-font: 400 17px 'Montserrat Alternates', sans-serif;
+$brand-font: 400 41px 'Bad Script', cursive;
+$title-font: 400 63px 'PT Mono', monospace;
+
+/* COLORS
+==================*/
+
+$primary-color: #de6d6e;
+$secondary-color: #736e6e;
+$black-color: #404040;
+$gray-color: #8b8b8b;
+
+$colors: (
+'red': #f00,
+'pink': #ffd2e8,
+'orange': #ffa500,
+'yellow': #ffd92e,
+'green': #84f542,
+'blue': #5493ff,
+'purple': #b554ff,
+'black': #2d2c2e,
+'white': #fff);
+
+/* TIMINGS
+==================*/
+
+$fast: 124ms;
+$long: 324ms;
+$very-long: .8s;

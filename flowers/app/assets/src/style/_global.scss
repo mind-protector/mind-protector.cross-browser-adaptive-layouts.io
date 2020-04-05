@@ -1,0 +1,83 @@
+
+/* IMPORTS
+==================*/
+
+@import "global/_vars.scss";
+@import "global/_mixins.scss";
+@import "global/_nav.scss";
+@import "global/_alert.scss";
+@import "global/_footer.scss";
+
+/* SETTINGS
+==================*/
+
+body {
+    min-width: $final;
+
+    height: 200vh;
+
+    font: $primary-font;
+    color: $black-color;
+}
+
+.main-color {
+    color: $primary-color
+}
+
+.title {
+    margin-bottom: 5px;
+    font: $title-font;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.price {
+    padding-right: 5px;
+}
+
+.container-lg {
+    @media (min-width: 1000px) {
+        max-width: 1140px !important;
+        padding: 0 !important;
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 1340px !important;
+        padding: 0 !important;
+    }
+
+    @media (min-width: 1600px) {
+        max-width: 1540px !important;
+        padding: 0 !important;
+    }
+}
+
+.btn-pink {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+    color: #fff !important;
+
+    &:hover, &:focus, &:active {
+        background-color: lighten($primary-color, 3%) !important;
+        border-color: lighten($primary-color, 3%) !important;
+    }
+
+    &:focus, &:active {
+        box-shadow: 0 0 0 0.2rem rgba(225, 121, 122,.5) !important;
+    }
+}
+
+.link, .link:hover, .link:focus,
+.link:active, .link:visited {
+    color: $secondary-color;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: darken($secondary-color, 10%);
+}
+
+label {
+    cursor: pointer;
+}
