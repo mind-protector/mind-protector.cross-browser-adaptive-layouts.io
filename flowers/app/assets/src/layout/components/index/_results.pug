@@ -15,9 +15,9 @@ section.results.mx-auto
         h3.group-title.display-4.w-100.h-auto.p-0 Хиты этой недели
         small.group-subtitle.d-block.w-100.h-auto.p-0 Товары, которые сейчас имеют популярность
         - for(var i = 0; i < 10; i++)
-            article.results-item
+            article.results-item(id="card-" + i)
                 .card
-                    .card-body(id="card-" + i)
+                    .card-body
                         .product-preview
                             a.link.img-wrapper(href="#")
                                 img.card-img-top(src="../assets/build/img/products/" + previews[i] alt="image")
@@ -47,6 +47,7 @@ section.results.mx-auto
                             .review-block.d-flex.flex-column.h-100
                                 b
                                 span.reviews.d-block
+                    //-TODO: Identify and hide cards that do not fit the user's screen size using the articles variable 
                     script(type="text/javascript") infoInit(4.6, 7, 'card-' + articles, '12:00 завтра', true);
                     script(type="text/javascript") regularShape(5, reviewsRegularShapes, undefined, '#card-' + articles + ' .reviews');
                     script(type="text/javascript") articles++;

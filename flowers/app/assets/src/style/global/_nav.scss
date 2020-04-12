@@ -263,6 +263,7 @@
     position: relative;
 
     @include size(33px, 33px);
+    margin-left: 4px;
     border-width: 2px !important;
     padding: 0 !important;
 

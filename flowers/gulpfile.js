@@ -4,6 +4,7 @@ const gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    coffee = require('gulp-coffee'),
     sass = require('gulp-sass'),
     pug = require('gulp-pug'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -23,13 +24,13 @@ const gulp = require('gulp'),
             img: './app/assets/build/img',
         },
         src: {
-            js: './app/assets/src/js/main.js',
+            coffee: './app/assets/src/coffee/main.coffee',
             style: './app/assets/src/style/main.scss',
             layout: ['./app/assets/src/layout/**/*.pug', '!./app/assets/src/layout/**/_*.pug'],
             img: './app/assets/src/img/**/*.*',
         },
         watch: {
-            js: './app/assets/src/js/**/*.js',
+            coffee: './app/assets/src/coffee/**/*.coffee',
             style: './app/assets/src/style/**/*.scss',
             layout: './app/assets/src/layout/**/*.pug',
             img: './app/assets/src/img/**/*.*',
@@ -49,10 +50,11 @@ gulp.task('browser-sync', function () {
     browserSync.watch(path.templates, reload);
 });
 
-gulp.task('js:build', function () {
-    gulp.src(path.src.js)
+gulp.task('coffee:build', function () {
+    gulp.src(path.src.coffee)
         .pipe(rigger())
         .pipe(sourcemaps.init())
+        .pipe(coffee({bare: true}))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
@@ -98,12 +100,12 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('build', gulp.series('clean',
-gulp.parallel('style:build', 'layout:build', 'js:build', 'image:build')));
+gulp.parallel('style:build', 'layout:build', 'coffee:build', 'image:build')));
 
 gulp.task('watch', function() {
     watch(path.watch.style, gulp.series('style:build'));
     watch(path.watch.layout, gulp.series('layout:build'));
-    watch(path.watch.js, gulp.series('js:build'));
+    watch(path.watch.coffee, gulp.series('coffee:build'));
     watch(path.watch.img, gulp.series('image:build'));
 });
 
