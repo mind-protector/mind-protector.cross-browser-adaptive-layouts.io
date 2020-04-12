@@ -1,0 +1,252 @@
+nav.navbar.navbar-expand-lg.navbar-light.fixed-top
+    .container-fluid
+        a.navbar-brand(href="#") Магазин<span class="main-color">Цветов</span>
+        
+        .navbar-buttons
+            .dropdown
+                button#filtersMenu.btn.btn-pink.dropdown-toggle.filters.filters-lg(
+                type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Фильтры
+                .dropdown-menu.filters-menu(aria-labelledby="filtersMenu")
+                    form(action="/" method="post")
+                        
+                        -
+                            var filters = [
+                                {
+                                    'Классика':'classics',
+                                    'Коробки':'boxes',
+                                    'Корзинки':'baskets',
+                                    'Свадебные':'weddings',
+                                    'Комнатные':'indoor',
+                                    'Со скидкой':'sale',
+                                },
+                                {
+                                    'small':['Маленький', '(10x10см)'],
+                                    'medium':['Средний', '(25x25см)'],
+                                    'large':['Большой', '(40x40см)'],
+                                },
+                                [
+                                    [
+                                        'Цена/Качество',
+                                        'Сначала новые',
+                                        'Сначала дешевые',
+                                    ],
+                                    {
+                                        'from':'От',
+                                        'to':'До',
+                                    },
+                                ],
+                                {
+                                    'Розы':'roses',
+                                    'Тюльпаны':'tulips',
+                                    'Пионы':'peonies',
+                                    'Пионовидные розы':'peony_roses',
+                                    'Хризантемы':'сhrysanthemums',
+                                },
+                                [
+                                    'red',
+                                    'pink',
+                                    'orange',
+                                    'yellow',
+                                    'green',
+                                    'blue',
+                                    'purple',
+                                    'black',
+                                    'white',
+                                    'multi-color',
+                                ],
+                                [
+                                    {
+                                        'A':{
+                                            'Альстромерии':'alstromerias',
+                                            'Амариллисы':'amaryllis',
+                                            'Анемоны':'anemones',
+                                            'Астры':'asters',
+                                        },
+                                        
+                                        'В':{
+                                            'Васильки':'cornflowers',
+                                        },
+                                        
+                                        'Г':{
+                                            'Гвоздики':'сarnations',
+                                            'Георгины':'dahlias',
+                                            'Герберы':'gerberas',
+                                            'Гиацинты':'hyacinths',
+                                        }
+                                    },
+                                    {
+                                        'continue':{
+                                            'Гладиолусы':'gladiolus',
+                                            'Голландская роза':'dutch_rose',
+                                            'Гортензии':'hydrangeas',
+                                            'Ирис':'iris',
+                                        },
+                                        'И':{
+                                            'Ирис':'iris',
+                                        },
+                                        'К':{
+                                            'Каллы':'сalla_lilies',
+                                            'Колокольчики':'bells',
+                                            'Кустовые розы':'shrub_roses',
+                                        },
+                                        'Л':{
+                                            'Лаванда':'lavender',
+                                            'Ландыши':'may-lily',
+                                        },
+                                    },
+                                    {
+                                        'continue':{
+                                            'Лилии':'lilies',
+                                        },
+                                        'М':{
+                                            'Матрикарии':'matricaria',
+                                            'Махровые тюльпаны':'terry_tulips',
+                                            'Мимозы':'mimosa',
+                                        },
+                                        'Н':{
+                                            'Нарциссы':'daffodils',
+                                        },
+                                        'О':{
+                                            'Орхидеи':'orchids',
+                                        },
+                                        'П':{
+                                            'Подснежники':'snowdrops',
+                                            'Подсолнухи':'sunflowers',
+                                        },
+                                    },
+                                    {
+                                        'Р':{
+                                            'Ранунклюсы':'ranunklyusy',
+                                            'Роза Эквадор':'rosa_ecuador',
+                                            'Ромашки':'daisies',
+                                        },
+                                        'С':{
+                                            'Сирень':'lilac',
+                                            'Суккуленты':'succulents',
+                                        },
+                                        'Ф':{
+                                            'Фрезии':'freesia',
+                                        },
+                                        'Э':{
+                                            'Эустомы':'eustomas',
+                                        },
+                                    },
+                                ]
+                            ];
+                            
+                        mixin dropdown-header(title, cls='', driver='')
+                            span.dropdown-header(class=cls) !{title}
+                            .dropdown-divider(class=driver)
+                            
+                        mixin check-button(key, type='checkbox')
+                            input.dropdown-item(type=type name=key)
+                            span.fake(class=type)
+                        
+                        mixin color-button(color, cls=color, icon_color='')
+                            button.btn.btn-default.b-color(
+                            class=cls type="button"
+                            name=color value="false"
+                            onclick="bcolorChecked('" + color + "')")
+                                i.fa.fa-check.icon-checked(class=icon_color)
+                            
+                        .row.m-0
+                            .col-sm-5.col-md-4
+                                +dropdown-header('Тип')
+                                    
+                                each key, val in filters[0]
+                                    label.dropdown-item.inline-input.small-paddings-item
+                                        span #{val}
+                                        +check-button(key)
+                                        
+                                span.dropdown-header Размер
+                                    
+                                each key, val in filters[1]
+                                    label.dropdown-item.inline-input.small-paddings-item
+                                        span #{key[0]} <span class="b-size">#{key[1]}</span>
+                                        +check-button(val)
+                                        
+                                .dropdown-divider
+                                    
+                            .col-sm-7.col-md-8.row.none-margins
+                                .col-md-6.none-paddings-sm
+                                    +dropdown-header('Сортировка')
+                                    
+                                    each item, index in filters[2]
+                                        if index == 1
+                                            .dropdown-divider
+                                                span.dropdown-header Цена
+                                                    span.currency ₽
+                                        each val, key in item
+                                            if index == 0
+                                                label.dropdown-item.inline-input.small-paddings-item
+                                                    span #{val}
+                                                    +check-button('sort', 'radio')
+                                            if index == 1
+                                                - var k = 1
+                                                if key == 'to'
+                                                    - k = 99999
+                                                .dropdown-item.inline-input
+                                                    label.dropdown-item.w-50(for=key) #{val}
+                                                    input.dropdown-item.w-50(id=key type='text' value=k name=key maxlength="5")
+                                
+                                .col-md-6.none-paddings-sm.none-paddings
+                                    +dropdown-header('<i class="fa fa-star"></i>Популярные', 'popular')
+                                    
+                                    each key, val in filters[3]
+                                        label.dropdown-item.inline-input.small-paddings-item
+                                            span #{val}
+                                            +check-button(key)
+                                
+                                .col-md-11.none-paddings-sm
+                                    +dropdown-header('Цвет', '', 'color-driver')
+                                    .color-filters
+                                        each val in filters[4]
+                                            if val == 'red'
+                                                +color-button(val, val + ' margins-md')
+                                            else if val == 'black'
+                                                +color-button(val, val, 'white-icon')
+                                            else
+                                                +color-button(val)
+                        
+                        .row.m-0
+                            .col-12
+                                +dropdown-header('Цветок')
+                            
+                            - var count = 1;
+                            each item in filters[5]
+                                - var cls = '';
+                                if count == 3
+                                    - cls = 'small-paddings-md-item';
+                                .col-md-6.col-lg-3
+                                    each content, category in item
+                                        if category != 'continue'
+                                            span.dropdown-header #{category}
+                                        each val, key in content
+                                            label.dropdown-item.inline-input(class=cls)
+                                                span #{key}
+                                                +check-button(val)
+                                - count++;
+                
+            button.btn.btn-outline-dark.filters(type="button") Применить
+        
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navigation")
+            span.navbar-toggler-icon
+        
+        #navigation.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+                li.nav-item
+                    a.nav-link(href="#") Избранное
+                li.nav-item
+                    a.nav-link(href="#") Избранное
+                li.nav-item
+                    .dropdown
+                        a#currenciesMenu.nav-link.dropdown-toggle.currency-note(href="#"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Руб
+                        
+                        .dropdown-menu.currencies-menu(aria-labelledby="currenciesMenu")
+                            each val, index in {1:'USD', 2:'EUR', 3:'RUB'}
+                                h4.dropdown-item.currencies-item(
+                                id="cur-" + index
+                                onclick="changeCurrency('cur-" + index + "', '." + val + "')") #{val} <i class="fa fa-check icon-checked"></i>
+                li.nav-item.btn-item
+                    a.nav-link.btn.btn-pink(href="#" role="button") <i class="fa fa-user"></i> Войти

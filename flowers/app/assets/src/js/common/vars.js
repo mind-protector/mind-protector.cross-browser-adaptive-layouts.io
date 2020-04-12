@@ -1,4 +1,6 @@
 var goods = 0,
+    articles = 0,
+    cards = [],
 
 reviewsRegularShapes = ['Положительная оценка',
                         'Положительные оценки',

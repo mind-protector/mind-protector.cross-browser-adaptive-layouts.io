@@ -48,6 +48,7 @@ function alertClose() {
 
 function infoInit(score, allReviews, id, date, hit) {
     var sel = '#' + id + ' ';
+    cards.push(sel);
     var rating = (allReviews < 4) ? ['Новинка!', 'text-info'] :
         (score < 3.6) ? ['Хорошо', 'text-warning'] :
         (score < 4.6) ? ['Превосходно', 'text-success'] :

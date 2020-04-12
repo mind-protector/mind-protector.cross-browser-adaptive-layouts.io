@@ -5,6 +5,7 @@ const gulp = require('gulp'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
+    pug = require('gulp-pug'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     cssmin = require('gulp-clean-css'),
@@ -16,22 +17,25 @@ const gulp = require('gulp'),
 
     path = {
         build: {
-            js: './assets/build/js/',
-            style: './assets/build/style/',
-            img: './assets/build/img',
+            js: './app/assets/build/js/',
+            style: './app/assets/build/style/',
+            layout: './app/templates/',
+            img: './app/assets/build/img',
         },
         src: {
-            js: './assets/src/js/main.js',
-            style: './assets/src/style/main.scss',
-            img: './assets/src/img/**/*.*',
+            js: './app/assets/src/js/main.js',
+            style: './app/assets/src/style/main.scss',
+            layout: ['./app/assets/src/layout/**/*.pug', '!./app/assets/src/layout/**/_*.pug'],
+            img: './app/assets/src/img/**/*.*',
         },
         watch: {
-            js: './assets/src/js/**/*.js',
-            style: './assets/src/style/**/*.scss',
-            img: './assets/src/img/**/*.*',
+            js: './app/assets/src/js/**/*.js',
+            style: './app/assets/src/style/**/*.scss',
+            layout: './app/assets/src/layout/**/*.pug',
+            img: './app/assets/src/img/**/*.*',
         },
-        templates: './templates/',
-        clean: './assets/build/*',
+        templates: './app/templates/',
+        clean: './app/assets/build/*',
     },
 
     server = {
@@ -56,7 +60,6 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('style:build', function () {
-    console.log('style');
     gulp.src(path.src.style)
         .pipe(sourcemaps.init())
         .pipe(sass())
@@ -66,6 +69,17 @@ gulp.task('style:build', function () {
         .pipe(gulp.dest(path.build.style))
         .pipe(reload({stream:true}));
 });
+
+gulp.task('layout:build', function () {
+    gulp.src(path.src.layout)
+        .pipe(sourcemaps.init())
+        .pipe(pug({
+            //pretty: true
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.layout))
+        .pipe(reload({stream:true}));
+})
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
@@ -84,10 +98,11 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('build', gulp.series('clean',
-gulp.parallel('style:build', 'js:build', 'image:build')));
+gulp.parallel('style:build', 'layout:build', 'js:build', 'image:build')));
 
 gulp.task('watch', function() {
     watch(path.watch.style, gulp.series('style:build'));
+    watch(path.watch.layout, gulp.series('layout:build'));
     watch(path.watch.js, gulp.series('js:build'));
     watch(path.watch.img, gulp.series('image:build'));
 });

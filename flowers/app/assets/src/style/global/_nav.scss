@@ -58,7 +58,7 @@
 }
 
 .filters-menu {
-    width: 946px;
+    width: 966px;
     left: -90% !important;
 
     max-height: 780px;
@@ -219,6 +219,22 @@
 .fa-star {
     font-size: 18px;
     margin-right: 5px;
+}
+
+.color-driver {
+    max-width: 71%;
+
+    @media (max-width: 991px), (max-width: 767px) {
+        max-width: 89%;
+    }
+
+    @media (max-width: 767px) {
+        max-width: 98%;
+    }
+
+    @media (max-width: 575px) {
+        max-width: 88%;
+    }
 }
 
 .popular {

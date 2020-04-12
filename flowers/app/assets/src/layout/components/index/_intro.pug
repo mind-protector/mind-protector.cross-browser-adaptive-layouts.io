@@ -1,0 +1,16 @@
+section.intro
+    .carousel.slide.h-100(data-ride="carousel")
+        .carousel-inner.h-100
+            .carousel-info.h-100
+                .rounds
+                    - var rounds = ['big', 'medium', 'small'];
+                    each round in rounds
+                        .round.rounded-circle(class=round + '-round')
+                .carousel-caption
+                    .display-2.title Цветочный магазин
+                    h3.subtitle Мы занимаемся продажей и доставкой цветов по Екатеринбургу
+            - for(let i = 1; i <= 3; i++)
+                - var cls = 'carousel-item carousel-img-' + i +' h-100';
+                if i == 1
+                    - cls += ' active';
+                div(class=cls)

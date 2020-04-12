@@ -1,0 +1,9 @@
+.alert.alert-dismissible.fade.show.fixed-bottom.fixed-right(role="alert")
+    button.close(type="button" onclick="alertClose()")
+        span &times;
+    h4.alert-title
+    small.alert-goods.d-inline-block
+        <span>Всего </span>
+        span#goods-value.goods-value
+            script(type="text/javascript") regularShape(goods, goodsRegularShapes, 'goods-value');
+    a.link.alert-link.text-info.d-block(href="#") Посмотреть

@@ -1,0 +1,18 @@
+section.services
+    .slider
+        .slider-wrapper
+            -
+                var slider_items = [
+                    ['1.jpeg', 'Только свежие цветы'],
+                    ['2.jpg', 'Гаратния качества цветов'],
+                    ['3.jpg', 'Бесплатная быстрая доставка'],
+                    ['4.jpg', 'Бонусы за каждую покупку'],
+                    ['5.jpg', 'Удобные способы оплаты'],
+                ];
+            each item in slider_items
+                .slider-item
+                    .item-wrapper.rounded-circle.h-100
+                        img.img-fluid.rounded-circle.h-100(src="../assets/build/img/services/" + item[0] alt="photo")
+                        h4.item-desc #{item[1]}
+        a.slider-control.slider-control-left(href='#' role="button")
+        a.slider-control.slider-control-right.slider-control-show(href='#' role="button")

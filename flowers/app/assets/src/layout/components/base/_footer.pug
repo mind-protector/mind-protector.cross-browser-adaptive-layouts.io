@@ -1,0 +1,98 @@
+footer.page-footer.font-small.elegant-color-dark
+    .container.footer-container.text-left.pt-3.mt-5
+        .row.footer-main.mt-3.mb-4
+            .row.col-7.m-0
+                .col-7.footer-wrapper.p-0
+                    h6.brand-title Магазин
+                        span.main-color Цветов
+                    hr.footer-hr.accent-2.mb-2.mt-0.d-inline-block.mx-auto
+                    small.copywrite.d-flex &copy; Магазин Цветов, inc. 2020 Copyright. <br> Все права защищены.
+                    
+                .col-5.footer-wrapper.footer-contacts.d-flex.flex-column.justify-content-center.pr-5.pl-0.mt-3
+                    .tablet-flex-col.d-flex.justify-content-center.mb-3
+                        i.fa.fa-phone.mr-2
+                        h6.footer-text.tel.d-inline.m-0 8-800-666-3636
+                    .tablet-flex-col.d-flex.justify-content-center.tablet-none-p.pl-2
+                        i.fas.fa-envelope.mr-2
+                        h6.footer-text.tel.d-inline.m-0 8-800-666-3636
+
+            .row.col-5.m-0
+                -
+                    var footer_links = {
+                        'Узнать о Нас':{
+                            'о компании':'#',
+                            'вакансии':'#',
+                            'отзывы':'#',
+                        },
+                        'Бизнесс':{
+                            'франшиза':'#',
+                            'сотрудникам':'#',
+                            'партнерам':'#',
+                        },
+                    };
+                
+                each item, index in footer_links
+                    - var cls = '';
+                    if index == 'Бизнесс'
+                        - cls = 'tablet-p-3';
+                    .col-6.footer-wrapper.d-flex.flex-column.justify-content-center.p-0
+                        .mt-2.mb-2(class=cls)
+                            h6.footer-text.text-uppercase.font-weight-bold #{index}
+                            ul.list-unstyled.footer-links.m-0
+                                each val, key in item
+                                    li.footer-link.mb-1
+                                        a.link.color-white.text-capitalize.d-block(href=val)
+                                            span.footer-text.link-text #{key}
+                                            
+    hr.div-hr.accent-2.mb-2.mt-0.d-inline-block.w-100
+    .container.footer-container.text-left.pb-4
+        .row.mt-3
+            .row.col-sm-6.col-md-8.rights.m-0
+                a.col-6.footer-wrapper.footer-item.link.footer-link.color-white(href="#")
+                    i.fa.fa-book.pr-2.pt-1
+                    span.footer-text.link-text Пользовательское соглашение
+                a.col-6.footer-wrapper.footer-item.link.footer-link.color-white(href="#")
+                    i.fa.fa-balance-scale.pr-2.pt-1
+                    span.footer-text.link-text Политика конфиденциальности
+                    
+            .row.col-sm-5.col-md-4.socials.d-flex.justify-content-md-center
+                -
+                    var socials = [
+                        {
+                            'instagram':[
+                                '#',
+                                'w-100 h-100',
+                                'instagram.png'
+                            ],
+                            'vk':[
+                                '#',
+                                'vk-logo',
+                                'vk.png'
+                            ],
+                        },
+                        {
+                            'ok.ru':[
+                                '#',
+                                'okru-logo',
+                                'okru.png'
+                            ],
+                            'facebook':[
+                                '#',
+                                'facebook',
+                                'facebook.png'
+                            ],
+                        }
+                    ];
+                each item, index in socials
+                    - var cls = '';
+                    if index == 0
+                        - cls = 'mr-3';
+                    .social-group.p-0(class=cls)
+                        each val, key in item
+                            - cls = 'd-flex align-items-center justify-content-center';
+                            if key == 'instagram'
+                                - cls = 'd-block mr-3';
+                            if key == 'ok.ru'
+                                - cls += ' mr-3';
+                            a.social(class=cls href=val[0])
+                                img(class=val[1] src="../assets/build/img/footer/" + val[2] alt=key)

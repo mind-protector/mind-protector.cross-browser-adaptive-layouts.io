@@ -1,10 +1,9 @@
 function changeCurrency(id, currency) {
 
     function changePrices(func) {
-        for(var i = 1; i <= $('.price').length; i++) {
-            var sel = '#price-' + i;
-            $(sel).text(func($(sel).attr('value')));
-        }
+        cards.forEach(function(element) {
+            $(element + '.price').text(func($(element + '.price').attr('value')));
+        });
     }
 
     var sel = '#' + id + ' .icon-checked';
@@ -14,7 +13,7 @@ function changeCurrency(id, currency) {
     $(sel).css('opacity', '1');
 
     switch (currency) {
-        case undefined:
+        case '.RUB':
             $(".currency").text('₽');
             $(".currency-note").text('Руб');
             changePrices(function(val){

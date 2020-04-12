@@ -1,0 +1,54 @@
+section.results.mx-auto
+    -
+        var previews = [
+            '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg',
+            '6.jpeg', '7.jpg', '8.jpg', '9.jpeg', '10.jpeg'
+        ];
+        var structure = {
+            'Роза белая':'1',
+            'Роза красная':'2',
+            'Махровый тюльпан сиреневый':'8',
+            'Ранунклюсы сиреневые':'15',
+            'Роза Эквадор розовая':'3',
+        };
+    .group.d-flex.flex-wrap
+        h3.group-title.display-4.w-100.h-auto.p-0 Хиты этой недели
+        small.group-subtitle.d-block.w-100.h-auto.p-0 Товары, которые сейчас имеют популярность
+        - for(var i = 0; i < 10; i++)
+            article.results-item
+                .card
+                    .card-body(id="card-" + i)
+                        .product-preview
+                            a.link.img-wrapper(href="#")
+                                img.card-img-top(src="../assets/build/img/products/" + previews[i] alt="image")
+                                .round-preview.d-flex.align-items-center.justify-content-center Смотреть
+                            .bonuses.d-flex.align-items-center <i class="fa fa-gift"></i> 110
+                            button.favorite-mark.btn(type="button" onclick=`favoriteAdd(${JSON.stringify('favorite-' + i)})`)
+                                .white-round.w-100.h-100
+                                .favorite-icon
+                                    i.fa.fa-heart.w-100.h-100(id="favorite-" + i)
+                            img.hit-mark(src="../assets/build/img/products/hit.png" alt="hit")
+                        h4.card-title.d-flex.align-items-center
+                            span Букет &#171;Рассвет&#187;
+                            i.fa.fa-question-circle
+                            .structure.text-center
+                                h4.info-title.text-left Средний размер
+                                small.info-value.d-block.text-left 31 x 22 см
+                                h4.info-title.text-left Состав:
+                                each val, key in structure
+                                    small.info-value.structure-value.d-block.text-left #{key} - #{val} шт.
+                        b
+                            data.price.card-price(value="2240") 2240
+                            span.currency ₽
+                        span  с доставкой
+                        small.card-text
+                        .product-rate.d-flex
+                            .score-block.d-flex.align-items-center.justify-content-center.h-100
+                            .review-block.d-flex.flex-column.h-100
+                                b
+                                span.reviews.d-block
+                    script(type="text/javascript") infoInit(4.6, 7, 'card-' + articles, '12:00 завтра', true);
+                    script(type="text/javascript") regularShape(5, reviewsRegularShapes, undefined, '#card-' + articles + ' .reviews');
+                    script(type="text/javascript") articles++;
+        a.btn.btn-lg.btn-outline-dark.group-btn(href="#")
+            span.group-btn-text Смотреть все из &#171;Хиты этой недели&#187;

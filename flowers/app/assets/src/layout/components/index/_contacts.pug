@@ -1,0 +1,40 @@
+header.contacts.vcard.container-lg
+    .contacts-content.d-flex.align-items-center
+        //- meta-data for hCard
+        .d-none
+            span.category Магазин цветов
+            span.fn-org МагазинЦветов
+            span.workhours ежедневно с 7:00 до 22:00
+            span.url
+                span.value-title(title="https://that-site.com/")
+
+        - var contacts_container = 'content-item d-flex align-items-center justify-content-around flex-wrap';
+        - var contacts_item = 'contacts-item d-flex align-items-sm-center w-auto';
+        
+        .content-first(class=contacts_container)
+            .address.flex-column(class=contacts_item)
+                .adr
+                    span Наш магазин по адресу:
+                    small.address-text
+                        a.link(href="#")
+                            i.fa.fa-map-marker
+                            span.street-address.dotted Билимбаевская 39, 70
+                            //- meta-data for hCard
+                            span.locality.d-none г. Екатеринбург
+            .delivery(class=contacts_item)
+                span Доставка в пригород <br class="d-none d-sm-block"> Екатеринбурга!
+        .content-second(class=contacts_container)
+            .hot-line.flex-column(class=contacts_item)
+                .container-column-sm
+                    small Горячая линия
+                        i.fa.fa-phone
+                    h5.hot-line-number.tel 8-800-666-3636
+            .numbers(class=contacts_item)
+                div
+                    small Наши контакты
+                    h5.vertical-center(class='contact-number-whatsapp')
+                        img.contact-icon(src="../assets/build/img/header/whatsapp.png" alt="whatsapp")
+                        span 8-855-000-3432
+                    h5.vertical-center(class='contact-number-viber')
+                        img.contact-icon(src="../assets/build/img/header/viber.png" alt="viber")
+                        span 8-900-466-1616
